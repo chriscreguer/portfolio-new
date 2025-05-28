@@ -20,7 +20,7 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./ # Deploy the entire repository content
-        server-dir: ${{ secrets.FTP_REMOTE_PATH }} # Target directory on your server
+        server-dir: ../public_html/ # Target directory on your server
         port: 21
         # Options for cleaning up remote directory before deploying can be added here
         # e.g., dangerous-clean-slate: true # This would delete everything in server-dir first 
