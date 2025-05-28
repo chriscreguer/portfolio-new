@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/hamburgers.css" rel="stylesheet">
+    <link rel="stylesheet" href="/dependencies/photoswipe/dist/photoswipe.css">
+    <script async src="js/script.js"></script> 
+
+    <title>Chris Creguer—UX Designer</title>
+
+ </head>
+
+<body>
+
+  <nav class="navbar">
+    <a class="logo" href="index.html">
+      <div>
+        Chris Creguer
+      </div>
+    </a>
+
+    <button class="hamburger hamburger--collapse" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner">
+        </span>
+      </span>
+    </button>
+
+    <ul class="navbar-list">
+      <a href="index.html" class="active"><li>Work</li></a>
+      <a href="about.html"><li>About</li></a>
+    </ul>
+  </nav>
+
+  <div class="overlay-menu">
+    <ul class="navbar-list-mobile">
+      <a href="index.html" class="active"><li>Work</li></a>
+      <a href="about.html"><li>About</li></a>
+    </ul>
+  </div>
+
+  <div class="project-cover plannercover project-card-pay-period-slider">
+    <div class="project-cover-content">
+      <h1>Navigation Slider</h1>
+      <p>Improving navigation with a fun UI pattern</p>
+      <ul class="chip">
+        <li><svg width="24px" height="24px" viewBox="0 0 24 24" stroke-width="1.5" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><g clip-path="url(#design-nib_svg__clip0_2585_14438)" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17.674 11.408l-1.905 5.715a.6.6 0 01-.398.386L3.693 20.98a.6.6 0 01-.74-.765L6.745 8.841a.6.6 0 01.34-.365l5.387-2.218a.6.6 0 01.653.13l4.404 4.405a.6.6 0 01.145.615zM3.296 20.602l6.364-6.364"></path><path d="M17.792 11.056l2.828-2.829a2 2 0 000-2.828L18.5 3.277a2 2 0 00-2.829 0l-2.828 2.829M11.781 12.116a1.5 1.5 0 10-2.121 2.122 1.5 1.5 0 002.121-2.122z"></path></g><defs><clipPath id="design-nib_svg__clip0_2585_14438"><path fill="#fff" d="M0 0h24v24H0z"></path></clipPath></defs></svg>UI Design</li>
+        <li><?xml version="1.0" encoding="UTF-8"?><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M2 14C2 16.2091 3.79086 18 6 18C8.20914 18 10 16.2091 10 14C10 11.7909 8.20914 10 6 10C3.79086 10 2 11.7909 2 14ZM2 14V6" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M22 14C22 16.2091 20.2091 18 18 18C15.7909 18 14 16.2091 14 14C14 11.7909 15.7909 10 18 10C20.2091 10 22 11.7909 22 14ZM22 14V6" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M14 14H10" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg> User Observation</li>
+        <li><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><rect x="9" y="2" width="6" height="12" rx="3" stroke="#000000" stroke-width="1.5"></rect><path d="M5 3v2M1 2v4m18-3v2m4-3v4M5 10v1a7 7 0 007 7v0a7 7 0 007-7v-1M12 18v4m0 0H9m3 0h3" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>Interview</li>      </ul>
+    </div>
+    
+    <div class="project-cover-background">
+      <img src="img/payperiodslider/Pay Period Slider.png">
+    </div>
+  </div>
+
+
+  </div>
+
+    
+  <div id="introduction-section" class="project-container">
+ 
+    <div class="panel"  data-color="white">
+
+          <h2 class="project-section-title">Problem</h2>
+
+          
+
+          <p class="detail">Users reported <b>difficulty navigating</b> between pay periods quickly. PACT Planner’s interface only allowed movement one pay period at a time, necessitating <b>numerous clicks</b> to reach distant pay periods.
+          </p> 
+
+          <div class="spacer"></div>
+
+          <h2 class="project-section-title">Solution</h2>
+          <p>
+            The pay period slider enables users to <b>easily navigate</b> through the entire project timeline by sliding to or clicking on any pay period. Plus, users can still use the existing arrow buttons to move forward or backward by one pay period at a time.</p> 
+            <p>
+              This feature also aids <b>wayfinding</b>, allowing users to easily see where the displayed pay periods fall within the contract's duration. The pay period representations on the slider are styled to match their corresponding elements.
+          </p>
+          <video class="project-video" autoplay playsinline loop muted onclick="this.paused?this.play():this.pause();">
+            <source src="img/payperiodslider/Sliding.mov">
+          </video>
+          <div class="project-image-caption">Sliding</div>
+          <div class="spacer"></div>
+          <video class="project-video" autoplay playsinline loop muted onclick="this.paused?this.play():this.pause();">
+            <source src="img/payperiodslider/Clicking.mov">
+          </video>
+          <div class="project-image-caption">Clicking</div>
+          <div class="spacer"></div>
+          <video class="project-video" autoplay playsinline loop muted onclick="this.paused?this.play():this.pause();">
+            <source src="img/payperiodslider/Nudging.mov">
+          </video>
+          <div class="project-image-caption">Nudging</div>
+          <div class="spacer"></div>
+
+          <div class="spacer"></div>
+
+          <h2 class="project-section-title">Outcome</h2>
+          <p>Users responded positively to a demonstration of this feature. From basic self-testing, I estimated that navigating from the start to the end of a two-year project is approximately <b>94% faster</b> and and requires <b>44 fewer clicks</b> using the pay period slider.</p>
+
+
+         </div>
+        </div>
+        </div>
+
+        <div class="step-card-group">
+            <div class="step-card"></div>
+        </div>
+
+
+
+      <div id="modal" class="modal">
+        <span id="modal-close" class="modal-close">&times;</span>
+        <img id="modal-content" class="modal-content">
+        <div id="modal-caption" class="modal-caption"></div>
+      </div>
+
+      </div>
+        <hr>
+        
+          <div class="next-page">
+<p>Next: <a class="next-link" href="tipping_points.html">Tipping Points</a>&nbsp;<span
+              class="iconlink">arrow_forward</span></p>
+        
+
+      </div>
+
+      <footer class="footer">    
+        <p class="footer-copyright"> © 2024 Chris Creguer</p>
+        <ul class="footer-icons-list">
+          <li>
+            <a href="https://www.linkedin.com/in/chriscreguer/" target="_blank">
+              <img class="footer-icon" alt="linkedin" src="img/icon/linkedin.png">
+            </a>
+          </li>
+          <li>
+            <a href="about.html">
+              <img class="footer-icon" alt="email" src="img/icon/email.png">
+            </a>
+          </li>
+        </ul>
+      </footer>
+      <script type="module">
+        import PhotoSwipeLightbox from '/dependencies/photoswipe/dist/photoswipe-lightbox.esm.js';
+        const lightbox = new PhotoSwipeLightbox({
+            gallery: '#my-gallery',
+            children: 'a',
+            pswpModule: () => import('/dependencies/photoswipe/dist/photoswipe.esm.js')
+        });
+        lightbox.init();
+        
+    </script>
+</body>
+</html>

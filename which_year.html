@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/hamburgers.css" rel="stylesheet">
+    <link rel="stylesheet" href="/dependencies/photoswipe/dist/photoswipe.css">
+    <script async src="js/script.js"></script> 
+
+    <title>Chris Creguer—UX Designer | Which Year Case Study</title>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a class="logo" href="index.html">
+      <div>
+        Chris Creguer
+      </div>
+    </a>
+
+    <button class="hamburger hamburger--collapse" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner">
+        </span>
+      </span>
+    </button>
+
+    <ul class="navbar-list">
+      <a href="index.html"><li>Work</li></a>
+      <a href="about.html"><li>About</li></a>
+    </ul>
+  </nav>
+
+  <div class="overlay-menu">
+    <ul class="navbar-list-mobile">
+      <a href="index.html"><li>Work</li></a>
+      <a href="about.html"><li>About</li></a>
+    </ul>
+  </div>
+
+  <div class="project-cover whichyear-cover project-card-which-year-page">
+    <div class="project-cover-content">
+      <h1>Which Year</h1>
+      <p>A Photo-Year Guessing Game</p>
+      <ul class="chip">
+        <li><svg width="24px" height="24px" viewBox="0 0 24 24" stroke-width="1.5" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><g clip-path="url(#design-nib_svg__clip0_2585_14438)" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17.674 11.408l-1.905 5.715a.6.6 0 01-.398.386L3.693 20.98a.6.6 0 01-.74-.765L6.745 8.841a.6.6 0 01.34-.365l5.387-2.218a.6.6 0 01.653.13l4.404 4.405a.6.6 0 01.145.615zM3.296 20.602l6.364-6.364"></path><path d="M17.792 11.056l2.828-2.829a2 2 0 000-2.828L18.5 3.277a2 2 0 00-2.829 0l-2.828 2.829M11.781 12.116a1.5 1.5 0 10-2.121 2.122 1.5 1.5 0 002.121-2.122z"></path></g><defs><clipPath id="design-nib_svg__clip0_2585_14438"><path fill="#fff" d="M0 0h24v24H0z"></path></clipPath></defs></svg>UI/UX Design</li>
+        <li><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M13.5 6L10 18.5M6.5 8.5L3 12l3.5 3.5M17.5 8.5L21 12l-3.5 3.5" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>Front-End Development</li>
+      </ul>
+    </div>
+    <div class="project-cover-background">
+      <img class="project-cover-image" src="img/whichyr/Input field example.png" alt="Which Year UI Highlights">
+    </div>
+  </div>
+
+  <div class="project-container">
+    <div class="panel" data-color="white">
+        <article class="case-study-content">
+            <h2>My Role</h2>
+            <p>Sole UX lead—from initial concept through launch and ongoing iterations—responsible for user research, interaction design, visual design, front-end implementation, and measuring success.</p>
+            
+            <h2>Project Genesis</h2>
+            <p>I set out to create a simple daily habit that blends quick visual intuition with a dash of history. Inspired by Wordle's shareable ritual and nostalgia for old photographs, I sketched the core loop on paper:</p>
+            <ul>
+                <li>See a photo</li>
+                <li>Guess its year (four-digit input + optional digit reveals)</li>
+                <li>Get instant feedback (points + context)</li>
+                <li>Share results</li>
+            </ul>
+            <p>Key early design principles:</p>
+            <ul>
+                <li>Mobile-first: Full-screen imagery, thumb-friendly controls.</li>
+                <li>Guided input: A slider plus tap-to-reveal individual digits.</li>
+                <li>Contextual captions: Brief "hint" before guessing, rich context after.</li>
+                <li>Dark, distraction-free UI: Focus on the photo.</li>
+            </ul>
+
+            <h2>Phase 1: MVP & Early Traction</h2>
+            <p><strong>Launch (April 2025):</strong> A lean HTML/CSS/JS prototype.</p>
+            <p><strong>Organic word-of-mouth:</strong> Pitched on Reddit's r/photography, shared on Hacker News & YC forums.</p>
+            <p>Initial metrics:</p>
+            <ul>
+                <li>~1 min average challenge time</li>
+                <li>35% next-day retention</li>
+                <li>2 K total plays within the first week</li>
+            </ul>
+            <h3>Early Praise</h3>
+            <blockquote>"Chris, your game is so fun ❤️ I'm putting my college friends on it." —College friend (iMessage)</blockquote>
+            <blockquote>"Dude, that's so fire." —A peer texting after their first play</blockquote>
+            <p>These comments confirmed that the core loop and UI were engaging—but they also hinted at unaddressed needs.</p>
+
+            <h2>Phase 2: Listening & Opportunity Framing</h2>
+            <p>Over the next two weeks, I harvested ~150 comments from social feeds, forums, and DMs and affinity-mapped them into three themes:</p>
+            <h3>"How good is my score?"</h3>
+            <blockquote>"Cool photo, but is 3 750 points any good?" —New player on Discord</blockquote>
+            <h3>"I wish I could play more than five days."</h3>
+            <blockquote>"Love this—can I revisit yesterday's?" —Reddit comment</blockquote>
+            <h3>"When does the next challenge drop?"</h3>
+            <blockquote>"I'm in Tokyo—when does midnight ET reset happen?" —YC thread</blockquote>
+            <p>I paired these themes with two quantitative signals: average session length (stuck near 1 min) and next-day retention (stuck near 35%).</p>
+
+            <h2>Phase 3: UX-Driven Enhancements</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Theme</th>
+                        <th>UX Method</th>
+                        <th>Solution</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Score Context</td>
+                        <td>Affinity mapping</td>
+                        <td>Distribution graphs per round + full bell-curve at end, with a clear "You" marker and percentile badges.</td>
+                    </tr>
+                    <tr>
+                        <td>Extended Play</td>
+                        <td>Community voting</td>
+                        <td>Curated Archive calendar: browse past daily challenges (hand-picked for clue quality).</td>
+                    </tr>
+                    <tr>
+                        <td>Reset Clarity</td>
+                        <td>Persona walkthroughs</td>
+                        <td>Countdown timer: shows "Next challenge in 04:12:18" (ET midnight basis).</td>
+                    </tr>
+                    <tr>
+                        <td>Harsh Miss Feedback</td>
+                        <td>Microcopy workshop</td>
+                        <td>Replace red "X" for big misses with neutral dot; refresh share copy to highlight percentile ("Top 12%") and average years off.</td>
+                    </tr>
+                    <tr>
+                        <td>Digit Reveal Usability</td>
+                        <td>Prototype walkthroughs</td>
+                        <td>Streamline reveal cards: one-tap unlock, auto-lock invalid years on both slider & inputs, quick flip animation.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Feature Deep Dives</h2>
+            <h3>Data Visualization</h3>
+            <p><strong>Before:</strong> Points only.</p>
+            <p><strong>After:</strong> Mini bell-curve after each guess and final distribution chart.</p>
+            <p><strong>Result:</strong> Average time-on-challenge rose 30% as players compared their performance.</p>
+            
+            <h3>Archive</h3>
+            <p><strong>Why:</strong> Power users wanted more than five plays.</p>
+            <p><strong>What:</strong> A calendar UI showing past days; clicking opens a fully playable challenge.</p>
+            <p><strong>Result:</strong> 40% of daily users now explore the Archive.</p>
+
+            <h3>Countdown Timer</h3>
+            <p><strong>Why:</strong> Global confusion around ET reset.</p>
+            <p><strong>What:</strong> Persistent timer at top of screen, recalculated client-side.</p>
+            <p><strong>Result:</strong> Support tickets and "When's next?" forum posts dropped by 75%.</p>
+
+            <h3>Shareable Results</h3>
+            <p><strong>Why:</strong> Many players found the big "X" icon demotivating.</p>
+            <p><strong>What:</strong> Swap out for a neutral dot beyond a 10-year miss; update share text to prioritize "Top X%" and average years off.</p>
+            <p><strong>Result:</strong> Shares increased 20%, with more positive sentiment on social feeds.</p>
+
+            <h2>Impact</h2>
+            <ul>
+                <li>260 K total plays, > 100 K unique users, 5–6 K DAU</li>
+                <li>Next-day retention up from 35% → 50%</li>
+                <li>Average session up from ~1 min → ~1 min 30 s</li>
+                <li>Consistent daily shares on Reddit, Hacker News, and niche forums, e.g.:</li>
+            </ul>
+            <pre><code>WhichYear 5/7/25
+4881 pts (top 4%)
+1.6 avg. years off
+🎯🎯
+https://whichyr.com</code></pre>
+
+            <h2>Reflections & Next Steps</h2>
+            <ul>
+                <li>Image sourcing: I'm exploring partnerships with public-domain archives to expand diversity while keeping curation tight.</li>
+                <li>User profiles: Planning an opt-in login so players can track long-term stats across devices.</li>
+                <li>New modes: Experimenting with a "Freeplay" sandbox and time-attack challenges based on this UX foundation.</li>
+            </ul>
+
+            <h2>Why This Matters</h2>
+            <p>By combining a lean initial build with focused, feedback-driven UX enhancements—rather than superficial polish alone—Which Year grew into a daily ritual for > 100 K history enthusiasts, delivering both quick fun and meaningful engagement.</p>
+        </article>
+    </div>
+  </div>
+
+  <hr>
+  
+  <div class="next-page">
+      <p>Next: <a class="next-link"  href="pay_period_slider.html">Navigation Slider</a>&nbsp;<span class="iconlink">arrow_forward</span></p> <!-- Update href to the next project -->
+  </div>
+
+  <footer class="footer">    
+    <p class="footer-copyright"> © 2024 Chris Creguer</p>
+    <ul class="footer-icons-list">
+      <li>
+        <a href="https://www.linkedin.com/in/chriscreguer/" target="_blank">
+          <img class="footer-icon" alt="linkedin" src="img/icon/linkedin.png">
+        </a>
+      </li>
+      <li>
+        <a href="about.html">
+          <img class="footer-icon" alt="email" src="img/icon/email.png">
+        </a>
+      </li>
+    </ul>
+  </footer>
+
+  <script type="module">
+    import PhotoSwipeLightbox from '/dependencies/photoswipe/dist/photoswipe-lightbox.esm.js';
+    
+    const galleries = [
+        '#gallery-digit-reveal', 
+        '#gallery-score-dist', 
+        '#gallery-timer-archive', 
+        '#gallery-shareable-results',
+        '#gallery-ui-highlights'
+    ];
+
+    galleries.forEach(galleryId => {
+        const lightbox = new PhotoSwipeLightbox({
+            gallery: galleryId,
+            children: 'a',
+            pswpModule: () => import('/dependencies/photoswipe/dist/photoswipe.esm.js')
+        });
+        lightbox.init();
+    });
+  </script>
+ 
+</body>
+</html> 
