@@ -1,0 +1,375 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/hamburgers.css" rel="stylesheet">
+    <link rel="stylesheet" href="dependencies/photoswipe/dist/photoswipe.css">
+    <script async src="js/script.js"></script> 
+    <title>Chris Creguer—UX Designer</title>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <a class="logo" href="index.html">
+      <div>
+        Chris Creguer
+      </div>
+    </a>
+
+    <button class="hamburger hamburger--collapse" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner">
+        </span>
+      </span>
+    </button>
+
+    <ul class="navbar-list">
+      <a href="index.html" class="active"><li>Work</li></a>
+      <a href="about.html"><li>About</li></a>
+    </ul>
+  </nav>
+
+  <div class="overlay-menu">
+    <ul class="navbar-list-mobile">
+      <a href="index.html" class="active"><li>Work</li></a>
+      <a href="about.html"><li>About</li></a>
+    </ul>
+  </div>
+
+  <header class="case-study-header case-study-theme-primary">
+    <div class="case-study-header-text">
+        <h1>Auto-Plan</h1>
+        <p class="subtitle">Making a complex algorithm feel like magic</p>
+        <ul class="tags">
+            <li>UI Design</li>
+            <li>User Observation</li>
+            <li>Interview</li>
+            <li>Usability Testing</li>
+        </ul>
+        <div class="project-links">
+            <a href="#introduction-section" class="button-primary">Scroll to mockups <span class="material-icons" style="font-size:1.25em; vertical-align:middle;">south</span></a>
+            <!-- Replace # with actual link if available -->
+        </div>
+    </div>
+    <div class="case-study-header-images">
+        <img src="img/auto_plan/hero1.png" alt="Auto-Plan Hero Image 1">
+    </div>
+  </header>
+    
+  <main class="case-study-content case-study-theme-primary">
+    <div class="project-container">
+        <div class="project-section-container">
+            <h2 class="project-section-title">Background</h2>
+            
+                <p class="detail">I served as <b>UX Lead</b> for this feature in PACT Planner—a web application that helps <b>program analysts maximize profit for government contractors</b> by allocating labor across different efforts while remaining compliant with complex contract requirements.
+                </p> 
+
+                <p class="detail">Government contracts often specify how many hours each role should work based on an estimate from the contractor. Program analysts are tasked with ensuring employees work as close to the number of funded hours as possible.
+                </p> 
+
+                <blockquote class="planner quoteblock">"We max our profit when they work exactly the hours they're funded. If they go over, we have to eat the cost. If they go under, we're leaving money on the table."
+                  <span class="quote-source">-PACT Planner user</span>
+                </blockquote>
+          </div>
+
+
+              
+                <h2 class="project-section-title">Problem</h2>
+                <p class="detail">If analysts had a crystal ball, I'd be out of a job. Fortunately for me, <b>predicting the exact number of hours an employee will need is practically impossible.</b> Even if it weren't, numerous factors affect an employee's availability, like unexpected absences, project delays, and demand on other projects. So <b>program analysts must constantly adapt their plans</b> in response to unexpected deviations.
+                </p> 
+                
+                <div class="pswp-gallery project-image autoplan-gallery">
+                  <a href="img/autoplan/plan_deviation.png" data-pswp-width="1162" data-pswp-height="590">
+                    <img src="img/autoplan/plan_deviation.png">
+                  </a>
+                  <div class="project-image-caption">An example of employee deviation from the plan. Each employee is forecast to either exceed or underspend the hours allocated to them.</div>
+                </div>
+
+                <p class="detail">Constantly adapting just one plan is time consuming, but our users juggle dozens of plans for various efforts at once. <b>Users reported feeling overwhelmed and frustrated</b>, especially towards the end of the fiscal year when many projects end.
+                </p> 
+
+                <blockquote class="planner quoteblock">"September is what we call 'hell month' and I apologize for cussing, but it is truly 'hell month'"
+                  <span class="quote-source">-PACT Planner user</span>
+                </blockquote>
+            
+
+              
+
+              <h2 class="project-section-title">Approach</h2>
+
+              <p class="detail">
+                We applied a Design Thinking approach tailored to our team's constraints.
+
+                <div class="full-width-ol">
+                <ol class="project-approach-list">
+                  <div class="project-approach-bullet">
+                  <b><li>Empathize</li></b>
+                  <p>
+                  I started with <b>user interviews and observation sessions</b> to help our team understand user workflows and pain points. We discovered that program analysts typically adjust one of three variables to account for deviations from a plan: an employee's future level of effort, end date, or total hours. We also learned that users frequently rely on external spreadsheets to perform calculations PACT Planner does not support, then manually input that data back into PACT Planner.
+                    </p>
+
+
+              <div class="pswp-gallery project-image autoplan-gallery">
+                <a href="img/autoplan/user-observation-session.png" data-pswp-width="1919" data-pswp-height="776">
+                  <img src="img/autoplan/user-observation-session.png" alt="A member of a virtual meeting shares their screen containing a beautifully-designed data table">
+                </a>
+                <div class="project-image-caption">Screenshot of a user observation session</div>
+              </div>
+              <p>
+                Then, I designed a <b>usability test</b> to simulate the planning and maintenance of a typical project.  I tested with 6 of our product team members, mostly because of restricted access to real users but also to cultivate empathy toward users. The test's tediousness proved rhetorically effective for team members skeptical about the severity of the problem.
+              </p>
+              </div>
+                   
+                    
+              <div class="project-approach-bullet">
+                  <b><li>Define</li></b>
+                  <p>
+                    I <b>labeled and organized pain points</b> and errors from usability testing/user observation sessions in our research repository to illustrate the distinct pain points users face. 
+                  </p>
+                  <div class="pswp-gallery project-image autoplan-gallery">
+                    <a href="img/autoplan/pain-points.png" data-pswp-width="4096" data-pswp-height="3490">
+                      <img src="img/autoplan/pain-points.png" alt="A virtual whiteboard filled with notes describing pain points, organized into categories">
+                    </a>
+                    <div class="project-image-caption">Pain points identified through user research</div>
+                  </div>
+
+               
+                    <p>
+                      Next, I created <b>UX maps</b> to illustrate user workflows and identify inefficiencies. This process highlighted that eliminating spreadsheets and manual data entry from users' workflows would save them significant amounts of time and reduce task complexity.
+                    </p>
+
+                    <div class="pswp-gallery project-image autoplan-gallery">
+                      <a href="img/autoplan/ux-mapping.png" data-pswp-width="7347" data-pswp-height="2677">
+                       <img src="img/autoplan/ux-mapping.png" alt="UX Map describing the flow of information between 4 different systems used for auto-planning">
+                      </a>
+                      <div class="project-image-caption">UX Map describing a basic user workflow</div>
+                    </div>
+
+                </ul>
+                </div>
+                
+                <div class="project-approach-bullet">
+                <b><li>Ideate</li></b>
+                <p>
+                  Before creating visual designs, I brainstormed solutions in broad strokes with a colleague. We settled on the idea of an auto-updating plan and explored how it might work across different contract types and planning strategies.
+                </p>
+
+                <div class="pswp-gallery project-image autoplan-gallery">
+                  <a href="img/autoplan/whiteboard.png" data-pswp-width="2660" data-pswp-height="1367">
+                    <img src="img/autoplan/whiteboard.png" alt="Graphic comparing the utility of currently implemented features and potential future features">
+                  </a>
+                  <div class="project-image-caption">Potential solutions identified in a whiteboarding session</div>
+                </div>
+
+                  <p>
+                    I then <b>iterated through design concepts</b> in high-fidelity. Since we already have a design system, there was no need to start with wireframes or low-fi mockups.
+                  </p>
+
+                  <div class="pswp-gallery project-image autoplan-gallery">
+                    <a href="img/autoplan/early-mockups.png" data-pswp-width="1505" data-pswp-height="954">
+                      <img src="img/autoplan/early-mockups.png" alt="Numerous mockups of a popover for an automated planning feature">
+                    </a>
+                    <div class="project-image-caption">A small selection of the many ill-fated mockups generated during the ideation phase</div>
+                  </div>
+
+
+                <p>
+                
+                </p>
+                </ul>
+                </div>
+
+              <div class="project-approach-bullet">
+                <b><li>Prototype</li></b>
+                <p>
+                  After settling on a couple of design concepts, I created prototypes for each.
+                </p>
+
+                <div class="pswp-gallery project-image autoplan-gallery">
+                  <a href="img/autoplan/prototyping.png" data-pswp-width="1749" data-pswp-height="403">
+                    <img src="img/autoplan/prototyping.png" alt="A screenshot of the Figma UI showing the prototyping links between numerous screens">
+                  </a>
+                  <div class="project-image-caption">Two prototypes created in Figma</div>
+                </div>
+              </div>
+
+
+                  
+              <div class="project-approach-bullet">
+                  <b><li>Test</li></b>
+                 <p>I demonstrated our prototype to a group of users and received overwhelmingly positive feedback. If not for budget and time constraints, I would have liked to conduct formal usability testing. </p>
+                <b><li>Develop <span class="waypoint">(Ongoing)</span></li></b>
+                <p>I worked with our tech lead to break the concept into bite-size chunks for our agile-abiding team to tackle, then created prototypes and documentation for each bit.
+                  </p>
+                  <p>
+                  Currently, I am working closely with developers to communicate design specs, review PRs, and help with HTML/CSS. I have also created a basic prototype of the algorithm in CodeSandbox using Javascript as a testing and informational tool for developers and testers.
+                  </p>
+
+                  <div class="pswp-gallery project-image autoplan-gallery">
+                    <a href="img/autoplan/code-prototype.png" data-pswp-width="1916" data-pswp-height="931">
+                      <img src="img/autoplan/code-prototype.png" alt="A screenshot of a CodeSandBox project containing a rudimentary data table">
+                    </a>
+                    <div class="project-image-caption">Code prototype used to communicate logic with stakeholders, developers, and testers</div>
+                  </div>
+                </div>
+              </ol>
+              </div>
+            </b>
+            </p> 
+
+            
+
+            <h2 class="project-section-title">Solution</h2>
+            <p>
+            To help users manage spend plans more efficiently, we developed Auto-Plan—a feature that <b>automatically creates and maintains employee hour allocations.</b> Auto-Plan adapts as employees log hours, continuously adjusting to ensure employees are planned to meet their allocated hours.
+            </p>
+            <video class="project-video" autoplay playsinline loop muted onclick="this.paused?this.play():this.pause();">
+              <source src="img/autoplan/auto-plan-demo.mov">
+              Using the auto-plan popover, a user changes the fixed parameter to LOE. The burnout date automatically updates to a new date. The user clicks save, and the hours on the data table behind the popover change.
+            </video>
+            <p>
+            <b>Users can customize how Auto-Plan makes adjustments.</b> They can choose to fix either an employee's end date or level of effort, and Auto-Plan will adjust the other. For instance, if an employee with a fixed level of effort works less than planned in the first few pay periods of a project, PACT Planner will extend their end date. If that employee instead had a fixed end date, PACT Planner would decrease their planned hours for future pay periods.
+            </p>
+
+            <div class="pswp-gallery project-image-small autoplan-gallery">
+              <a href="img/autoplan/auto-plan-popover.png" data-pswp-width="763" data-pswp-height="1165">
+                <img src="img/autoplan/auto-plan-popover.png" alt="UI element that allows users to auto-plan hours">
+              </a>
+              <div class="project-image-caption">Auto-Plan Popover</div>
+            </div>
+            <div class="pswp-gallery project-image autoplan-gallery">
+              <a href="img/autoplan/auto-plan-in-context.png" data-pswp-width="1924" data-pswp-height="968">
+                <img class="modal-target"  src="img/autoplan/auto-plan-in-context.png" alt="auto-plan menu, as viewed from a spend plan document in PACT Planner">
+              </a>
+              <div class="project-image-caption">Auto-Plan Popover in context</div>
+            </div>
+
+            <p>
+            <b>Users can override the Auto-Plan hours for any pay period</b> and Auto-Plan will automatically adapt to ensure employees are planned to meet their allocated hours. It's also easy to preview the effect an override will have on the burnout date or future level of effort. Overriding helps users refine Auto-Plan's work when they have more accurate predictions for the future.
+            </p>
+            <div class="pswp-gallery project-image-small autoplan-gallery">
+              <a href="img/autoplan/hours-planning-popover.png" data-pswp-width="801" data-pswp-height="913">
+                <img src="img/autoplan/hours-planning-popover.png" alt="UI element that allows users to override auto-plan hours for any pay period">
+              </a>
+              <div class="project-image-caption">Users can override Auto-Plan using the hours planning popover.</div>
+            </div>
+            <p>
+            Auto-Plan includes various <b>conditional warnings and indicators</b> to alert users when an employee is unlikely to follow their plan. These warnings or indicators appear:
+            </p>
+            <ul>
+            <li>During pay periods when an employee has requested leave</li>
+            <li>When an employee's future plan requires a significant change in effort</li>
+            <li>When an employee must work overtime to meet their allocated hours</li>
+            <li>When an employee has already exceeded their allocated hours</li>
+            </ul>
+            <div class="pswp-gallery project-image autoplan-gallery">
+              <a href="img/autoplan/variance-tooltip.png" data-pswp-width="556" data-pswp-height="297">
+                <img src="img/autoplan/variance-tooltip.png" alt="A red indicator reads '100%,' with a tooltip that reads 'Plan vs. Past LOE" >
+              </a>
+              <div class="project-image-caption">This indicator appears when an employee's future plan requires a significant change in effort. It expands on hover and includes a tooltip.</div>
+            </div>
+        
+            <p>
+            Warnings may prompt the user to override the plan, adjust allocated hours, or instruct the employee to adhere to the plan.
+            </p>
+            <p>
+            In addition to warnings, we incorporated several UI elements to make Auto-Planning <b>intuitive and easy to understand</b>:
+            <ul>
+            <li>A tooltip explaining how Auto-Planning works</li>
+            <li>A wand icon to represent Auto-Planning and indicate when it is enabled</li>
+            <li>Icons indicating hours values being continuously adjusted by Auto-Plan</li>
+            </ul>
+            <div class="pswp-gallery project-image autoplan-gallery">
+              <a href="img/autoplan/auto-plan-tooltip.png" data-pswp-width="878" data-pswp-height="533">
+                <img class="modal-target"  src="img/autoplan/auto-plan-tooltip.png" alt="tooltip reading, 'PACT Planner will automatically create and maintain a plan for this employee to spend the exact number of allocated hours.'">
+              </a>
+              <div class="project-image-caption">Tooltip explaining Auto-Plan functionality.</div>
+            </div>
+            </p>
+       
+
+       
+
+
+            
+
+            <h2 class="project-section-title">Outcome</h2>
+            
+            <p class="detail">
+              This feature is not yet released, but <b>users responded very positively</b> to demonstrations:
+              <blockquote class="planner quoteblock">"This is awesome. I'd say this is <b>almost like magic.</b>"
+              </blockquote>
+              <blockquote class="planner quoteblock">"This does exactly what I was hoping to accomplish."
+              </blockquote>
+              <blockquote class="planner quoteblock">"I'm really excited about the auto-planning feature."
+              </blockquote>
+              <blockquote class="planner quoteblock">"That's one less thing we have to worry about doing manually."
+              </blockquote>
+              <p>
+                We anticipate that Auto-Plan will save users about three hours of work annually for a typical contract. Considering users manage dozens of contracts each year, I expect this feature will significantly increase user <b>satisfaction, efficiency, and effectiveness</b> when using PACT Planner.
+
+              </p>
+
+          
+
+           </div>
+          </div>
+          </div>
+
+          <div class="step-card-group">
+              <div class="step-card"></div>
+          </div>
+
+
+        <div id="modal" class="modal">
+          <span id="modal-close" class="modal-close">&times;</span>
+          <img id="modal-content" class="modal-content">
+          <div id="modal-caption" class="modal-caption"></div>
+        </div>
+
+        </div>
+          <hr>
+          
+            <div class="next-page">
+    <p>Next: <a class="next-link" href="employee_conversion.html">Employee Conversion</a>&nbsp;<span
+                class="iconlink">arrow_forward</span></p>
+          
+
+        </div>
+
+        <footer class="footer">    
+          <p class="footer-copyright"> © 2024 Chris Creguer</p>
+          <ul class="footer-icons-list">
+            <li>
+              <a href="https://www.linkedin.com/in/chriscreguer/" target="_blank">
+                <img class="footer-icon" alt="linkedin" src="img/icon/linkedin.png">
+              </a>
+            </li>
+            <li>
+              <a href="about.html">
+                <img class="footer-icon" alt="email" src="img/icon/email.png">
+              </a>
+            </li>
+          </ul>
+        </footer>
+      
+          
+
+        <script type="module">
+          import PhotoSwipeLightbox from './dependencies/photoswipe/dist/photoswipe-lightbox.esm.js';
+          const lightbox = new PhotoSwipeLightbox({
+              gallery: '.autoplan-gallery',
+              children: 'a',
+              pswpModule: () => import('./dependencies/photoswipe/dist/photoswipe.esm.js')
+          });
+          lightbox.init();
+          
+      </script>
+
+
+
+</body>
+</html>

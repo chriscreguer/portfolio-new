@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/hamburgers.css" rel="stylesheet">
+    <link rel="stylesheet" href="/dependencies/photoswipe/dist/photoswipe.css">
+    <script async src="js/script.js"></script>
+    <title>Chris Creguer—UX Designer</title>
+</head>
+<body>
+    <nav class="navbar">
+        <a class="logo" href="index.html">
+            <div>Chris Creguer</div>
+        </a>
+        <button class="hamburger hamburger--collapse" type="button">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+        <ul class="navbar-list">
+            <a href="index.html" class="active"><li>Work</li></a>
+            <a href="about.html"><li>About</li></a>
+        </ul>
+    </nav>
+    <div class="overlay-menu">
+        <ul class="navbar-list-mobile">
+            <a href="index.html" class="active"><li>Work</li></a>
+            <a href="about.html"><li>About</li></a>
+        </ul>
+    </div>
+    <header class="case-study-header case-study-theme-walkupmatch">
+        <div class="case-study-header-text">
+            <h1>WalkupMatch</h1>
+            <p class="subtitle">Connecting pickup soccer players</p>
+            <ul class="tags">
+                <li>UI Design</li>
+                <li>Prototyping</li>
+            </ul>
+            <div class="project-links">
+                <a href="#" target="_blank" class="button-primary">View Live Project <span class="icon-external-link"></span></a> 
+                <!-- Replace # with actual link if available -->
+            </div>
+        </div>
+        <div class="case-study-header-images">
+            <img src="img/walkupmatch/hero1.png" alt="WalkupMatch Hero Image 1">
+            <img src="img/walkupmatch/hero2.png" alt="WalkupMatch Hero Image 2">
+            <img src="img/walkupmatch/hero3.png" alt="WalkupMatch Hero Image 3">
+        </div>
+    </header>
+
+    <main class="case-study-content case-study-theme-walkupmatch">
+        <div id="introduction-section">
+            <div class="panel" data-color="white">
+                <h2 class="project-section-title">Background</h2>
+                <p class="detail">Walk-up Match is a piece of software that lets you add your Spotify, gives you a team of baseball players with similar music taste to you based on their walk-up music, and gives you stats about the team. This case study shows mockups of the application. (Boilerplate text)</p>
+                
+                <h3 class="project-section-title" style="margin-top: 2em;">Application Mockups</h3>
+                <div class="pswp-gallery project-image" id="gallery-walkupmatch">
+                    <div style="display: flex; gap: 1em; justify-content: center;">
+                        <div style="flex: 1; max-width: 45%;">
+                            <a href="img/walkupmatch/WalkupMatch Mobile 1.png" data-pswp-width="1200" data-pswp-height="800"> 
+                                <img src="img/walkupmatch/WalkupMatch Mobile 1.png" alt="Walk-up Match Mobile Screenshot 1" style="width: 100%;">
+                            </a>
+                            <div class="project-image-caption" style="text-align: center;">Mobile Design 1</div>
+                        </div>
+                        <div style="flex: 1; max-width: 45%;">
+                            <a href="img/walkupmatch/WalkupMatch Mobile 2.png" data-pswp-width="1200" data-pswp-height="800">
+                                <img src="img/walkupmatch/WalkupMatch Mobile 2.png" alt="Walk-up Match Mobile Screenshot 2" style="width: 100%;">
+                            </a>
+                            <div class="project-image-caption" style="text-align: center;">Mobile Design 2</div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="project-section-title" style="margin-top: 2em;">Additional Visuals</h3>
+                <div class="pswp-gallery project-image" id="gallery-additional-walkupmatch">
+                    <a href="img/walkupmatch/WalkupMatch Desktop.png" data-pswp-width="1200" data-pswp-height="800">
+                        <img src="img/walkupmatch/WalkupMatch Desktop.png" alt="Additional WalkupMatch visual 1">
+                    </a>
+                    <div class="project-image-caption">Desktop Design</div>
+                </div>
+
+            </div>
+        </div>
+        <div class="spacer"></div><div class="spacer"></div><div class="spacer"></div>
+        <p style="color:rgb(0,0,0, .6); text-align:center; font-weight: 500;"><span style="font-family:material icons; font-size:3rem;">engineering</span><br>This case study is under construction</p>
+    </div>
+    </main>
+
+    <hr>
+    <div class="next-page">
+        <p>Next: <a class="next-link" href="index.html">Home</a>&nbsp;<span class="iconlink">arrow_forward</span></p>
+    </div>
+    <footer class="footer">
+        <p class="footer-copyright"> © 2024 Chris Creguer</p>
+        <ul class="footer-icons-list">
+            <li><a href="https://www.linkedin.com/in/chriscreguer/" target="_blank"><img class="footer-icon" alt="linkedin" src="img/icon/linkedin.png"></a></li>
+            <li><a href="about.html"><img class="footer-icon" alt="email" src="img/icon/email.png"></a></li>
+        </ul>
+    </footer>
+    <script type="module">
+        import PhotoSwipeLightbox from '/dependencies/photoswipe/dist/photoswipe-lightbox.esm.js';
+        
+        // Initialize existing galleries with the class selector
+        const classLightbox = new PhotoSwipeLightbox({
+            gallery: '#gallery-walkupmatch', // Target existing gallery by ID
+            children: 'a',
+            pswpModule: () => import('/dependencies/photoswipe/dist/photoswipe.esm.js')
+        });
+        classLightbox.init();
+
+        // Initialize the new gallery with its ID selector
+        const additionalWalkupmatchLightbox = new PhotoSwipeLightbox({
+            gallery: '#gallery-additional-walkupmatch',
+            children: 'a',
+            pswpModule: () => import('/dependencies/photoswipe/dist/photoswipe.esm.js')
+        });
+        additionalWalkupmatchLightbox.init();
+    </script>
+</body>
+</html> 

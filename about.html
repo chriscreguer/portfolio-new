@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/hamburgers.css" rel="stylesheet">
+  <!--<script async src="js/script.js"></script> -->
+
+    <title>Chris Creguer—UX Designer</title>
+
+  </head>
+
+  <body>
+
+<div id="snackbar"><span class="snackbar-icon-success">check_circle</span>Copied to clipboard</div>
+
+    <nav class="navbar">
+      <a class="logo" href="index.html">
+        <div>
+          Chris Creguer
+        </div>
+      </a>
+  
+      <button class="hamburger hamburger--collapse" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner">
+          </span>
+        </span>
+      </button>
+  
+      <ul class="navbar-list">
+        <a href="index.html"><li>Work</li></a>
+        <a href="about.html" class="active"><li>About</li></a>
+      </ul>
+    </nav>
+  
+    <div class="overlay-menu">
+      <ul class="navbar-list-mobile">
+        <a href="index.html" class="active"><li>Work</li></a>
+        <a href="about.html"><li>About</li></a>
+      </ul>
+    </div>
+
+    <main>
+
+      <div class="about-container">
+        <div class="about-header">
+          <img class="about-image-mobile" src="img/about/profile.png">
+          <div>
+            <h1 class="about-title-mobile">
+            About Me
+            </h1>
+          </div>
+        </div>
+        <div class="about-description">
+          <img class="about-image-desktop" src="img/about/profile.png">
+          <p>I'm a UX Designer and Michigan State alumnus currently designing at COLSA. I'm passionate about solving problems with intuitive and delightful experiences.</p>
+        </div>
+        <br>
+        <div class="about-links">
+          <div>
+            <span class="iconlink">
+              download
+            </span>
+            <p2>
+              <a href="about/Chris_Creguer_Resume.pdf" download>
+                Download Resume
+              </a>
+            </p2>
+          </div>
+          <span class="desktoponly" style="color:#ccc">
+            |
+          </span>
+          <div class="block">
+            <p2>
+              Connect on
+            </p2>
+          <p2>
+            <a href="http://linkedin.com/in/chriscreguer" target="blank">
+              LinkedIn
+            </a>
+          </p2>
+        </div>
+      </div>
+
+      <hr>
+
+      <h3>Contact</h3>
+
+      <div id="input-copy" style="margin-top:2.25rem; cursor:pointer;" class="input-group">
+        <input style="cursor:pointer;" class="input-email" type="text" value="chris.creguer@gmail.com" id="myInput" readonly="readonly">
+        <button id="button-copy" class="button-input">
+          Copy
+        </button> 
+      </div>
+
+
+      <hr>
+      <h3>Education</h3>
+
+      <span class="year">2018-2022</span>
+      <span class="job">Michigan State University</span>
+      <span class="desc">Experience Architecture (B.A.)</span>
+      <span class="desc">4.0 GPA</span>
+
+
+      <hr>
+      <h3>Experience</h3>
+<div class="experiences">
+      <div>
+      <span class="year">Jun 2022 - present</span>
+      <span class="job">UX Designer</span>
+      <span class="company">COLSA Corporation</span>
+      </div>
+      <div>
+      <span class="year">Jun 2021 - May 2022 </span>
+      <span class="job">UX Design Intern</span>
+      <span class="company">COLSA Corporation</span>
+    </div>
+      <div>
+      <span class="year">Jan 2021 - Jun 2021</span>
+      <span class="job">UX Design Intern</span>
+      <span class="company">INVENT.US</span>
+    </div>
+      <div>
+      <span class="year">Jan 2021 - May 2021</span>
+      <span class="job">UX Design Intern</span>
+      <span class="company">MSU College Of Education</span>
+    </div>
+      <div>
+      <span class="year">Jun 2019 - Feb 2020</span>
+      <span class="job">Social Media + City Planning Intern</span>
+      <span class="company">City of Detroit</span>
+    </div>
+  </div>
+          </div>
+          </div>
+      </div>
+
+    </main>
+
+  <footer class="footer">    
+    <p class="footer-copyright"> © 2024 Chris Creguer</p>
+    <ul class="footer-icons-list">
+      <li>
+        <a href="https://www.linkedin.com/in/chriscreguer/" target="_blank">
+          <img class="footer-icon" alt="linkedin" src="img/icon/linkedin.png">
+        </a>
+      </li>
+      <li>
+        <a href="about.html">
+          <img class="footer-icon" alt="email" src="img/icon/email.png">
+        </a>
+      </li>
+    </ul>
+  </footer>
+
+<script>
+
+  var copyText = document.getElementById('input-copy');
+  var copyTextButton = document.getElementById('button-copy');
+  
+  copyText.addEventListener("click", function() {
+  
+  console.log("Event found");
+  
+    var text= "chris.creguer@gmail.com";
+    navigator.clipboard.writeText(text);
+    
+     // Get the snackbar DIV
+     var x = document.getElementById("snackbar");
+  
+     // Add the "show" class to DIV
+     x.className = "show";
+   
+   // After 3 seconds, remove the show class from DIV
+   setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+  }
+  );
+
+</script>
+
+</body>
+  </html>

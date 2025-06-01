@@ -1,0 +1,2846 @@
+/* FONT DECLARATIONS */
+
+@font-face {
+    font-family: 'Satoshi-Variable';
+    src: url('../fonts/Satoshi-Variable.woff2') format('woff2'),
+         url('../fonts/Satoshi-Variable.woff') format('woff'),
+         url('../fonts/Satoshi-Variable.ttf') format('truetype');
+         font-weight: 300 900;
+         font-display: swap;
+         font-style: normal;
+  }
+
+@font-face {
+    font-family: 'material icons';
+    src: url('../fonts/MaterialIcons-Regular.ttf') format('truetype');
+         font-weight: 400;
+         font-style: normal;
+  }
+
+.material-icons {
+    font-family: 'material icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+/* GENERAL */
+
+ html, body{
+    background-color:white;
+    font-family: satoshi-variable, Helvetica, Arial, sans-serif; 
+    color:#161616;
+    padding:0;
+    margin:0;
+    scroll-behavior: smooth;
+    scroll-padding-top: 63px;
+    overflow-x: hidden !important;    
+ }
+
+body {
+    transition: background-color .65s ease-out;
+    /* max-width: 1440px; */ /* REMOVED */
+    /* margin: 0 auto; */ /* REMOVED */
+}
+
+.content-limiter {
+    width: 100%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 3em; /* Standard horizontal padding */
+    padding-right: 3em; /* Standard horizontal padding */
+    box-sizing: border-box;
+}
+
+main{
+    margin-bottom: 12em;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+hr {
+    margin-top:4.5rem;
+    margin-bottom: 4.5rem;
+    border-width: 0;
+    border-top-width: 0px;
+    border-top: 1px solid #E1E1E1;
+}
+
+a { 
+    text-decoration:none;
+    color:black;
+}
+
+ ul{
+    padding: 0;
+    list-style-type:disc;
+    list-style-position: inside;
+}
+
+ol {
+    margin-top: 4rem;
+    padding-left: 0px;
+    list-style-position: inside;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .5em;
+}
+
+.bold {
+    font-weight:700;
+}
+
+.spacer{
+    height:48px;
+}
+
+/* NAV STYLING */
+
+.navbar{
+    /* height: 6em; */ /* Height will be determined by content-limiter's padding + content */
+    /* padding: 0 3em; */ /* Padding moves to content-limiter */
+    /* margin: 0; */ /* Default, no change */
+    /* transition: height 300ms; */ /* Can remain if desired */
+    /* display: flex; */ /* Flex behavior moves to content-limiter */
+    /* justify-content: space-between; */ /* Moves to content-limiter */
+    background-color: #fff; /* Stays on .navbar for full-width background */
+    width: 100%; /* Ensures .navbar itself is full-width */
+    /* max-width:100vw; */ /* Not needed if width is 100% */
+}
+
+.navbar > .content-limiter {
+    height: 6em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Added for vertical alignment of logo/nav-list */
+    /* Original padding from .navbar (0 3em) is now part of .content-limiter's definition */
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 100%;
+    display: flex;
+}
+
+.logo div {
+    margin: auto;
+}
+
+.navbar-list {
+    text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    font-size: 1.25rem;
+    gap: .5em;
+    height: 100%;
+    margin: 0;
+}
+
+.navbar-list a {
+    height: 100%;
+    display: flex;
+    padding: 0 .75em;
+}
+
+.navbar-list li {
+    margin: auto;
+}
+
+.navbar-list a:not(.active):hover {
+    opacity: .6;
+}
+
+.active {
+    font-weight: 700;
+}
+
+.overlay-menu{
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 6;
+    width: 100%;
+    height: 100vh;
+    transition: all .3s ease;
+} 
+
+.display-overlay-menu{
+    opacity: 0 !important;
+    visibility: hidden;
+}
+
+.navbar-list-mobile{
+    text-decoration: none;
+    list-style-type: none;
+    flex-direction: column;
+    font-size: 2.5rem;
+    gap: .5em;
+    display: flex;
+    text-align: center;
+    margin: auto;
+    padding: 0;
+}
+
+.hamburger{
+    z-index: 8;
+}
+
+/* INDEX - HERO */
+
+.hero{
+    /* padding: 4em 2em; */ /* Padding moves to content-limiter */
+    text-align: left;
+    width: 100%; /* Ensure .hero itself is full-width */
+}
+
+.hero > .content-limiter {
+    padding-top: 4em;
+    padding-bottom: 4em;
+    /* Horizontal padding comes from .content-limiter default */
+}
+
+.hero-text{
+    max-width: 1000px;
+    /* padding: 0 20px; */ /* Replaced by .content-limiter padding */
+}
+
+.hero-text-summary {
+    font-size: 60px; 
+    line-height: 1.05; /* Adjusted line-height */
+    font-weight: 600; 
+    letter-spacing: -0.005em;
+    max-width: 920px; /* Increased max-width */
+    margin-bottom: 1em;
+}
+
+.hero-text-summary-position { /* "UX Designer" part */
+    color: #191919a9; /* Grey color for UX Designer */
+}
+
+.hero-text-summary-company { /* "COLSA" */
+    color: #007BFF; /* Primary blue or COLSA's specific blue */
+    font-weight: 700;
+}
+
+.hero-text-name{
+    font-size:1.5rem; 
+    margin-bottom:.75rem; 
+    margin-top: 0;
+}
+
+/* INDEX - CARD STYLING */
+
+.projects-list {
+    display: grid;
+    gap: 2em;
+    max-width: 1440px;
+    margin: 4em auto;
+    grid-template-columns: 1fr;
+    padding: 0 1em;
+    box-sizing: border-box;
+}
+
+.project-card {
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #161616;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    overflow: hidden;
+    position: relative;
+    min-height: 300px;
+}
+
+.project-card:hover {
+    /* transform: translateY(-8px); */ /* REMOVED */
+    /* box-shadow: 0 12px 24px rgba(0,0,0,0.1); */ /* REMOVED */
+}
+
+.project-card-content-wrapper { 
+    display: flex;
+    flex-grow: 1;
+    padding: 2em; 
+    width: 100%; 
+    box-sizing: border-box; /* Ensures padding is included in width/height */
+}
+
+/* Card Layout: Vertical (Text top, Image bottom) */
+.project-card.card-layout-vertical .project-card-content-wrapper {
+    flex-direction: column;
+    justify-content: space-between; /* Pushes image to bottom or text to top */
+}
+.project-card.card-layout-vertical .project-card-text-content {
+    /* Takes full width by default in a column flex direction */
+}
+.project-card.card-layout-vertical .project-card-image-container {
+    width: 100%;
+    margin-top: 1.5em; /* Space between text and image */
+}
+.project-card.card-layout-vertical .project-card-image-container img {
+    display: block; /* remove extra space below image */
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px; /* Softer image corners */
+}
+
+/* Card Layout: Horizontal (Text left, Image right) - Default for mobile is vertical stack */
+/* On larger screens, this will be overridden by media queries */
+.project-card.card-layout-horizontal .project-card-content-wrapper {
+    flex-direction: column; /* Mobile default: stack vertically */
+    align-items: flex-start; /* Align text to start on mobile */
+}
+.project-card.card-layout-horizontal .project-card-text-content,
+.project-card.card-layout-horizontal .project-card-image-container {
+    flex-basis: auto; /* Allow natural sizing on mobile */
+    width: 100%;
+}
+.project-card.card-layout-horizontal .project-card-image-container img {
+    margin-right: 0; /* No negative margin on mobile */
+    max-width: 100%; /* Ensure image fits on mobile */
+}
+
+/* Specific Card Image Effects - Mobile (can be adjusted if needed) */
+.project-card.which-year-card .project-card-image-container img,
+.project-card.tamatracker-card .project-card-image-container img {
+    margin-bottom: -20px; /* Less hang on mobile, as per original observation */
+}
+.project-card.profile-card .project-card-image-container img {
+    width: 100%; /* Full width on mobile */
+    margin-bottom: -20px; /* Less hang on mobile */
+}
+
+
+/* General Text and Tag styling for cards */
+.project-card-title{
+    font-size: 1.75rem; /* From image observation - can adjust */
+    font-weight: 700;
+    margin-bottom: 0; /* Reduced space */
+}
+.project-card-subtitle{
+    font-size: 1.1rem; /* From image observation */
+    font-weight: 400;
+    color: #555; /* Greyish, as in image */
+    line-height: 1.5;
+    margin-bottom: 0.25rem;
+    margin-top: 0;
+}
+.project-card .tags { /* Changed from .chip to .tags */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+}
+.project-card .tags li {
+    padding: 0.4em 0.8em;
+    border-radius: 15px; /* Rounded tags */
+    font-size: 0.9rem;
+    font-weight: 500;
+    /* border: 1px solid transparent; */ /* Base border, colors will override - REMOVED */
+    border: none; /* Removed border from chips */
+}
+
+/* GLOBAL CARD SIZING RULES */
+a.card-size-40 { 
+    grid-column: span 3; /* Takes ~43% of a 7-column grid */
+    display: flex; /* Ensure <a> tag participates in flex/grid layout correctly */
+    height: 522px; /* Default height for cards in row 1 & 3 */
+}
+a.card-size-60 { 
+    grid-column: span 4; /* Takes ~57% of a 7-column grid */
+    display: flex; /* Ensure <a> tag participates in flex/grid layout correctly */
+    height: 522px; /* Default height for cards in row 1 & 3 */
+}
+
+/* Specific Project Card Backgrounds & Index Tag Colors */
+.project-card.which-year-card { background-color: rgba(95, 44, 200, 0.08); } /* Light Purpleish */
+.project-card.which-year-card .tags li { background-color: rgba(95, 44, 200, 0.08); color: #5F2CC8; /* border-color: rgba(95, 44, 200, 0.2); REMOVED */ }
+
+.project-card.finvera-card { background-color: rgba(0, 91, 227, 0.08); } /* Light Blue */
+.project-card.finvera-card .tags li { background-color: rgba(0, 91, 227, 0.08); color: #005BE3; /* Finvera Light BG, Finvera Text */ }
+
+.project-card.walkupmatch-card { background-color: rgba(189, 193, 218, 0.22); } /* WalkupMatch Light BG BDC1DA 22% */
+.project-card.walkupmatch-card .tags li { background-color: rgba(189, 193, 218, 0.22); color: #202A66; /* WalkupMatch Light BG, WalkupMatch Custom Text */ }
+
+.project-card.profile-card { background-color: rgba(0, 44, 141, 0.08); } /* Profile Light BG (002C8D @ 8%) */
+.project-card.profile-card .tags li { background-color: rgba(0, 44, 141, 0.08); color: #002C8D; /* Profile Light BG, Profile Text */ }
+
+.project-card.tamatracker-card { background-color: rgba(79, 36, 142, 0.08); } /* TamaTracker Light BG */
+.project-card.tamatracker-card .tags li { background-color: rgba(79, 36, 142, 0.08); color: #4F248E; /* TamaTracker Light BG, TamaTracker Text */ }
+
+.project-card.dribbble-gallery-card { background-color: rgba(195, 86, 128, 0.08); } /* Dribbble Light BG */
+.project-card.dribbble-gallery-card .tags li { background-color: rgba(195, 86, 128, 0.08); color: #B01852; /* Dribbble Light BG, Dribbble Text */ }
+
+
+/* Tablet - Adjusting for 2 columns as per the image */
+@media (min-width: 768px) {
+    .projects-list {
+        grid-template-columns: repeat(7, 1fr); /* 7-unit grid for 43/57 split */
+        padding: 0 2em; /* Adjust padding as needed */
+        align-items: stretch; /* Ensure grid items stretch to fill row height */
+    }
+    /* .project-card no longer a direct grid item, its parent <a> is. */
+    /* height and min-height rules might need to be on <a> or handled differently */
+
+    a.project-card-row2-short { /* Specific class for shorter row 2 cards - NOW ON <a> TAG */
+        height: 452px; /* Explicit, taller height for row 2 cards */
+        min-height: unset !important; /* Override default min-height from a.card-size-* and ensure it takes precedence */
+    }
+    
+    /* Ensure the .project-card div takes up the full height of the <a> tag */
+    a > .project-card {
+        flex-grow: 1; /* Allow .project-card to grow within the <a> flex container */
+        height: 100%; /* Make project-card fill the <a> tag */
+    }
+
+    .project-card-content-wrapper {
+        height: 100%; /* Make wrapper fill card height for content distribution */
+    }
+
+    /* Remove specific card-span overrides as 2fr 3fr grid handles widths */
+    /* .project-card.card-span-1 { grid-column: span 1; } */
+    /* .project-card.card-span-2 { grid-column: span 2; } */ 
+    
+    /* REMOVE THESE RULES
+    .project-card.walkupmatch-card.card-span-2,
+    .project-card.profile-card.card-span-2 {
+        grid-column: auto; 
+    }
+    */
+
+    /* Restore horizontal layout for cards that are horizontal */
+    .project-card.card-layout-horizontal .project-card-content-wrapper {
+        flex-direction: row;
+        align-items: center; /* Vertically center content and image */
+        gap: 1.5em;
+    }
+    .project-card.card-layout-horizontal .project-card-text-content { flex-basis: 40%; } /* Text takes 40% */
+    .project-card.card-layout-horizontal .project-card-image-container { 
+        flex-basis: 60%; /* Image takes 60% */
+        height: 100%; /* Make image container take full card height */
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Center image if smaller than container */
+        position: relative; /* For image positioning */
+    }
+    .project-card.card-layout-horizontal .project-card-image-container img {
+        margin-right: -80px; /* Image hang effect for horizontal cards */
+        max-width: 150%; /* Allow image to be larger than its container for hang effect */
+        max-height: 100%;
+        object-fit: contain; /* Ensure image aspect ratio is maintained */
+    }
+    .project-card.finvera-card .project-card-image-container img {
+        margin-right: -60px; /* Reduced Image hang effect */
+        max-width: 130%; /* Reduced image size/hang */
+        max-height: 100%;
+        object-fit: contain; 
+    }
+    .project-card.walkupmatch-card .project-card-image-container img {
+        /* Assuming walkupmatch also needs similar horizontal hanging image adjustment */
+        margin-right: -60px; 
+        max-width: 130%; 
+        max-height: 100%;
+        object-fit: contain; 
+    }
+
+    .project-card.dribbble-gallery-card .project-card-image-container img {
+        margin-right: 0; /* Dribbble gallery image should not hang */
+        max-width: 100%; /* Ensure it fits within its container */
+        max-height: 250px; /* Max height for Dribbble image to prevent it being too tall */
+        object-fit: contain; 
+    }
+
+    /* Specific Card Image Effects - Tablet & Desktop */
+    .project-card.which-year-card .project-card-image-container img,
+    /* .project-card.profile-card .project-card-image-container img, -- Profile card has custom handling below */
+    .project-card.tamatracker-card .project-card-image-container img {
+        margin-bottom: -60px; /* Image hang effect for vertical cards */
+    }
+    .project-card.profile-card .project-card-text-content {
+        position: relative; /* Ensure text is above image if overlapping */
+        z-index: 1;
+    }
+    .project-card.profile-card .project-card-image-container { /* For profile card's specific layout */
+        width: 100%; 
+        margin-left: 0; /* Reset mobile margins if any */
+        margin-right: 0;
+        margin-bottom: -60px; /* Hang effect */
+        height: auto; /* Adjust if specific height needed */
+        position: relative; /* For z-indexing if needed */
+        overflow: visible; /* Allow image to hang */
+    }
+    .project-card.profile-card .project-card-image-container img {
+        display: block;
+        width: 150%; /* Oversize the image */
+        max-width: none; 
+        height: auto;
+        object-fit: cover; 
+        object-position: top left; 
+        margin-left: 0; /* Align with left edge of text block */
+        margin-bottom: -80px; /* Increased negative margin for more hang */
+        margin-right: -80px; /* Negative margin to hang right */
+        border-radius: 4px; 
+    }
+}
+
+/* Wider screens - Target 6 column base for ~40/60 splits */
+/* This media query might need adjustment or removal if 2-column is desired for all larger screens */
+@media (min-width: 992px) {
+    /* Keeping 2 columns for consistency with the image, but could be 3 or more */
+    /* If a 6-column base was strictly for item spanning, ensure .card-span-x maps correctly */
+    /* For a 2-column layout, .card-span-1 would be 1fr, .card-span-2 would be 2fr (effectively) */
+    /* .projects-list { grid-template-columns: repeat(2, 1fr); } /* Already set in 768px */
+    
+    /* If you wanted 3 columns on very wide screens, you'd change it here, e.g.: */
+    /* .projects-list { grid-template-columns: repeat(3, 1fr); } */
+    /* And then adjust .card-span-x accordingly: */
+    /* .project-card.card-span-1 { grid-column: span 1; } */ 
+    /* .project-card.card-span-2 { grid-column: span 2; } /* (e.g. for a card taking 2/3 width) */
+}
+
+/* FILTERS - If you plan to add filtering options */
+
+.index-filters{
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.index-chips{
+margin-top: 1.25em;
+padding: 0;
+display: flex;
+gap: 0.25em;
+}
+
+.index-chips li{
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding: 4px 14px;
+    border-radius: 20px;
+    display: inline-flex;
+    margin: 4px 1px;
+    cursor: pointer;
+    color: #333;
+    border: 2px solid #dfdfdf;
+    gap: 0.35em;
+    align-items: center;
+}
+
+.index-chips li:hover{
+    background-color: rgb(16 123 255 / 8%);
+    border: 2px solid #107bff;
+    color: #107bff;
+}
+
+.index-chips .active{
+    background-color: rgb(16 123 255 / 8%);
+    border: 2px solid #107bff;
+    color: #107bff;
+}
+
+.index-chips .active i{
+display: block;
+}
+
+.index-chips .active:hover{
+    background-color: rgba(8, 115, 238, 0.244);
+}
+
+.index-chips i{
+    font-family: material icons;
+    display:none;
+    margin: auto;
+}
+
+/* Auto-Plan Card */
+.project-card-auto-plan{
+    background-color: #f1f6fe;
+    color: rgba(0,0,0.8);
+}
+
+.project-card-auto-plan .chip li{
+    background-color: rgba(8, 114, 238, 0.08);
+    color: #004890;
+}
+
+.project-card-auto-plan .chip svg, .project-card-auto-plan .chip g, .project-card-auto-plan .chip rect, .project-card-auto-plan .chip path {
+    stroke: #004890;
+}
+
+.project-card-auto-plan .project-card-image{
+    margin-left: -15rem;
+    width: 150%;
+}
+
+/* Employee Conversion Card */
+.project-card-employee-conversion{
+    background-color: #f1f6fe;
+    color: rgba(0,0,0.8);
+}
+
+.project-card-employee-conversion .chip li{
+    background-color: rgba(8, 114, 238, 0.08);
+    color: #004890;
+}
+
+.project-card-employee-conversion .chip svg, .project-card-employee-conversion .chip g, .project-card-employee-conversion .chip rect, .project-card-employee-conversion .chip path {
+    stroke: #004890;
+}
+
+.project-card-employee-conversion .project-card-image{
+    width: 175%;
+}
+
+/* Pay Period Slider Card */
+.project-card-pay-period-slider{
+    background-color: #f1f6fe;
+    color: rgba(0,0,0.8);
+}
+
+.project-card-pay-period-slider .chip li{
+    background-color: rgba(8, 114, 238, 0.08);
+    color: #004890;
+}
+
+.project-card-pay-period-slider .chip svg, .project-card-pay-period-slider .chip g, .project-card-pay-period-slider .chip rect, .project-card-pay-period-slider .chip path {
+    stroke: #004890;
+}
+
+.project-card-pay-period-slider .project-card-image{
+    width: 115%;
+    margin-left: -5rem;
+}
+
+
+/* Project Play Card */
+.project-card-projectplay{
+    background-color: #f3f8ff;
+    color: rgba(0,0,0.8);
+}
+
+.project-card-projectplay .chip li{
+    background-color: rgba(8, 114, 238, 0.05);
+    color: #0872EE;
+}
+
+.project-card-projectplay .chip svg, .project-card-projectplay .chip g, .project-card-projectplay .chip path, .project-card-projectplay .chip rect{
+    stroke: #0872EE;
+}
+
+.project-card-projectplay .project-card-image{
+    width: 85%;
+    margin-right: 0em;
+}
+
+/* TamaTracker Card */
+.project-card-tamatracker{
+    background: #f6f0ff;
+    color: rgba(0,0,0.8);
+}
+
+.project-card-tamatracker .chip li{
+    background-color: rgb(235 224 250);
+    color: rgb(72 27 138);
+}
+
+.project-card-tamatracker .chip svg, .project-card-tamatracker .chip g, .project-card-tamatracker .chip path, .project-card-tamatracker .chip rect{
+    stroke: rgb(72 27 138);
+}
+
+.project-card-tamatracker-page .chip li{
+    background-color: rgba(145 70 255 / 21%);
+    color: rgb(205 172 255);
+}
+
+.project-card-tamatracker-page .chip svg, .project-card-tamatracker-page .chip g, .project-card-tamatracker-page .chip path, .project-card-tamatracker-page .chip rect{
+    stroke: rgb(205 172 255);
+}
+
+.project-card-tamatracker .project-card-image{
+    width: 109%;
+    margin-left: -2em;
+}
+
+/* Tipping Points Card */
+.project-card-tippingpoints{
+    background: #eff1f7;
+}
+
+.project-card-tippingpoints .chip li{
+    background-color: rgba(8,10,34,.07);
+    color: #172050;
+}
+
+.project-card-tippingpoints .chip svg, .project-card-tippingpoints .chip g, .project-card-tippingpoints .chip path, .project-card-tippingpoints .chip rect{
+    stroke: #172050;
+}
+
+.project-card-tippingpoints .project-card-image{
+    width: 120%;
+    margin-left: -1em;
+}
+
+/* UI Gallery Card */
+.project-card-uigallery{
+    background-color: rgb(184 80 154 / 13%);
+    height: 500px;
+}
+
+.project-card-uigallery .project-card-image{
+    margin-left: -2.5rem;
+    width: 104%;
+}
+
+.project-card-uigallery .chip li{
+    background-color: rgb(184 80 154 / 10%);
+    color: #b01852;
+}
+
+.project-card-uigallery .chip svg, .project-card-uigallery .chip g, .project-card-uigallery .chip path, .project-card-uigallery .chip rect{
+    stroke: #b01852;
+}
+
+/* Chips */
+.chip{
+    margin-top: 1.25em;
+    padding: 0;
+}
+
+.chip svg{
+    display: none;
+}
+
+.chip li{
+    font-weight: 500;
+    padding: 4px 14px;
+    border-radius: 20px;
+    display: inline-flex;
+    margin: 4px 1px;
+ }
+
+ .chip li svg{
+    height: 16px;
+    width: 16px;
+    margin: auto;
+    margin-right: 0.375em;
+ }
+
+/* Square Cards (UI Design Gallery) */
+.square-cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px
+}
+
+.square-cards a{
+    flex-grow: 1;
+    flex-basis: 0;
+    min-width: 0;
+}
+
+.square-cards .project-card{
+    height: 200px;
+}
+
+.square-cards .project-card-content{
+    width: 100%;
+}
+
+.square-cards .project-card-background{
+    width: 70%;
+    margin: 2em auto 1em auto;
+}
+
+.square-cards .project-card-content {
+    margin: 0 auto;
+    padding: 1em 3em;
+    width: calc(100% - 6em);
+    display: flex;
+    text-align:center;
+}
+
+/* PROJECT PAGE - COVER STYLING */
+
+.project-cover {
+    color:#000;
+    height:calc(100vh - 6em);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.project-cover-content {
+    max-width: 80vw;
+}
+
+.project-cover-background img {
+    max-width: 700px;
+    width: 80vw;
+    border-radius: 10px;
+    -webkit-filter: drop-shadow(2px 4px 40px rgba(0,0,0,0.07));
+    filter: drop-shadow(2px 4px 40px rgba(0,0,0,0.07));
+}
+
+.project-cover-squares{
+    max-width: 700px;
+    width: 80vw;
+    border-radius: 10px;
+    -webkit-filter: drop-shadow(2px 4px 40px rgba(0,0,0,0.07));
+    filter: drop-shadow(2px 4px 40px rgba(0,0,0,0.07));
+}
+
+.project-cover h1{
+    font-size: 3rem;
+    line-height: 2.5rem;
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+.project-cover p{
+    font-weight: 400;
+    font-size:1.5rem;
+    margin-top:0rem;
+    opacity: .6;
+    margin-bottom: 0;
+}
+
+
+.last-updated{
+    font-size: .825rem !important;
+    opacity: .75;
+    display:none;
+}
+
+.plannercover{
+    background-color: #EAF3FF;
+}
+
+.featureforgecover{
+    background-color: #1466fb;
+}
+
+.tamatrackercover{
+    background-color: #1D1F29;
+    color: #fff !important;
+}
+
+.projectplaycover{
+    background-color: #EBF2FB;
+
+}
+
+.desktrackercover{
+    background-color: #1A61DB;
+
+}
+
+.lunchtimecover{
+    background-color: #FFE8DB;
+
+}
+
+/* PROJECT PAGE - GENERAL STYLING */
+
+.project-container{
+    padding: 15px 0 50px;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 4rem 20px;
+    box-sizing: border-box;
+}
+
+.project-container p{
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 1rem;
+    }
+
+.project-container  a{
+    text-decoration:underline;
+    color:#4893FF;
+}
+
+.project-approach-list{
+    gap: 1rem;
+    display: flex;
+}
+
+.project-approach-bullet{
+    width: 500px;
+    background-color: #fafafa;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.full-width-ol {
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -45vw;
+    margin-right: -45vw;
+    width: 90vw;
+}
+
+.project-section-container:nth-child(2n){
+    background-color: #fafafa;
+    
+}
+
+.header-description{
+    font-size: 1rem;
+    text-transform:uppercase;
+    margin:0;
+}
+
+.project-image{
+    margin: 2em 0;
+    color: rgba(0,0,0,.7);
+    background-color: #f5f5f5;
+    padding: 12px 16px;
+    border-radius: 10px;
+}
+
+.project-image img{
+    max-width: 700px;
+    width: 100%;
+    border: 1px solid #ccc;
+    margin-bottom: 4px;
+    transition: .3s;
+}
+
+.project-image img:hover {
+
+    border: 1px solid #7a7a7a;
+  }
+
+.project-image-no-border img{
+    border: none !important;
+}
+
+.project-image-small{
+    margin: 2em 0em 3em 0em;
+    color: rgba(0,0,0,.7);
+}
+
+.project-image-small img{
+    width: 50%;
+    border: none;
+}
+
+.project-video{
+    margin: 1em 0em;
+    width: 100%;
+    max-width: 700px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 4px;
+}
+
+.project-video-cover{
+    width: 100%;
+}
+
+ol .project-image{
+    margin: 2em 0em 3em 0em;
+}
+
+.project-page-title{
+    margin:0;
+}
+
+.project-title-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3em;
+}
+
+.project-title-section h3{
+    margin: 0;
+}
+
+.project-title-section p{
+    margin: 0;
+    color: rgba(0,0,0,.6)
+}
+
+
+.next-page{
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.quoteblock{
+    max-width: 600px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    padding: 40px;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    float: none;
+    clear: none;
+    font-size: 1.5rem;
+    line-height: 38px;
+    letter-spacing: 0.2px;
+}
+
+.quote-source{
+    display: block;
+    font-weight: 700;
+    font-size: .825rem;
+    margin-top:4px;
+    text-transform: uppercase;
+}
+
+.quoteblock.planner{
+    display: block;
+    margin-top: 48px;
+    margin-bottom: 48px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border-left: 2px solid #004890;
+    background-color: transparent;
+    color: #004890;
+}
+
+.quoteblock.tamatracker{
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border-left: 2px solid #9146ff;
+    background-color: transparent;
+    color: #9146ff;
+}
+
+/* PROJECT PAGE - PROJECT NAV STYLING */
+
+.project-nav{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 64px;
+    border-bottom: 1px solid #ccc;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 5;
+}
+
+.arrow-right{
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 64%, rgba(255,255,255,1) 100%);
+    padding: 1em 1em 1em 0em;
+    width: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: auto;
+    right:0;
+    position: absolute;
+    cursor: pointer;
+}
+
+.arrow-left{
+    background: linear-gradient(270deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 64%, rgba(255,255,255,1) 100%);
+    padding: 1em 1em 1em 0em;
+    width: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: auto;
+    left:0;
+    position: absolute;
+    cursor: pointer;
+}
+
+.project-nav-arrow{
+    border-radius: 100px;
+    padding: .5em;
+    font-family: 'material icons';
+    transition: .1s all;
+}
+
+.project-nav-arrow:hover{
+    background-color: rgba(0,0,0, .1);
+}
+
+
+/* PROJECT PAGE - PROJECT INFO CARDS*/
+
+.project-info-cards{
+    display: flex;
+    gap: 1em;
+}
+
+.project-info-card{
+    width: 200px;
+    height: 200px;
+    background-color: #f9fafb;
+    border-radius: 5px;
+    padding: 1.5em;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.project-info-card-title{
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.project-info-card-icon{
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    background-color: #eaf3ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-text-bold{
+    font-weight: 600;
+    display: inline-flex;
+    gap: 4px;
+}
+.project-text-bold svg{
+    top: 3px;
+    position: relative;
+}
+
+.project-section-description{
+    font-size: 1rem;
+    color: #707070;
+    margin-bottom:0;
+    font-weight: 600;
+
+}
+  
+.project-section-title{
+    font-size: 2rem;
+    font-weight: 600;
+    color: #303030;
+    margin: .375em 0 0 0;
+
+}
+
+/* PROJECT PAGE - QUOTE SECTION STYLING */
+
+.quote-section{
+    background-color: #eaf3ff;
+}
+
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 6; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    opacity: 1 !important;
+    max-width: 1200px;
+  }
+  
+  /* Caption of Modal Image */
+  .modal-caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 1200px;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    font-size: 1em;
+    margin-top: 32px;
+  }
+  
+  /* Add Animation */
+
+  
+  @-webkit-keyframes zoom {
+    from {-webkit-atransform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .modal-close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .modal-close:hover,
+  .modal-close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+@media only screen and (max-width: 1420px)
+{
+    .project-nav{
+        justify-content: flex-start;
+    }
+
+    .project-nav{
+        overflow-x: hidden;
+        overflow-y: hidden;
+        }
+}
+
+.project-nav-arrows{
+    display: flex;
+    align-items: center;
+}
+
+.arrow-right .project-nav-arrow{
+    margin-left: 2em;
+}
+
+.project-nav-list{
+    display: flex;
+    gap: 1.5em;
+    height: 100%;
+    overflow-x: scroll;
+    transition: all .3s ease;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+.project-nav-list::-webkit-scrollbar {
+    display: none;
+}
+
+.project-nav-list a{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.project-nav-list li{
+    font-size: 1.25rem;
+    color: rgba(0,0,0,.6);
+    padding: 0 1em;
+    list-style-type: none;
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.project-nav-list a:not(.active):hover{
+    background-color: rgba(0,0,0,.04);
+    transition: all .3s ease;
+}
+
+.project-nav-list .active li{
+    color: #000;
+    box-shadow: inset 0 -4px 0 #007bff;
+}
+
+/* PROJECT PAGE - METRICS STYLING */
+
+.metrics-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5em 0;
+    background-color: #fbfbfb;
+}
+
+.metrics-container{
+  max-width: 70vw;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  gap: 4em;
+}
+
+.metric{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    min-width: 10.5em;
+}
+
+.metric-bubble{
+    padding: 1em;
+    border-radius: 100px;
+    display: flex;
+    gap: .25em;
+    align-items: center;
+    justify-content: center;
+}
+
+.metric-bubble-positive{
+    background-color: rgba(20, 144, 0, 0.08);
+    color: rgba(20, 144, 0, 1);
+}
+
+.metric-bubble-negative{
+    background-color: rgba(144, 0, 0, 0.07);
+    color:rgba(144, 0, 0, 1)
+}
+
+.metric-icon{
+    font-family: 'material icons';
+    font-size: 1.25rem;
+}
+
+
+.metric-number{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.metric-name{
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+
+/* ABOUT PAGE */
+
+.about-container{
+    max-width: 680px;
+    margin: 4em auto 0 auto;
+}
+
+.about-header{
+    display: block; 
+    gap:1.25rem;
+}
+
+.about-image-mobile{
+    display:none;
+    width:5rem; 
+    border-radius: 50%; 
+    align-self: center;
+}
+
+.about-image-desktop{
+    display:block;
+    width:5rem; 
+    border-radius: 50%; 
+    align-self: center;
+}
+
+.about-title-mobile{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.about-updated{
+    color:#707070; 
+    font-style:italic; 
+    font-size:.825rem; 
+    margin-bottom:1em;
+}
+
+.about-description{
+    gap:1.25rem; 
+    margin-top:.75rem;
+    display: flex;
+}
+
+.about-links{
+    display: flex; 
+    gap:1.25rem;
+}
+
+.about-container p{
+    font-size:1.25rem;
+    line-height:1.5em;
+    margin-bottom: 1rem;
+}
+
+.about-container a{
+    text-decoration:underline;
+    color:#4893FF;
+}
+
+/* Random ass unorganized classes */
+
+#wiretomock{
+    overflow: auto;
+}
+
+.space{
+    margin-bottom:2rem;
+}
+
+.grow:hover
+{
+   transition:all 0.3s ease;
+    -webkit-transform: scale(1.015);
+    -ms-transform: scale(1.015);
+    transform: scale(1.015);
+}
+
+
+.flex-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+ 
+
+.iconlink {
+    font-family: 'material icons';
+    color: #4893FF;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  .next-link{
+    color: #006AFF;
+  }
+
+.shadow{
+    width: 150px;
+    -webkit-filter: drop-shadow(3px 3px 17px #C1C1C1);
+    filter: drop-shadow(3px 3px 17px #C1C1C1);
+
+}
+
+.contactme{
+    padding-top:5rem;
+    text-align: center;
+    /* padding-left:8.3rem; */ /* Replaced by content-limiter */
+    /* padding-right:8.3rem; */ /* Replaced by content-limiter */
+}
+
+footer{
+    /* display: flex; */ /* Moves to content-limiter */
+    /* justify-content: space-between; */ /* Moves to content-limiter */
+    /* padding: 0 3em; */ /* Moves to content-limiter */
+    /* height: 7rem; */ /* Height will be determined by content-limiter's padding + content */
+    margin-top: 6em;
+    background-color: #191919;
+    color: rgba(255,255,255,.5);
+    /* align-items: center; */ /* Moves to content-limiter */
+    width: 100%; /* Ensures footer itself is full-width */
+}
+
+footer > .content-limiter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 7rem;
+    /* Original padding from footer (0 3em) is now part of .content-limiter's definition */
+}
+
+.footer-copyright{
+    margin: 0;
+}
+
+.footer-icons-list{
+    list-style-type: none;
+    display: flex;
+    gap: 2em;
+    margin: 0;
+}
+
+.footer-icon{
+    height:20px;
+}
+
+.year {
+    font-size:1rem;
+    color: rgba(0,0,0,.6);
+    display:block;
+}
+
+.company {
+    font-size:20px;
+    display:block;
+    font-weight:400;
+}
+
+.job {
+    font-size:20px;
+    display:block;
+    font-weight:700;
+}
+       
+.desc{
+    font-size:20px;
+    display:block;
+}
+
+.experiences{
+    display: flex;
+    flex-direction: column;
+    gap: 2.2em;
+}
+
+.image{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.imageoutline img{
+    border: 1px solid #ccc;
+    border-radius:5px;
+}
+
+.section-title{
+    font-size:1.5rem;
+    font-weight:700;
+}
+
+.project-background{
+display:flex;
+font-size:1.25rem;
+gap:3rem;
+}
+
+.project-background-section{
+    flex: auto;
+    font-size:1.25rem;
+    line-height: 1.5em;
+}
+
+.project-background-section h3{
+margin: 1rem 0rem;
+}
+
+.big{
+    max-width: 1400px;
+}
+
+.image1{
+    max-width:1500px;
+    margin: 0 auto;
+}
+.image2{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.image p{
+    font-size:1.25rem;
+    margin-bottom: 5rem;
+
+}
+
+.p1{
+    font-size:25px;
+    line-height:1.5em;
+    margin-bottom: 5rem;
+}
+
+.image img{
+    width:100%;
+}
+.image1 img{
+    width:100%;
+}
+
+.headercontainer{
+    margin-top: 4rem;
+}
+
+.panel{
+    font-family: satoshi-variable, sans-serif;
+}
+
+.blue{
+    box-sizing: border-box;
+    color:white;
+    padding: 10vh 20px;
+    margin: 10vh auto;
+    transition: background-color .75s ease;
+}
+
+.blue> * {
+    margin: 10vh auto;
+    max-width: 720px;
+}
+
+  .color-blue {
+    background-color: rgb(25, 25, 25);
+  }
+
+  .color-white {
+    background-color: #fff;
+  }
+
+
+.about-container li{
+    font-size:1.25rem;
+    line-height:1.5em;
+    margin-bottom: 1rem;
+}
+
+.project-container li{
+    font-size: 18px;
+    line-height:30px;
+    margin-bottom: .75rem;
+    }
+
+.ordered{
+    list-style-type: lower-alpha; padding-bottom: 0;
+}
+
+.listitem{
+    margin-top:.5em;
+}
+
+.listbottom{
+    padding-bottom: 1em;
+    margin-top:.5em;
+}
+
+table {
+    font-family: satoshi-variable, arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    font-size:1rem;
+  }
+
+  table li{
+      font-size:1rem !important;
+  }
+
+  table ul{
+    padding-left:1rem !important;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: .5rem .8rem;
+  }
+
+.caption{
+color:black;
+text-decoration:none;
+
+}
+
+.caption a{
+    text-decoration:none;
+}
+
+.frontend{
+display:block;
+}
+
+.ui{
+    display:block;
+}
+
+.graphicdesign{
+display:block;
+
+}
+
+.hide{
+    display:none;
+}
+
+.mapimg{
+    margin-left:2.5rem;
+    margin-right:2.5rem;
+    text-align:center;
+    }
+
+.mapimg img{
+    width:100%;
+    margin:0;
+    max-width:700px;
+    }
+
+ /* Contact Field */
+.input-group {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    width: 100%;
+}
+
+.input-email {
+    width: 185px;
+    display: block;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f5f5f5;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    outline: none;
+    border-radius: 0.25rem 0rem 0rem 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.button-input {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+    padding: 0.375em 1em;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0 0.25rem .25rem 0;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    margin: 0;
+}
+
+.button-input:hover {
+    background-color: #0070e8;
+}
+
+.button-plain {
+    display: inline-block;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    padding: 0.25em 1em;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    /* height: 2em; */
+    border-radius: 0.5rem;
+    /* text-transform: uppercase; */
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    background-color: #f2f2f2;
+    color: #333333;
+    letter-spacing: 1.25px;
+    border: none;
+    margin: 0;
+}
+
+.button-plain:hover {
+    background-color: #0070e816;
+}
+
+#snackbar {
+    display: flex;
+    visibility: hidden; /* Hidden by default. Visible on click */
+    margin-left: -125px;
+    background-color: #157e15;
+    color: #fff;
+    text-align: center;
+    font-weight:500;
+    border-radius: 4px;
+    padding: 1em 1.5em 1em 1em;
+    border-left: 4px solid #fff;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    -webkit-filter: drop-shadow(2px 4px 20px rgba(0,0,0,0.2));
+    filter: drop-shadow(2px 4px 20px rgba(0,0,0,0.2));
+    gap: 0.5em;
+    align-items: center;
+}
+
+#snackbar.show {
+    visibility: visible;
+}
+    
+.snackbar-icon-success{
+    color: #fff;
+    font-family: 'material icons';
+    font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 1300px)
+{
+
+.project-container{
+    position: relative;
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 8rem 20px;
+    box-sizing: border-box;
+}
+
+.contactme{
+    text-align:center;
+    margin: 0 auto;
+}
+
+.iconlink{
+    font-family: 'material icons';
+    color: #4893FF;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+
+/* PROJECT COVER STYLING */
+
+.project-cover{
+    color:#000;
+    height:calc(100vh - 6em);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+}
+
+.project-cover-content{
+    margin: auto;
+    width: unset;
+}
+
+.project-cover-background{
+    width: 50%;
+}
+
+.project-cover-background img{
+    margin-left: 3em;
+    max-width: unset;
+    width: 100%;
+}
+
+}
+ /*Resized browser */
+
+ @media only screen and (min-width: 701px) and (max-width: 900px)
+ {
+
+.project-card-subtitle{
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+    margin-top: 0;
+}
+
+.project-card-title{
+    font-size: 2rem;
+}
+
+.project-card{
+    flex-direction: column;
+    height: unset;
+    margin: auto;
+}
+
+.project-card-background{
+    width:100%;
+    order: 1;
+}
+
+.project-card img {
+    width: 80% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 1.5em;
+    -webkit-filter: drop-shadow(2px 4px 40px rgba(0,0,0,0.07));
+    filter: drop-shadow(2px 4px 40px rgba(0,0,0,0.07));
+  }
+
+  .project-card-content {
+    width: 80%;
+    order: 2;
+    margin: 1.25em auto;
+  }
+
+  .projects-list{
+    gap: 2em;
+    padding: 0 16px;
+    width:unset;
+  }
+
+  .navbar-list{
+    display:none;
+}
+
+.display-overlay-menu{
+    opacity: 1 !important;
+    visibility: visible;
+}
+
+
+.small.project-card{
+    flex-direction: row;
+}
+
+.small.project-card .project-card-content{
+    width: 100% !important;
+    order: 2 !important;
+    margin: auto 2em;
+}
+
+.small.project-card img{
+    width: 100% !important;
+    margin: auto !important;   
+}
+
+.small.project-card .project-card-background{
+    width: 80% !important;
+    margin: auto !important;
+    margin-left: auto !important;
+    margin-left: 2em !important;
+}
+    
+.navbar{
+    padding: 0 1.5em;
+    width: calc(100% - 3em);
+}
+
+.about-container{
+    margin-left: 6.5rem;
+    margin-right: 6.5rem;
+    }
+
+.project-container{
+    margin-left: 6.5rem;
+    margin-right: 6.5rem;
+    }
+
+.image{
+
+    margin-left:2.5rem;
+    margin-right:2.5rem;
+}
+
+.project-cover{
+    text-align: center;
+}
+
+.image1{
+    margin-left:2.5rem;
+    margin-right:2.5rem;
+}
+
+.mapimg{
+    margin-left:2.5rem;
+    margin-right:2.5rem;
+    }   
+    
+.mapimg img{
+    width:100%;
+    margin:0;
+    max-width:1000px;
+    }
+
+    .metrics-container{
+        max-width: unset;
+        gap: 2em;
+    }
+
+ }
+
+/*Mobile browser */
+
+ @media screen and (max-width: 700px) {
+    
+h2{
+    font-size: 1.5rem;
+}    
+
+.project-card-subtitle{
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+    margin-top: 0;
+}
+
+.project-card{
+    flex-direction: column;
+    height: unset;
+    margin:auto;
+}
+
+.project-card-background{
+    width:100%;
+    order: 1;
+}
+
+.project-card img {
+    width: 80% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 1.5em;
+    -webkit-filter: drop-shadow(2px 4px 40px rgba(0,0,0,0.07));
+    filter: drop-shadow(2px 4px 40px rgba(0,0,0,0.07));
+  }
+
+.project-card-content {
+margin: 1.25em auto;
+width: 80%;
+order: 2;
+}
+
+.project-cover{
+    flex-direction: column-reverse;
+}
+
+.project-cover p{
+    font-size: 1.25rem; 
+}
+
+.project-cover h1{
+    font-size: 2.5rem; 
+    line-height:3.25rem;
+    margin-bottom: .25rem;
+    }
+
+.project-image{
+    margin: 0px -20px;
+    border-radius: 0;
+    padding: 12px 20px;
+}
+
+ol .project-image{
+    margin: 0px -20px;
+    border-radius: 0;
+}
+
+.project-image-small img{
+    width: 80%;
+    border: none;
+}
+
+.project-card-content h3{
+    font-size: 1.5rem !important;
+  }
+
+  .chip{
+    margin-top: .75em;
+}
+
+.chip li{
+    font-size: 12px;
+ }
+
+.projects-list{
+gap: 2em;
+padding: 0 16px;
+width:unset;
+}
+
+.small.project-card{
+    flex-direction: row;
+}
+
+.small.project-card .project-card-content{
+    width: 100% !important;
+    order: 2 !important;
+    margin: auto 2em;
+}
+
+.small.project-card img{
+    width: 100% !important;
+    margin: auto !important;   
+}
+
+.small.project-card .proaject-card-background{
+    width: 80% !important;
+    margin: auto !important;
+    margin-left: auto !important;
+    margin-left: 2em !important;
+}
+
+nav .nav{
+float:none;
+display:inline-block;
+margin-left: -4.5rem;
+margin-top: 3.5rem;
+}
+
+.underline{
+    border-bottom: 3.5px solid #007bff;
+}
+
+.fcf-form-control-sm {
+max-width:56%;
+}
+
+/* HAMBURGER MENU */
+
+.mobilemenu{
+position: absolute;
+right: 2rem;
+top: 2rem;
+margin: 1rem 0.5rem 0.5rem 0.5rem;
+cursor: pointer;
+display: flex;
+align-items: center;
+flex-direction: column;
+justify-content: center;
+color: black;
+transition: 0.5s;
+z-index: 2;
+}
+
+.mobilemenu:hover{
+opacity: 0.75;
+}
+
+.menu1, .menu2, .menu3{
+    width: 1.3rem;
+    height: .17rem;
+background-color: #292929;
+margin: .13rem 0;
+border-radius: 70px;
+transition: 0.5s;
+}
+
+.hamburgermenu .menu1{
+transform: rotate(45deg) translate(0.13rem, 0.5rem);
+}
+
+.hamburgermenu .menu2{
+opacity: 0;
+}
+
+.hamburgermenu .menu3{
+transform: rotate(-45deg) translate(0.13rem, -0.5rem);
+}
+
+.hambar{
+width: 100%;
+height: 100%;
+background-color: #FFFFFF;
+box-shadow: 0rem 0.5rem 1rem #525252;
+position: fixed;
+overflow: hidden;
+top: 0;
+right: -3000px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+transition: 0.5s;
+z-index: 1;
+}
+
+.hamburgermenu .hambar{
+    right: 0;
+}
+
+.hero-text-summary{
+    letter-spacing: -1px;
+    font-size: 3.75rem;
+    font-weight: 700;
+    line-height: 4rem;
+}
+
+.nav-list{
+    text-align: center;
+    width: 80%;
+}
+
+.nav-list li{
+    list-style: none;
+}
+
+.nav-item{
+    list-style: none;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.nav-item:hover{
+    background-color: hsl(214, 100%, 96%);
+}
+
+.nav-item a:hover{
+    color: #292929;
+}
+
+.nav-link{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    position: relative;
+    padding: 0.5rem;
+    transition: 0.5s;
+}
+
+.navbar-list{
+    display:none;
+}
+.display-overlay-menu{
+    opacity: 1 !important;
+    visibility: visible;
+}
+
+
+.navbar {
+    padding: 0 1.125em;
+    width: calc(100% - 2.25em);
+}
+    
+.ham-icons img{
+    width: 1rem;
+    margin: 1.5rem 0.75rem 0 0.75rem;
+    transition: 0.5s;
+}
+
+.ham-icons img:hover{
+    opacity: 0.75;
+}
+
+
+.about-header{
+    display: flex; 
+    gap:1.25rem;
+}
+
+.about-image-desktop{
+    display:none;
+}
+
+.about-image-mobile{
+    display:block;
+}
+
+.hamburger{
+    display:block;
+}
+
+.hero-text-summary{
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+}
+
+html, body{
+
+}
+
+body{
+position:relative;
+}
+
+.contactme{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size:15px;
+    text-align:center;
+    padding-top: 6rem;
+}
+
+.about-container{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.image{
+    margin-left:0;
+    margin-right:0;
+}
+
+.image1{
+
+    margin-left:0;
+    margin-right:0;
+}
+
+.myrole{
+        text-align:center;
+}
+
+
+.blue{
+    margin: 0;
+}
+
+.blue> * {
+    margin: 0;
+}
+
+
+.project-background{
+    display:block;
+    text-align:center;
+}
+
+.project-background-section:nth-child(2),
+.project-background-section:nth-child(3)
+{
+    margin-top:3rem;
+}
+
+.block:nth-child(1)
+{
+    margin-bottom:.75rem;
+}
+
+.mapimg{
+    margin-left:0;
+    margin-right:0;
+    }
+
+.mapimg img{
+    width:100%;
+    margin:0;
+}
+
+.project-cover {
+text-align: left;
+    }
+
+.metrics-container{
+    max-width: unset;
+    gap: 5vw;
+}
+
+.metric{
+    min-width: unset;
+    width: 24vw;
+}
+
+ }
+
+/* Which Year Case Study Specific Styles */
+
+/* Constrain in-content images and add zoom cursor (if images are added later with this class structure) */
+.project-card-which-year-page .project-container .project-image img {
+    max-width: 100%;
+    max-height: 500px; /* Adjust as needed */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: zoom-in;
+}
+
+/* Project Cover Theme for Which Year */
+.project-cover.whichyear-cover.project-card-which-year-page {
+    background-color: #351968; /* Dark purple background */
+    color: #f5f5f5; /* Light text color for the cover */
+}
+
+/* Ensure project cover image fits without overflow */
+.project-cover.whichyear-cover .project-cover-background {
+    overflow: hidden; /* Ensure container clips the image */
+    max-height: 400px; /* Match hero height or desired height */
+}
+
+.project-cover.whichyear-cover .project-cover-background .project-cover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the area, might crop */
+    object-position: center; /* Center the image */
+}
+
+/* Text color within the dark cover */
+.project-card-which-year-page .project-cover-content h1,
+.project-card-which-year-page .project-cover-content p {
+    color: #f5f5f5; /* Light text color for cover h1 and p */
+}
+
+/* Chips styling (already primary color background with white text) */
+.project-card-which-year-page .chip li {
+    background-color: #6a32cf;
+    color: white;
+}
+
+.project-card-which-year-page .chip li svg,
+.project-card-which-year-page .chip li svg g,
+.project-card-which-year-page .chip li svg path,
+.project-card-which-year-page .chip li svg rect {
+    stroke: white;
+    fill: white;
+}
+
+/* Styling for blockquotes in Which Year case study */
+.project-card-which-year-page .case-study-content blockquote {
+    border-left: 3px solid #6a32cf;
+    color: #6a32cf;
+    padding: 10px 20px;
+    margin: 20px 0;
+    background-color: #f9f6fe; /* Very light purple tint */
+    font-style: italic;
+}
+
+/* Styling for links in Which Year case study content */
+.project-card-which-year-page .case-study-content a {
+    color: #6a32cf;
+    text-decoration: underline;
+}
+
+.project-card-which-year-page .case-study-content a:hover {
+    color: #5227a0; /* Darker shade for hover */
+}
+
+/* Finvera Project Styles */
+.project-card-finvera-page .project-cover-content h1,
+.project-card-finvera-page .project-cover-content p {
+    color: #fff;
+}
+
+.project-card-finvera-page .chip li {
+    background-color: rgba(0, 91, 227, 0.08);
+    color: #005BE3;
+    border: 1px solid #005BE3;
+}
+
+.project-card-finvera-page .chip li:hover {
+    background-color: rgba(0, 91, 227, 0.16);
+}
+
+.project-card-finvera-page .chip li svg g {
+    stroke: #005BE3;
+}
+
+/* Walk-up Match Project Styles */
+.project-card-walk-up-match-page .project-cover-content h1,
+.project-card-walk-up-match-page .project-cover-content p {
+    color: #fff;
+}
+
+.project-card-walk-up-match-page .chip li {
+    background-color: rgba(62, 86, 228, 0.08);
+    color: #3E56E4;
+    border: 1px solid #3E56E4;
+}
+
+.project-card-walk-up-match-page .chip li:hover {
+    background-color: rgba(62, 86, 228, 0.16);
+}
+
+.project-card-walk-up-match-page .chip li svg g {
+    stroke: #3E56E4;
+}
+
+.project-card-tippingpoints{
+    background: #eff1f7;
+}
+
+/* Gallery Preview Styles */
+.gallery-preview-container {
+    position: relative; /* For positioning the overlay */
+    /* The .project-image class already gives padding and background, which is fine */
+}
+
+.gallery-preview-link {
+    display: block; /* Make the <a> tag a block for positioning the image and overlay */
+    position: relative; /* For the overlay to be absolute to this link */
+    cursor: pointer;
+}
+
+.gallery-preview-image {
+    display: block; /* Remove extra space below image */
+    width: 100%;
+    /* border: 1px solid #ccc; is already on .project-image img, which is good */
+}
+
+.gallery-action-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3); /* Slightly less dark, more subtle */
+    color: white;
+    display: flex;
+    flex-direction: column; /* Stack icon and text vertically */
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+}
+
+.gallery-preview-link:hover .gallery-action-overlay {
+    opacity: 1;
+}
+
+.gallery-action-overlay .gallery-icon {
+    font-size: 3rem; /* Larger icon */
+    margin-bottom: 0.25em;
+}
+
+.gallery-action-overlay .gallery-text {
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+/* CASE STUDY PAGE STYLES */
+.case-study-header {
+ 
+    margin-bottom: 0; 
+    width: 100vw;
+    position: relative; /* Required for the 100vw breakout */
+    left: 50%;
+    transform: translateX(-50%);
+    box-sizing: border-box; /* Ensures padding/border don't add to 100vw if header itself had them */
+}
+
+.case-study-header-content-constrained {
+    width: 100%;
+    max-width: 1440px; /* Site's standard max-width */
+    margin: 0 auto; /* Center the content */
+    padding: 4em 3em; /* Padding previously on .case-study-header */
+    gap: 3em; /* Gap previously on .case-study-header */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.case-study-header-text {
+    flex-basis: 45%; /* Adjust as needed */
+    max-width: 550px; /* Max width for text block */
+}
+
+.case-study-header-text h1 {
+    font-size: 32px; /* Updated font size */
+    color: #161616;
+    margin-top: 0;
+    margin-bottom: 0.1em; /* Reduced space between title and subtitle */
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+.case-study-header-text .subtitle {
+    font-size: 16px; /* Updated font size */
+    color: #1919199c;
+    margin-bottom: 1em;
+    margin-top: .45em;
+    line-height: 1.2;
+}
+
+.header-tags {
+    display: flex;
+    gap: 1em;
+    margin-bottom: 2em; /* Space before details grid */
+}
+
+.header-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    padding: 0.25em .75em;
+    border-radius: 20px; /* Fully rounded */
+    font-size: 0.9rem;
+    font-weight: 500;
+    background-color: #f0f0f0; /* Neutral base background */
+    color: #333; /* Neutral base text color */
+}
+
+.tag-icon {
+    width: 16px;
+    height: 16px;
+    fill: currentColor; /* Icon color matches text */
+}
+
+.header-details-grid {
+    display: flex;
+    gap: 4em; /* Gap between Tools and KPIs columns */
+    margin-bottom: 2.5em; /* Space before button */
+}
+
+.details-column {
+    flex-basis: auto;
+}
+
+.details-column h3 {
+    font-size: 14px; /* Smaller heading for these sections */
+    font-weight: 700;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+
+}
+
+.details-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #444;
+}
+
+.details-column ul li {
+    margin-bottom: 0.2em; /* Reduced space between list items */
+}
+
+/* project-links button styling is mostly fine, ensure color matches */
+.project-links .button-primary {
+    background-color: #5F2CC8; /* Main purple for button */
+    color: white;
+    padding: 0.75em 1.5em; /* Slightly larger padding */
+    text-decoration: none;
+    border-radius: 50px; /* Fully rounded */
+    font-weight: 600; /* Bolder text */
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6em;
+    transition: background-color 0.3s ease;
+}
+.project-links .button-primary:hover {
+    background-color: #4A20A0; /* Darken(#5F2CC8, 15%) */
+}
+
+.case-study-header-images {
+    flex-basis: 50%; 
+    display: flex; /* Arrange images horizontally */
+    gap: 1em; /* Space between images */
+    align-items: flex-start; /* Align images to the top of their container */
+    /* Removed position, justify-content, align-items (center), min-height from previous stacked layout */
+    margin-top: 0; /* Reset margin if any was inherited */
+}
+
+.case-study-header-images img {
+    max-width: calc(33.333% - 0.66em); /* For 3 images with 1em gap (1em * 2 gaps / 3 images) */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Slightly softer radius for side-by-side */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Softer shadow for side-by-side */
+    /* Removed position: absolute and transform properties */
+    object-fit: contain; /* Ensure whole image is visible */
+}
+
+/* Ensure content starts below the header */
+.case-study-content {
+    padding: 3em 2em 2em 2em; /* Top padding from header, others for content */
+    max-width: 800px; 
+    margin: 0 auto 2em auto; 
+    background-color: #FFFFFF; 
+}
+.case-study-content h2 {
+    font-size: 2rem; 
+    color: #161616;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    font-weight: 700; 
+    border-bottom: 1px solid #EAEAEA; 
+    padding-bottom: 0.3em;
+}
+.case-study-content h2:first-child {
+    margin-top: 0;
+}
+.case-study-content h3 {
+    font-size: 1.5rem; 
+    color: #161616;
+    margin-top: 1.5em;
+    margin-bottom: 0.3em;
+    font-weight: 600;
+}
+.case-study-content p, .case-study-content li {
+    font-size: 1.1rem; 
+    line-height: 1.7;
+    color: #333333; 
+    margin-bottom: 1em;
+}
+.case-study-content ul, .case-study-content ol {
+    padding-left: 1.5em; 
+}
+.case-study-content li {
+    margin-bottom: 0.5em;
+}
+.case-study-content blockquote {
+    border-left: 4px solid #5F2CC8; /* Default, will be overridden by project color */
+    padding-left: 1.5em; 
+    margin-left: 0;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    font-style: italic;
+    color: #444444;
+    background-color: rgba(95, 44, 200, 0.03); /* Default, will be overridden */
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-right: 1em;
+    border-radius: 0 4px 4px 0; 
+}
+.case-study-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5em 0;
+    font-size: 1rem; 
+}
+.case-study-content th, .case-study-content td {
+    border: 1px solid #DDDDDD;
+    padding: 0.8em 1em;
+    text-align: left;
+    line-height: 1.5;
+}
+.case-study-content th {
+    background-color: rgba(95, 44, 200, 0.05); /* Default, will be overridden */
+    font-weight: 600;
+    color: #161616;
+}
+.case-study-content pre {
+    background-color: #282c34; 
+    color: #abb2bf;      
+    padding: 1.5em;
+    border-radius: 8px; 
+    overflow-x: auto;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace; 
+    font-size: 0.95em;
+    line-height: 1.6;
+    margin: 1.5em 0;
+}
+
+/* Theming for WhichYear specifically - button color is already handled by .project-links .button-primary */
+.case-study-theme-whichyear .case-study-header {
+    background-color: #F4F2F8; /* Explicitly set for WhichYear theme */
+}
+.case-study-theme-whichyear .header-tag {
+    background-color: #E8E1F8; /* Light purple for WhichYear tags */
+    color: #5F2CC8; /* Main purple for WhichYear tag text/icon */
+}
+
+/* Theme specific styles for content body */
+.case-study-theme-whichyear.case-study-content blockquote {
+    border-left-color: #5F2CC8;
+    background-color: rgba(95, 44, 200, 0.05);
+}
+.case-study-theme-whichyear.case-study-content th {
+    background-color: rgba(95, 44, 200, 0.08);
+}
+
+/* Finvera Theme (#005BE3) */
+.case-study-header.case-study-theme-finvera { background-color: rgba(0, 91, 227, 0.08); }
+.case-study-theme-finvera .header-tag {
+    background-color: rgba(0, 91, 227, 0.08); 
+    color: #005BE3; 
+}
+.case-study-theme-finvera .project-links .button-primary { background-color: #005BE3; }
+.case-study-theme-finvera .project-links .button-primary:hover { background-color: #0048b3; } 
+
+/* TamaTracker Theme (#4F248E) */
+.case-study-header.case-study-theme-tamatracker { background-color: rgba(79, 36, 142, 0.08); }
+.case-study-theme-tamatracker .header-tag {
+    background-color: rgba(79, 36, 142, 0.08);
+    color: #4F248E;
+}
+.case-study-theme-tamatracker .project-links .button-primary { background-color: #4F248E; }
+.case-study-theme-tamatracker .project-links .button-primary:hover { background-color: #3b1b6a; } 
+
+/* WalkupMatch Theme */
+.case-study-header.case-study-theme-walkupmatch { background-color: rgba(189, 193, 218, 0.22); } /* WalkupMatch Light BG BDC1DA 22% */
+.case-study-theme-walkupmatch .header-tag {
+    background-color: rgba(189, 193, 218, 0.22); 
+    color: #202A66; /* WalkupMatch Custom Text */
+}
+.case-study-theme-walkupmatch .project-links .button-primary { background-color: #202A66; } /* WalkupMatch Custom Text */
+.case-study-theme-walkupmatch .project-links .button-primary:hover { background-color: #161c43; } /* Darken(#202A66, 15%) approx */
+
+/* Profile Theme */
+.case-study-header.case-study-theme-profile { background-color: rgba(0, 44, 141, 0.08); }
+.case-study-theme-profile .header-tag {
+    background-color: rgba(0, 44, 141, 0.08);
+    color: #002C8D;
+}
+.case-study-theme-profile .project-links .button-primary { background-color: #002C8D; }
+.case-study-theme-profile .project-links .button-primary:hover { background-color: #001f64; } 
+
+/* Primary Blue Theme */
+.case-study-header.case-study-theme-primary { background-color: rgba(0, 123, 255, 0.08); }
+.case-study-theme-primary .header-tag {
+    background-color: rgba(0, 123, 255, 0.08);
+    color: #007BFF;
+}
+.case-study-theme-primary .project-links .button-primary { background-color: #007BFF; }
+.case-study-theme-primary .project-links .button-primary:hover { background-color: #005fcc; }
+
+/* WhichYear Theme */
+.case-study-header.case-study-theme-whichyear {
+    background-color: #F4F2F8;
+}
+
+.case-study-theme-whichyear .header-tag {
+    background-color: #E8E1F8;
+    color: #5F2CC8;
+}
+
+/* Larger, shadowless hero image for non-WhichYear case studies */
+.case-study-header-images img:not([src*="whichyr/"]):not(.whichyear-cover):not(.project-card-which-year-page) {
+    max-width: 520px;
+    width: 100%;
+    height: auto;
+    box-shadow: none !important;
+    margin: 0 auto;
+    display: block;
+}
+
+
+
+

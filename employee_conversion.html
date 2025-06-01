@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/hamburgers.css" rel="stylesheet">
+    <link rel="stylesheet" href="dependencies/photoswipe/dist/photoswipe.css">
+    <script async src="js/script.js"></script> 
+
+    <title>Chris Creguer—UX Designer</title>
+
+ </head>
+
+<body>
+
+  <nav class="navbar">
+    <a class="logo" href="index.html">
+      <div>
+        Chris Creguer
+      </div>
+    </a>
+
+    <button class="hamburger hamburger--collapse" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner">
+        </span>
+      </span>
+    </button>
+
+    <ul class="navbar-list">
+      <a href="index.html" class="active"><li>Work</li></a>
+      <a href="about.html"><li>About</li></a>
+    </ul>
+  </nav>
+
+  <div class="overlay-menu">
+    <ul class="navbar-list-mobile">
+      <a href="index.html" class="active"><li>Work</li></a>
+      <a href="about.html"><li>About</li></a>
+    </ul>
+  </div>
+
+  <header class="case-study-header case-study-theme-primary">
+    <div class="case-study-header-text">
+        <h1>Employee Conversion</h1>
+        <p class="subtitle">Accelerating a mundane task</p>
+        <ul class="tags">
+            <li>UI Design</li>
+            <li>User Observation</li>
+            <li>Interview</li>
+        </ul>
+        <div class="project-links">
+            <a href="#introduction-section" class="button-primary">Scroll to mockups <span class="material-icons" style="font-size:1.25em; vertical-align:middle;">south</span></a>
+            <!-- Replace # with actual link if available -->
+        </div>
+    </div>
+    <div class="case-study-header-images">
+        <img src="img/employee_conversion/hero1.png" alt="Employee Conversion Hero Image 1">
+    </div>
+  </header>
+    
+  <main class="case-study-content case-study-theme-primary">
+    <div id="introduction-section" class="project-container">
+ 
+    <div class="panel"  data-color="white">
+
+    <div class="textcontainer">
+      <h2 class="project-section-title">Background</h2>
+      
+          <p class="detail">I served as <b>UX Lead</b> for this feature in PACT Planner—a web application that helps program analysts maximize profit for government contractors by <b>planning labor across different efforts.</b>
+          </p> 
+
+          <p class="detail">To access employee timecard data (crucial for labor planning), PACT Planner requires users to <b>link employees to specific work assignments.</b> Because analysts begin planning projects before work assignments are finalized, PACT Planner enables users to add 'unapproved' employees, who are linked to basic personal information but not yet to a work assignment. If the employee expected to fill a role is unknown or not yet part of the employee database, users can create 'placeholder' employees, whose information must be entered manually.
+          </p> 
+          <blockquote class="planner quoteblock">"Even though they don't have a work assignment yet, we might go ahead and start allocating towards them."
+            <span class="quote-source">-PACT Planner user</span>
+          </blockquote>
+          
+
+          <p class="detail">Once work assignments are generated, users can link both unapproved and placeholder employees to these assignments and <b>access their timecard data</b> by converting them to 'approved' employees.
+          </p> 
+
+         
+<div class="spacer"></div>
+
+          <h2 class="project-section-title">Problem</h2>
+
+          
+
+          <p class="detail">
+            Exploratory user observation sessions and interviews revealed that users found the employee conversion process <b>tedious and time-consuming.</b>
+          </p> 
+
+          <div class="pswp-gallery project-image employeeconversion-gallery">
+            <a href="img/employeeconversion/old-process.png" data-pswp-width="1368" data-pswp-height="474">
+              <img src="img/employeeconversion/old-process.png" alt="A 'convert' button next to an employee name">
+            </a>
+            <div class="project-image-caption">The previous process required users to convert employees individually.</div>
+          </div>
+
+          <div class="spacer"></div>
+
+          <h2 class="project-section-title">Approach</h2>
+
+          <p class="detail">
+            I started by <b>interviewing users</b> to better understand how the employee conversion feature was being used. We learned that users typically:
+            <ul>
+              <li>Convert many, often dozens, of employees consecutively</li>
+              <li>Assign placeholder employees a generic title (e.g., '3510.P_Specialist_III') when the name of the employee is not yet known.</li>
+              <li>Are unconcerned with employee information changes during conversion if user-entered information conflicts with source of record information</li>
+              <li>Convert placeholder employees to unapproved status when a work assignment isn't available</li>
+              <br>
+                <p>Using insights from user interviews, I whiteboarded potential solutions with a colleague. We discussed but ruled out automatic employee conversion, since linking a work assignment without user input is impossible in most cases. Instead, we settled on the idea of a multi-convert option that would allow users to <b>convert many employees simultaneously.</b></p>
+                <p>I iterated through low-fi mockups for a multi-convert concept and presented several to our design team, eventually settling on and creating a prototype for a design that allowed users to link all placeholder/unapproved employees to work assignments on one screen. The design leveraged existing UI patterns to reduce development costs.</p>
+                <p>After receiving positive feedback from a group of users during a prototype walkthrough, I collaborated with developers to break the feature into chunks for our agile team to implement. I created design deliverables for each and met with developers to communicate specifications, answer questions, and discuss the feature's purpose.</p>
+
+          <div class="spacer"></div>
+
+          <h2 class="project-section-title">Solution</h2>
+          <p>
+            Our final solution, the bulk convert employees feature, lets users convert all convertible employees at once. Where possible, it <b>auto-fills a work assignment</b> for employees using a combination of user-entered and source of record employee information. Checkmark icons are used to reinforce which employees will be converted upon clicking 'Convert'. </p>
+            
+            <div class="pswp-gallery project-image employeeconversion-gallery">
+              <a href="img/employeeconversion/bulk-convert-modal.png" data-pswp-width="1900" data-pswp-height="1982">
+                <img class="modal-target"  src="img/employeeconversion/bulk-convert-modal.png" alt="modal allowing users to convert multiple employees at once">
+              </a>
+              <div class="project-image-caption">Bulk Convert Modal</div>
+            </div>
+          <p>
+            Users can manually select or change a work assignment using an <b>intelligent search field</b> that suggests work assignments based on each employee's information. Since there are hundreds, unapproved employees aren't included in search suggestions until the user types at least one character.
+          </p>
+
+          <div class="pswp-gallery project-image-small employeeconversion-gallery">
+            <a href="img/employeeconversion/autocomplete-search.png" data-pswp-width="1365" data-pswp-height="1170">
+              <img src="img/employeeconversion/autocomplete-search.png" alt="an search field with autocomplete suggestions for work assignments. Work assignments appear before employees.">
+            </a>
+            <div class="project-image-caption">PACT Planner intelligently suggests work assignments and employees.</div>
+          </div>
+          <p>
+            We improved the employees table by adding conversion buttons to each convertible employee. This makes it easier for users to convert employees individually and clearly identifies which employees are eligible for conversion. We also designed icons to represent different types of conversions.
+          </p>
+          <div class="pswp-gallery project-image employeeconversion-gallery">
+            <a href="img/employeeconversion/Iconography.png" data-pswp-width="1452" data-pswp-height="664">
+              <img class="modal-target"  src="img/employeeconversion/Iconography.png" alt="The icons used to indicate convertibility, labeled">
+            </a>
+            <div class="project-image-caption">Conversion button for each conversion type</div>
+          </div>
+          <div class="pswp-gallery project-image employeeconversion-gallery">
+            <a href="img/employeeconversion/employee-conversion.png" data-pswp-width="2880" data-pswp-height="1355">
+              <img class="modal-target"  src="img/employeeconversion/employee-conversion.png" alt="table displaying many employees, with a convert icon next to some.">
+            </a>
+            <div class="project-image-caption">Conversion buttons in context</div>
+          </div>
+         
+          <div class="spacer"></div>
+
+          <h2 class="project-section-title">Outcome</h2>
+          <p>
+          Users responded positively to this feature in follow-up interviews:
+          
+          <blockquote class="planner quoteblock">"Converting placeholders is something that we do a lot of and this makes the workflow <b>a lot easier</b>."
+          </blockquote>
+          <blockquote class="planner quoteblock">"It's coming in super handy, being able to multi-convert. I mean, it's been great."
+          </blockquote>
+          <blockquote class="planner quoteblock">"I love it. It's great."
+          </blockquote>
+            </p>
+            <p>
+              From basic self-testing, I estimated that converting 10 employees is approximately <b>90% faster</b> using the bulk convert feature. For what it's worth, I also noticed this feature being used frequently while reviewing session recordings.
+              </p>
+              <p>
+                I'm certain that bulk employee conversion has <b>alleviated a significant pain point</b> for our users.
+                </p>
+
+              <h3 class="project-section-title" style="margin-top: 2em;">Additional Visuals</h3>
+              <div class="pswp-gallery project-image employeeconversion-gallery">
+                  <a href="img/employeeconversion/employee_conversion_cover.png" data-pswp-width="1200" data-pswp-height="800">
+                      <img src="img/employeeconversion/employee_conversion_cover.png" alt="Additional Employee Conversion visual 1">
+                  </a>
+                  <div class="project-image-caption">Employee Conversion Cover</div>
+              </div>
+
+         </div>
+        </div>
+        </div>
+
+        <div class="step-card-group">
+            <div class="step-card"></div>
+        </div>
+
+
+
+      <div id="modal" class="modal">
+        <span id="modal-close" class="modal-close">&times;</span>
+        <img id="modal-content" class="modal-content">
+        <div id="modal-caption" class="modal-caption"></div>
+      </div>
+
+      </div>
+        <hr>
+        
+          <div class="next-page">
+          <p>Next: 
+            <a class="next-link" href="pay_period_slider.html">Pay Period Slider</a>&nbsp;
+            <span class="iconlink">arrow_forward</span>
+          </p>
+        </div>
+
+      </div>
+
+      <footer class="footer">    
+        <p class="footer-copyright"> © 2024 Chris Creguer</p>
+        <ul class="footer-icons-list">
+          <li>
+            <a href="https://www.linkedin.com/in/chriscreguer/" target="_blank">
+              <img class="footer-icon" alt="linkedin" src="img/icon/linkedin.png">
+            </a>
+          </li>
+          <li>
+            <a href="about.html">
+              <img class="footer-icon" alt="email" src="img/icon/email.png">
+            </a>
+          </li>
+        </ul>
+      </footer>
+      <script type="module">
+        import PhotoSwipeLightbox from './dependencies/photoswipe/dist/photoswipe-lightbox.esm.js';
+        const lightbox = new PhotoSwipeLightbox({
+            gallery: '.employeeconversion-gallery',
+            children: 'a',
+            pswpModule: () => import('./dependencies/photoswipe/dist/photoswipe.esm.js')
+        });
+        lightbox.init();
+        
+    </script>
+</body>
+</html>
