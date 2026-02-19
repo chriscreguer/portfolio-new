@@ -1,36 +1,27 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!doctype html>
 <html>
-  <head>
-
+<head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-
     <link href="css/style.css" rel="stylesheet">
     <link href="css/hamburgers.css" rel="stylesheet">
-    <link rel="stylesheet" href="dependencies/photoswipe/dist/photoswipe.css">
-    <script async src="js/script.js"></script> 
-
-    <title>Chris Creguer—UX Designer</title>
-
- </head>
-
-<body>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2/css/lightgallery-bundle.min.css">
+    <script async src="js/script.js"></script>
+    <script async src="js/footer.js"></script>
+    <title>Chris Creguer—UX Designer | TamaTracker Case Study</title>
+</head>
+<body class="cs-page cs-theme-tamatracker">
 
   <nav class="navbar">
     <div class="content-limiter">
       <a class="logo" href="index.html">
-        <div>
-          Chris Creguer
-        </div>
+        <div>Chris Creguer</div>
       </a>
-
       <button class="hamburger hamburger--collapse" type="button">
         <span class="hamburger-box">
-          <span class="hamburger-inner">
-          </span>
+          <span class="hamburger-inner"></span>
         </span>
       </button>
-
       <ul class="navbar-list">
         <a href="index.html"><li>Work</li></a>
         <a href="about.html"><li>About</li></a>
@@ -40,248 +31,221 @@
 
   <div class="overlay-menu">
     <ul class="navbar-list-mobile">
-      <a href="index.html" class="active"><li>Work</li></a>
+      <a href="index.html"><li>Work</li></a>
       <a href="about.html"><li>About</li></a>
     </ul>
   </div>
 
-  <header class="case-study-header case-study-theme-tamatracker">
-    <div class="case-study-header-content-constrained">
-      <div class="case-study-header-text">
-          <h1>TamaTracker</h1>
-          <p class="subtitle">Progress tracker with complex animations</p>
-          
-          <div class="header-tags">
-              <span class="header-tag">
-                  <svg class="tag-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
-                  UI Design
-              </span>
-              <span class="header-tag">
-                  <svg class="tag-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-2.5-3.5l1.41 1.41L12 14.83l1.09 1.08 1.41-1.41L12 12l2.5-2.5-1.41-1.41L12 9.17l-1.09-1.08-1.41 1.41L12 12l-2.5 2.5z"/></svg>
-                  Motion Design
-              </span>
-          </div>
-
-          <div class="header-details-grid">
-              <div class="details-column">
-                  <h3>Tools and Methods</h3>
-                  <ul>
-                      <li>Figma</li>
-                      <li>Adobe After Effects</li>
-                      <li>Lottie</li>
-                      <li>User Feedback</li>
-                  </ul>
-              </div>
-              <div class="details-column">
-                  <h3>KPIs</h3>
-                  <ul>
-                      <li>Increased User Retention</li>
-                      <li>High Task Completion Rate</li>
-                      <li>Positive App Store Reviews</li>
-                  </ul>
-              </div>
-          </div>
-          
-          <div class="project-links">
-              <a href="#introduction-section" class="button-primary">Scroll to mockups <span class="material-icons" style="font-size:1.25em; vertical-align:middle;">south</span></a>
-          </div>
-      </div>
-      <div class="case-study-header-images">
-          <img src="img/tamatracker/hero1.png" alt="TamaTracker Hero Image 1 - App Interface">
+  <header class="cs-hero">
+    <div class="cs-hero-bg"></div>
+    <div class="cs-hero-inner">
+      <h1 class="cs-hero-title">TamaTracker</h1>
+      <div class="cs-hero-subtitle">Progress tracker with complex animations</div>
+      <div class="cs-hero-image">
+        <img src="img/tamatracker/TamaTracker2.png" alt="TamaTracker — Trick grid">
       </div>
     </div>
   </header>
 
-  <main class="case-study-content case-study-theme-tamatracker">
-    <div id="introduction-section">
- 
-    <div class="panel"  data-color="white">
+  <main>
+    <div class="content-limiter">
+      <div class="case-study case-study-theme-tamatracker">
+        <div class="cs-layout">
+          <article class="cs-content" style="padding: 0 3em;">
 
-      <h2 class="project-section-title">Background</h2>
-      
-          <p class="detail">TamaTracker is a web application that helps <b>kendama players</b> learn new tricks and track their progress. I designed, developed, and tested a basic version of TamaTracker in 2021. The project collected dust until 2024, when I redesigned the tool based on user feedback gathered years prior.
-          </p> 
+            <section class="wy-section-narrow">
+              <p class="wy-lede">TamaTracker is a web app for kendama players — part progress tracker, part social leaderboard, part trick encyclopedia. Kendama is a skill toy (think yo-yo adjacent) where players learn and master tricks of varying difficulty. TamaTracker gives that process structure, turning something inherently informal into something you can track, share, and learn from.</p>
+              <div class="wy-columns">
+                <div class="wy-col">
+                  <h4>My Role</h4>
+                  <p>Designer &amp; Developer</p>
+                </div>
+                <div class="wy-col">
+                  <h4>Tools / Methods</h4>
+                  <p>Figma
+After Effects / Lottie
+User Feedback (Reddit, friends)</p>
+                </div>
+                <div class="wy-col">
+                  <h4>Timeline</h4>
+                  <p>2021–2024</p>
+                </div>
+              </div>
+            </section>
 
-      
-         
-
-
-  <div class="pswp-gallery project-image tamatracker-gallery">
-    <a href="img/tamatracker/tamatracker3.png" data-pswp-width="1758" data-pswp-height="1055">
-      <img src="img/tamatracker/tamatracker3.png" alt="A 'convert' button next to an employee name">
-    </a>
-    <div class="project-image-caption">Desktop mockup</div>
-  </div>
-  
-  <div class="pswp-gallery project-image tamatracker-gallery">
-    <a href="img/tamatracker/tamatracker4.png" data-pswp-width="2695" data-pswp-height="2022">
-      <img src="img/tamatracker/tamatracker4.png" alt="A 'convert' button next to an employee name">
-    </a>
-    <div class="project-image-caption">UI elements</div>
-  </div>
-
-  <p class="detail">I used animations to make the interface livelier and trick completion more rewarding.
-  </p> 
+            <section class="cs-article-body" id="gallery-tamatracker">
 
 
-  <video class="project-video" autoplay playsinline loop muted onclick="this.paused?this.play():this.pause();">
-    <source src="img/tamatracker/TamaTracker-video1.mov">
-    UI animations, created in Figma
-  </video>
+              <div class="cs-article-section">
+                <div class="cs-article-section-label">
+                  <span class="cs-section-name">Concept</span>
+                </div>
+                <h3>More Than a Tracker</h3>
+                <p>People don't like to track unless they're getting something out of tracking. Apps like Letterboxd and Goodreads work because the social element gives logging a purpose beyond record-keeping. I wanted TamaTracker to have that same pull — but with an added learning dimension that makes it genuinely useful for improving.</p>
+                <p>The app does three things: it tracks your progress across 70+ tricks with a gamified scoring system, it lets you compare stats with friends on a leaderboard, and it helps you discover what to learn next based on what you've already done. Each trick has a difficulty score, so the leaderboard isn't just "who has the most tricks" — it's weighted by how hard they are.</p>
 
-  <h3 class="project-section-title" style="margin-top: 2em;">Additional Visuals</h3>
-  <div class="pswp-gallery project-image tamatracker-gallery">
-      <a href="img/tamatracker/tamatracker-leaderboard.png" data-pswp-width="1200" data-pswp-height="800">
-          <img src="img/tamatracker/tamatracker-leaderboard.png" alt="Additional TamaTracker visual 1">
-      </a>
-      <div class="project-image-caption">Leaderboard</div>
-      <a href="img/tamatracker/tamatracker-progress.png" data-pswp-width="1200" data-pswp-height="800">
-          <img src="img/tamatracker/tamatracker-progress.png" alt="Additional TamaTracker visual 2">
-      </a>
-      <div class="project-image-caption">Progress</div>
-      <a href="img/tamatracker/tamatracker-tricks.png" data-pswp-width="1200" data-pswp-height="800">
-          <img src="img/tamatracker/tamatracker-tricks.png" alt="Additional TamaTracker visual 3">
-      </a>
-      <div class="project-image-caption">Tricks</div>
-      <a href="img/tamatracker/TamaTracker2.png" data-pswp-width="1200" data-pswp-height="800">
-          <img src="img/tamatracker/TamaTracker2.png" alt="Additional TamaTracker visual 4">
-      </a>
-      <div class="project-image-caption">TamaTracker2</div>
-      <a href="img/tamatracker/tamatracker_mock_1.png" data-pswp-width="1200" data-pswp-height="800">
-          <img src="img/tamatracker/tamatracker_mock_1.png" alt="Additional TamaTracker visual 5">
-      </a>
-      <div class="project-image-caption">Mockup 1</div>
-      <a href="img/tamatracker/kendamatricks.png" data-pswp-width="1200" data-pswp-height="800">
-          <img src="img/tamatracker/kendamatricks.png" alt="Additional TamaTracker visual 6">
-      </a>
-      <div class="project-image-caption">Kendama Tricks</div>
-  </div>
+                <div class="cs-article-img">
+                  <a href="img/tamatracker/tamatracker3.png" data-src="img/tamatracker/tamatracker3.png">
+                    <img src="img/tamatracker/tamatracker3.png" alt="TamaTracker — Desktop interface">
+                  </a>
+                </div>
+              </div>
 
-    </div>
+              <div class="cs-article-section">
+                <div class="cs-article-section-label">
+                  <span class="cs-section-name">Progression System</span>
+                </div>
+                <h3>Three Levels of "Landing It"</h3>
+                <p>The very first prototype treated tricks as binary — you either had it or you didn't. But feedback from players on Reddit and from friends made it clear that wasn't how it actually works. Landing a trick once doesn't mean you have it down. There are distinct levels: getting it once (an accomplishment), getting it sometimes (it's in your developing repertoire), and having it on lock (you can hit it reliably).</p>
+                <p>This three-tier system became the foundation of the scoring model. Each level earns different points, and the progression feels earned because it maps to how players actually think about their skills. It's somewhat subjective — but that's fine. The goal isn't precision, it's motivation.</p>
 
-    <div class="spacer"></div>    <div class="spacer"></div>    <div class="spacer"></div>
-    <p style="color:rgb(0,0,0, .6); text-align:center;  font-weight: 500;"><span style="font-family:material icons; font-size:3rem;">engineering</span><br>This case study is under construction</p>
+                <div class="cs-article-img">
+                  <a href="img/tamatracker/tamatracker4.png" data-src="img/tamatracker/tamatracker4.png">
+                    <img src="img/tamatracker/tamatracker4.png" alt="TamaTracker — Trick progression UI">
+                  </a>
+                </div>
+              </div>
 
+              <div class="cs-article-section">
+                <div class="cs-article-section-label">
+                  <span class="cs-section-name">Motion</span>
+                </div>
+                <h3>Animations That Scale with Achievement</h3>
+                <p>Leveling up a trick triggers a celebration animation, and having a trick fully on lock triggers something bigger. The animations scale with the achievement — a beginner trick feels different from an advanced one. This is where the gamification actually earns its keep: the reward feedback is what makes people want to log their progress in the first place.</p>
 
+                <div class="cs-article-img">
+                  <video class="project-video" autoplay playsinline loop muted onclick="this.paused?this.play():this.pause();" style="width: 100%; border: 1px solid #e0e0e0;">
+                    <source src="img/tamatracker/TamaTracker-video1.mov">
+                  </video>
+                </div>
+              </div>
+
+              <div class="cs-article-section">
+                <div class="cs-article-section-label">
+                  <span class="cs-section-name">Social &amp; Discovery</span>
+                </div>
+                <h3>Leaderboards, Comparisons &amp; What to Learn Next</h3>
+                <p>The social layer is what pushes tracking from useful to sticky. A leaderboard ranks players by difficulty points — not just trick count — so someone who's landed fewer but harder tricks can still compete. Spider charts let you compare your strengths across different trick categories against friends, showing where you're strong and where you might want to branch out.</p>
+                <p>The discovery side recommends tricks based on what you've already done. Tricks are organized by difficulty and can be filtered by grip type or skill tree, so if you're strong in one area but weak in another, TamaTracker surfaces what you'd probably want to try next. Each trick page includes details on how it's done, with links to video references.</p>
+
+                <div class="cs-article-img-grid">
+                  <a href="img/tamatracker/tamatracker-leaderboard.png" data-src="img/tamatracker/tamatracker-leaderboard.png">
+                    <img src="img/tamatracker/tamatracker-leaderboard.png" alt="TamaTracker — Leaderboard">
+                  </a>
+                  <a href="img/tamatracker/tamatracker-progress.png" data-src="img/tamatracker/tamatracker-progress.png">
+                    <img src="img/tamatracker/tamatracker-progress.png" alt="TamaTracker — Progress and data visualization">
+                  </a>
+                </div>
+
+                <div class="cs-article-img-grid">
+                  <a href="img/tamatracker/tamatracker-tricks.png" data-src="img/tamatracker/tamatracker-tricks.png">
+                    <img src="img/tamatracker/tamatracker-tricks.png" alt="TamaTracker — Trick browser">
+                  </a>
+                  <a href="img/tamatracker/TamaTracker2.png" data-src="img/tamatracker/TamaTracker2.png">
+                    <img src="img/tamatracker/TamaTracker2.png" alt="TamaTracker — Trick detail">
+                  </a>
+                </div>
+
+                <div class="cs-article-img">
+                  <a href="img/tamatracker/tamatracker_mock_1.png" data-src="img/tamatracker/tamatracker_mock_1.png">
+                    <img src="img/tamatracker/tamatracker_mock_1.png" alt="TamaTracker — Mobile mockup">
+                  </a>
+                </div>
+              </div>
+
+              <div class="cs-article-section">
+                <div class="cs-article-section-label">
+                  <span class="cs-section-name">Illustration</span>
+                </div>
+                <h3>70+ Custom Trick Illustrations</h3>
+                <p>Every trick has a custom illustration showing the kendama's position and motion. At rest, the illustration communicates the trick at a glance — on hover, it animates to show what the trick actually looks like in motion. This matters because trick names alone aren't always descriptive, especially for players exploring new territory. The illustrations make browsing intuitive: you can scan a grid of tricks and understand what each one involves without reading a description.</p>
+
+                <div class="cs-article-img">
+                  <a href="img/tamatracker/kendamatricks.png" data-src="img/tamatracker/kendamatricks.png">
+                    <img src="img/tamatracker/kendamatricks.png" alt="TamaTracker — 70+ custom kendama trick illustrations">
+                  </a>
+                </div>
+              </div>
+
+            </section>
+
+          </article>
+        </div>
+      </div>
     </div>
   </main>
 
-    <!--
-
-  </div>
-
-  <div class="project-container">
-    <div class="panel" data-color="white">
-      <div class="textcontainer">
-        <p class="detail">
-          <b>KENDAMA PLAYERS</b> improve by learning new tricks. This process is not easy—players struggle <a style="color:#9146ff;" href="https://www.reddit.com/r/Kendama/comments/1hcao1/learning_curve/" target="_blank">choosing which tricks to learn </a>and <a style="color:#9146ff;" href="https://www.reddit.com/r/Kendama/comments/rvkltu/tips_on_not_giving_in_to_frustration/ " target="_blank">battling frustration.</a> Dozens of websites host lists of kendama tricks, but none are interactive.</a>
-          </p>
-        <blockquote class="tamatracker quoteblock">How could we make the accomplishment of learning a new trick easier and more rewarding?</blockquote>
-        <p class="detail">
-            TamatTacker is a progress tracking tool that makes kendama progression easier with:
-            <ul>
-              <li>An interactive checklsit that remembers your progress</li>
-              <li>Trick illustrations</li>
-              <li>Information about 70+ tricks</li>
-              <li>A trick line creator</li>
-            </ul>
-  </p>
-</div>
-</div>
-</div>
-        
-
-
-
-<div class="project-container">
-
-  
-    
-       
-    
-
-
-  <!-- <p class="detail">
-    <h3>User Feedback</h3>
-    <blockquote class="tamatracker quoteblock">I think it would be good to have several levels to tick off for each trick. Something like: Landed once Inconsistent Consistent Every try</blockquote>
-    <blockquote class="tamatracker quoteblock">Hitting something once after hours of trying is very different than being able to do the trick in a few minutes which is also very different from being able to do the trick in a couple tries</blockquote>
-    <blockquote class="tamatracker quoteblock"> I can think off is account creation and competing with friends.</blockquote>
-    <blockquote class="tamatracker quoteblock">It's already looking good!🔥 just add The trick demos and tips to every tricks</blockquote>
-</p>
-       <br><br><br>
-
-   
-<div class="headercontainer">
- <h1>Final Product</h1>
- <p>After creating illustrations for ~60 kendama tricks, I developed the tamatracker web app (more on the process coming soon). The following are screenshots from <a style="color:#9146ff;" href="https://tamatracker.com">Tamatracker.com</a>:</p>
- <br>
-</div>
-      <div class="image">
-        <img src="img/tamatrackermobile.png"> Mobile Progress, Tricks, and Lines Pages
-        <br> <br><br> <br>
-        <img src="img/tamatracker.png"> Desktop Progress Page
-        <br> <br><br> <br>
-        <img src="img/tamatracker1.png"> Desktop Tricks Page
-        <br> <br><br> <br>
-        <img src="img/tamatracker2.png"> Desktop Lines Page
-        <br> <br><br> <br>
-        <img src="img/tamatracker3.png"> Desktop Add Trick Dialogue
-        <br> <br><br> <br>
-        <img src="img/kendamatricks.png"> Kendama Trick Graphics
-        <br> <br><br> <br>
-  
-</div>
-
+  <div class="more-case-studies">
+    <h3 class="more-case-studies-title">More case studies</h3>
+    <div class="more-case-studies-grid">
+      <a href="which_year.html">
+        <div class="mini-card mini-whichyear">
+          <div class="mini-card-text">
+            <h3 class="mini-card-title">WhichYear</h3>
+            <p class="mini-card-subtitle">Daily game with over 600,000 plays</p>
+            <ul class="mini-card-tags"><li>UI Design</li><li>Full-Stack</li></ul>
+          </div>
+          <div class="mini-card-image"><img src="img/previews/whichyear_preview.png" alt="WhichYear"></div>
+        </div>
+      </a>
+      <a href="finvera.html">
+        <div class="mini-card mini-finvera">
+          <div class="mini-card-text">
+            <h3 class="mini-card-title">Finvera</h3>
+            <p class="mini-card-subtitle">Fintech startup news site</p>
+            <ul class="mini-card-tags"><li>UI Design</li><li>Front-End</li></ul>
+          </div>
+          <div class="mini-card-image"><img src="img/previews/finvera_preview.png" alt="Finvera"></div>
+        </div>
+      </a>
+      <a href="walk-up-match.html">
+        <div class="mini-card mini-walkupmatch">
+          <div class="mini-card-text">
+            <h3 class="mini-card-title">WalkupMatch</h3>
+            <p class="mini-card-subtitle">Spotify Wrapped meets MLB</p>
+            <ul class="mini-card-tags"><li>UI Design</li><li>Full-Stack</li></ul>
+          </div>
+          <div class="mini-card-image"><img src="img/previews/walkup_match_preview.png" alt="WalkupMatch"></div>
+        </div>
+      </a>
+      <a href="profile_tool.html">
+        <div class="mini-card mini-profile">
+          <div class="mini-card-text">
+            <h3 class="mini-card-title">Profile</h3>
+            <p class="mini-card-subtitle">Charge tracking software</p>
+            <ul class="mini-card-tags"><li>UI Design</li><li>Front-End</li></ul>
+          </div>
+          <div class="mini-card-image"><img src="img/previews/profile_preview.png" alt="Profile"></div>
+        </div>
+      </a>
     </div>
-    <p style="color:#707070; text-align:center"><span style="font-family:material icons; color:rgb(0,0,0, .4); font-size:3rem;">engineering</span><br>This case study is under construction.</p>
   </div>
--->
 
+  <footer></footer>
 
-<div id="modal" class="modal">
-  <span id="modal-close" class="modal-close">&times;</span>
-  <img id="modal-content" class="modal-content">
-  <div id="modal-caption" class="modal-caption"></div>
- </div>
- 
- </div>
-  <hr>
-  
-    <div class="next-page">
-<p>Next: <a class="next-link"  href="ui_gallery.html">UI Deisgn Gallery</a>&nbsp;<span
-        class="iconlink">arrow_forward</span></p>
-  
- 
- </div>
- 
- 
- 
- 
- <footer class="footer">    
-  <p class="footer-copyright"> © 2024 Chris Creguer</p>
-  <ul class="footer-icons-list">
-    <li>
-      <a href="https://www.linkedin.com/in/chriscreguer/" target="_blank">
-        <img class="footer-icon" alt="linkedin" src="img/icon/linkedin.png">
-      </a>
-    </li>
-    <li>
-      <a href="about.html">
-        <img class="footer-icon" alt="email" src="img/icon/email.png">
-      </a>
-    </li>
-  </ul>
- </footer>
-
-<script type="module">
-  import PhotoSwipeLightbox from './dependencies/photoswipe/dist/photoswipe-lightbox.esm.js';
-  const lightbox = new PhotoSwipeLightbox({
-      gallery: '.tamatracker-gallery',
-      children: 'a',
-      pswpModule: () => import('./dependencies/photoswipe/dist/photoswipe.esm.js')
-  });
-  lightbox.init();
-</script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2/lightgallery.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2/plugins/thumbnail/lg-thumbnail.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2/plugins/zoom/lg-zoom.umd.js"></script>
+  <script>
+    var lg = lightGallery(document.getElementById('gallery-tamatracker'), {
+      selector: 'a[data-src]',
+      plugins: [lgThumbnail, lgZoom],
+      speed: 0,
+      backdropDuration: 100,
+      download: false,
+      thumbnail: true,
+      animateThumb: true,
+      currentPagerPosition: 'middle',
+      thumbWidth: 100,
+      thumbHeight: '70px',
+      thumbMargin: 10,
+      zoom: true,
+      scale: 0.5,
+      enableZoomAfter: 0,
+      actualSize: false,
+      showZoomInOutIcons: true,
+    });
+  </script>
 
 </body>
 </html>

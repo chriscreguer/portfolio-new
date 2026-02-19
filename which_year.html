@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!doctype html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,12 +6,13 @@
 
     <link href="css/style.css" rel="stylesheet">
     <link href="css/hamburgers.css" rel="stylesheet">
-    <link rel="stylesheet" href="dependencies/photoswipe/dist/photoswipe.css">
-    <script async src="js/script.js"></script> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2/css/lightgallery-bundle.min.css">
+    <script async src="js/script.js"></script>
+    <script async src="js/footer.js"></script> 
 
     <title>Chris Creguer—UX Designer | Which Year Case Study</title>
 </head>
-<body>
+<body class="wy-page">
 
   <nav class="navbar">
     <div class="content-limiter">
@@ -42,247 +43,601 @@
     </ul>
   </div>
 
-  <header class="case-study-header case-study-theme-whichyear" style="background-color: #F4F2F8;">
-    <div class="case-study-header-content-constrained">
-      <div class="case-study-header-text">
-          <h1>WhichYear</h1>
-          <p class="subtitle">Daily game with over 300,000 plays</p>
+  <header class="wy-hero">
+    <div class="wy-hero-bg"></div>
+    <div class="wy-hero-inner">
+      <div class="wy-logo" aria-label="WhichYear logo">
+        <svg width="327" height="38" viewBox="0 0 327 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M326.556 35.9057C326.72 36.3379 326.704 36.7202 326.507 37.0527C326.342 37.3519 326.063 37.5015 325.668 37.5015H316.1C315.409 37.5015 314.965 37.1524 314.768 36.4543L310.132 23.5881C309.934 23.0562 309.425 22.7902 308.602 22.7902H306.334C306.103 22.7902 305.939 22.8733 305.84 23.0396C305.775 23.1725 305.742 23.2723 305.742 23.3388V36.0553C305.742 37.0194 305.199 37.5015 304.114 37.5015H295.828C295.335 37.5015 294.989 37.4018 294.792 37.2023C294.628 37.0028 294.545 36.687 294.545 36.2548V1.64586C294.545 0.881205 294.858 0.498878 295.483 0.498878H311.956C316.724 0.498878 320.424 1.42976 323.054 3.29153C325.685 5.12005 327 7.71323 327 11.0711C327 12.6336 326.72 14.0798 326.161 15.4096C325.602 16.7395 324.83 17.8865 323.843 18.8506C322.89 19.7815 321.788 20.4963 320.539 20.9949C320.21 21.1279 320.144 21.4438 320.341 21.9424L326.556 35.9057ZM311.513 15.3598C312.762 15.3598 313.716 15.0273 314.373 14.3624C315.064 13.6975 315.409 12.8331 315.409 11.7692C315.409 10.5059 314.982 9.54175 314.127 8.87683C313.305 8.21191 312.335 7.87945 311.217 7.87945H306.876C306.12 7.87945 305.742 8.21191 305.742 8.87683V14.3125C305.742 15.0107 306.021 15.3598 306.58 15.3598H311.513Z" fill="#5F2CC7"/>
+          <path d="M254.701 37.5015C254.339 37.5015 254.076 37.3353 253.912 37.0028C253.747 36.6371 253.764 36.1883 253.961 35.6564L265.897 1.64586C266.062 1.24691 266.243 0.964321 266.44 0.79809C266.637 0.598615 266.95 0.498878 267.377 0.498878H277.094C277.949 0.498878 278.54 0.947697 278.869 1.84533L290.707 35.806C290.838 36.1384 290.838 36.5041 290.707 36.9031C290.608 37.302 290.378 37.5015 290.016 37.5015H280.349C279.79 37.5015 279.428 37.2189 279.264 36.6537L277.34 30.9188C277.274 30.7526 277.192 30.6196 277.094 30.5199C277.028 30.3869 276.863 30.3204 276.6 30.3204H266.144C265.749 30.3204 265.503 30.5033 265.404 30.869L263.382 36.7535C263.316 36.9529 263.185 37.1358 262.987 37.302C262.823 37.435 262.56 37.5015 262.198 37.5015H254.701ZM274.134 21.8427C274.627 21.8427 274.775 21.5103 274.578 20.8453L271.619 12.3178C271.553 12.1515 271.454 12.0684 271.323 12.0684C271.191 12.0684 271.093 12.1515 271.027 12.3178L268.018 20.7955C267.755 21.4936 267.92 21.8427 268.511 21.8427H274.134Z" fill="#5F2CC7"/>
+          <path d="M222.054 1.64586C222.054 0.881205 222.366 0.498878 222.991 0.498878H249.626C250.218 0.498878 250.514 0.847959 250.514 1.54612L250.464 7.3309C250.464 8.22854 250.037 8.67736 249.182 8.67736H234.385C233.629 8.67736 233.25 8.99319 233.25 9.62486V13.8637C233.25 14.5619 233.546 14.911 234.138 14.911H243.016C243.707 14.911 244.052 15.2434 244.052 15.9083V22.0921C244.052 22.3248 243.986 22.5243 243.855 22.6905C243.723 22.8567 243.493 22.9398 243.164 22.9398H234.04C233.513 22.9398 233.25 23.1725 233.25 23.638V28.6249C233.25 29.0903 233.448 29.323 233.842 29.323H249.872C250.596 29.323 250.957 29.6389 250.957 30.2705V36.4044C250.957 36.7036 250.859 36.9696 250.661 37.2023C250.497 37.4018 250.201 37.5015 249.774 37.5015H223.386C222.498 37.5015 222.054 37.0859 222.054 36.2548V1.64586Z" fill="#5F2CC7"/>
+          <path d="M217.447 0.498878C217.874 0.498878 218.137 0.615239 218.236 0.847961C218.367 1.04744 218.334 1.3134 218.137 1.64586L206.596 20.4963C206.365 20.8287 206.217 21.1944 206.152 21.5934C206.119 21.9923 206.102 22.7237 206.102 23.7876V36.0553C206.102 37.0194 205.56 37.5015 204.475 37.5015H196.188C195.695 37.5015 195.35 37.4018 195.153 37.2023C194.988 37.0028 194.906 36.687 194.906 36.2548V23.1393C194.906 22.6074 194.84 22.2084 194.709 21.9424C194.61 21.6432 194.446 21.3108 194.216 20.9451L182.674 1.8952C182.444 1.49625 182.394 1.1638 182.526 0.897829C182.69 0.631862 183.036 0.498878 183.562 0.498878H193.476C193.969 0.498878 194.314 0.581992 194.511 0.748221C194.709 0.881205 194.923 1.14717 195.153 1.54612L201.219 12.617C201.384 12.9162 201.515 13.0824 201.614 13.1157C201.746 13.1157 201.893 12.9661 202.058 12.6669L208.026 1.54612C208.223 1.11393 208.437 0.831337 208.667 0.698353C208.897 0.56537 209.243 0.498878 209.703 0.498878H217.447Z" fill="#5F2CC7"/>
+          <path d="M158.273 22.6905C157.747 22.6905 157.484 22.9398 157.484 23.4385V36.0553C157.484 37.0194 156.941 37.5015 155.856 37.5015H147.619C147.093 37.5015 146.731 37.4018 146.534 37.2023C146.37 37.0028 146.287 36.687 146.287 36.2548V1.64586C146.287 0.881205 146.6 0.498878 147.225 0.498878H156.596C157.188 0.498878 157.484 0.847959 157.484 1.54612V13.1157C157.484 13.7806 157.78 14.1131 158.372 14.1131H166.658C167.25 14.1131 167.546 13.7806 167.546 13.1157V1.54612C167.546 0.847959 167.842 0.498878 168.433 0.498878H177.805C178.43 0.498878 178.742 0.881205 178.742 1.64586V36.2548C178.742 36.687 178.643 37.0028 178.446 37.2023C178.282 37.4018 177.936 37.5015 177.41 37.5015H169.173C168.088 37.5015 167.546 37.0194 167.546 36.0553V23.4385C167.546 22.9398 167.283 22.6905 166.756 22.6905H158.273Z" fill="#090809"/>
+          <path d="M126.346 0C128.418 0 130.325 0.282591 132.067 0.847771C133.843 1.41295 135.405 2.21085 136.753 3.24147C138.134 4.27209 139.252 5.48557 140.107 6.88189C140.995 8.27822 141.603 9.80752 141.932 11.4698C142.096 12.168 142.113 12.6168 141.981 12.8163C141.883 13.0157 141.653 13.1487 141.291 13.2152L132.659 13.7638C132.298 13.7638 132.067 13.6973 131.969 13.5643C131.87 13.3981 131.788 13.1487 131.722 12.8163C131.459 11.3535 130.949 10.14 130.193 9.17585C129.47 8.17848 128.286 7.67979 126.642 7.67979C124.8 7.67979 123.321 8.51093 122.203 10.1732C121.118 11.8023 120.575 14.6448 120.575 18.7008C120.575 22.8233 121.068 25.7157 122.055 27.378C123.074 29.007 124.587 29.8215 126.593 29.8215C128.237 29.8215 129.683 29.4059 130.933 28.5748C132.215 27.7104 133.284 26.1811 134.139 23.9869C134.303 23.5879 134.764 23.4549 135.52 23.5879L141.685 24.8346C141.85 24.8679 142.031 24.9843 142.228 25.1837C142.425 25.3832 142.475 25.8154 142.376 26.4803C142.277 27.0122 142.014 27.7437 141.587 28.6745C141.159 29.6054 140.551 30.6194 139.762 31.7165C138.973 32.7804 137.953 33.7944 136.704 34.7585C135.454 35.6894 133.958 36.4707 132.215 37.1024C130.506 37.7008 128.516 38 126.247 38C122.729 38 119.654 37.1689 117.024 35.5066C114.426 33.811 112.404 31.5004 110.957 28.5748C109.543 25.6159 108.836 22.2581 108.836 18.5013C108.836 14.7445 109.543 11.4864 110.957 8.72704C112.404 5.96763 114.443 3.82327 117.073 2.29396C119.704 0.764655 122.795 0 126.346 0Z" fill="#090809"/>
+          <path d="M103.901 0.498878C104.493 0.498878 104.789 0.847959 104.789 1.54612V36.0553C104.789 36.5872 104.658 36.9696 104.394 37.2023C104.131 37.4018 103.72 37.5015 103.161 37.5015H94.9245C94.3983 37.5015 94.0366 37.4018 93.8393 37.2023C93.6749 37.0028 93.5927 36.687 93.5927 36.2548V1.64586C93.5927 0.881205 93.9051 0.498878 94.5299 0.498878H103.901Z" fill="#090809"/>
+          <path d="M68.008 22.6905C67.4819 22.6905 67.2188 22.9398 67.2188 23.4385V36.0553C67.2188 37.0194 66.6762 37.5015 65.5911 37.5015H57.3542C56.8281 37.5015 56.4664 37.4018 56.2691 37.2023C56.1047 37.0028 56.0225 36.687 56.0225 36.2548V1.64586C56.0225 0.881205 56.3349 0.498878 56.9596 0.498878H66.331C66.9229 0.498878 67.2188 0.847959 67.2188 1.54612V13.1157C67.2188 13.7806 67.5147 14.1131 68.1066 14.1131H76.3929C76.9848 14.1131 77.2807 13.7806 77.2807 13.1157V1.54612C77.2807 0.847959 77.5766 0.498878 78.1685 0.498878H87.5399C88.1646 0.498878 88.477 0.881205 88.477 1.64586V36.2548C88.477 36.687 88.3784 37.0028 88.1811 37.2023C88.0167 37.4018 87.6714 37.5015 87.1453 37.5015H78.9083C77.8232 37.5015 77.2807 37.0194 77.2807 36.0553V23.4385C77.2807 22.9398 77.0176 22.6905 76.4915 22.6905H68.008Z" fill="#090809"/>
+          <path d="M50.6278 0.498878C51.2855 0.498878 51.7294 0.698354 51.9595 1.0973C52.2226 1.46301 52.2719 1.92845 52.1075 2.49363L42.0949 36.2548C41.799 37.0859 41.2071 37.5015 40.3193 37.5015H33.5127C32.5592 37.5015 31.9673 37.0859 31.7371 36.2548L26.6075 18.701C26.5089 18.302 26.3938 18.1026 26.2623 18.1026C26.1307 18.0693 25.9828 18.302 25.8184 18.8007L20.7381 36.2548C20.5079 37.0859 19.916 37.5015 18.9625 37.5015H11.9093C11.0215 37.5015 10.4296 37.0859 10.1336 36.2548L0.0717425 2.49363C-0.0597855 1.92845 -0.0104624 1.46301 0.219712 1.0973C0.482768 0.698354 0.926675 0.498878 1.55143 0.498878H9.68973C10.2158 0.498878 10.5775 0.598615 10.7748 0.79809C11.005 0.964321 11.1694 1.21366 11.2681 1.54612L16.4963 20.0474C16.595 20.4131 16.6936 20.6126 16.7922 20.6459C16.9238 20.6459 17.0224 20.5129 17.0882 20.2469L22.2671 1.54612C22.3329 1.21366 22.4808 0.964321 22.711 0.79809C22.9412 0.598615 23.3193 0.498878 23.8454 0.498878H30.7507C31.2768 0.498878 31.6385 0.598615 31.8358 0.79809C32.0659 0.964321 32.2303 1.21366 32.329 1.54612L37.7545 20.4963C37.8203 20.6957 37.9189 20.8121 38.0505 20.8453C38.182 20.8786 38.2642 20.7955 38.2971 20.596L43.328 1.54612C43.3938 1.21366 43.5418 0.964321 43.7719 0.79809C44.0021 0.598615 44.3802 0.498878 44.9064 0.498878H50.6278Z" fill="#090809"/>
+          </svg>
           
-          <div class="header-tags">
-              <span class="header-tag solo-project-tag">
-                  <svg class="tag-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-                  Solo Project
-              </span>
-              <span class="header-tag duration-tag">
-                  <svg class="tag-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z"/></svg>
-                  3 Months
-              </span>
-          </div>
-
-          <div class="header-details-grid">
-              <div class="details-column">
-                  <h3>Tools and Methods</h3>
-                  <ul>
-                      <li>Usability Testing</li>
-                      <li>User Interviews</li>
-                      <li>Figma</li>
-                      <li>React</li>
-                      <li>Typescript</li>
-                  </ul>
-              </div>
-              <div class="details-column">
-                  <h3>KPIs</h3>
-                  <ul>
-                      <li>70% Completion Rate</li>
-                      <li>30% Share Results Rate</li>
-                      <li>7,000 Daily Users</li>
-                      <li>7 min Avg. Engagement Time</li>
-                  </ul>
-              </div>
-          </div>
-          
-          <div class="project-links">
-              <a href="https://whichyr.com" target="_blank" class="button-primary">Play WhichYear <span class="material-icons" style="font-size:1.25em; vertical-align:middle;">open_in_new</span></a>
-          </div>
       </div>
-      <div class="case-study-header-images">
-          <img src="img/whichyr/hero1.png" alt="WhichYear Screenshot 1 - Main Game Interface">
-          <img src="img/whichyr/hero2.png" alt="WhichYear Screenshot 2 - Challenge Results">
-          <img src="img/whichyr/hero3.png" alt="WhichYear Screenshot 3 - Challenges Archive">
+      <div class="wy-subtitle">Daily photo-dating browser game</div>
+      <div class="wy-hero-images" aria-label="Key screenshots">
+        <img src="img/whichyr/hero1.png" alt="Main Game Interface">
+        <img src="img/whichyr/hero2.png" alt="Challenge Results">
+        <img src="img/whichyr/hero3.png" alt="Challenges Archive">
       </div>
     </div>
   </header>
 
-  <main class="case-study-content case-study-theme-whichyear">
-    <article>
-        <h2>My Role</h2>
-        <p>Sole UX lead—from initial concept through launch and ongoing iterations—responsible for user research, interaction design, visual design, front-end implementation, and measuring success.</p>
-        
-        <h2>Project Genesis</h2>
-        <p>I set out to create a simple daily habit that blends quick visual intuition with a dash of history. Inspired by Wordle's shareable ritual and nostalgia for old photographs, I sketched the core loop on paper:</p>
-        <ul>
-            <li>See a photo</li>
-            <li>Guess its year (four-digit input + optional digit reveals)</li>
-            <li>Get instant feedback (points + context)</li>
-            <li>Share results</li>
-        </ul>
-        <p>Key early design principles:</p>
-        <ul>
-            <li>Mobile-first: Full-screen imagery, thumb-friendly controls.</li>
-            <li>Guided input: A slider plus tap-to-reveal individual digits.</li>
-            <li>Contextual captions: Brief "hint" before guessing, rich context after.</li>
-            <li>Dark, distraction-free UI: Focus on the photo.</li>
-        </ul>
+  <main>
+    <div class="content-limiter">
+      <div class="case-study case-study-theme-whichyear" id="whichyear-case-study">
+        <div class="cs-layout">
+          <article class="cs-content" aria-label="Which Year case study">
+            
 
-        <h2>Phase 1: MVP & Early Traction</h2>
-        <p><strong>Launch (April 2025):</strong> A lean HTML/CSS/JS prototype.</p>
-        <p><strong>Organic word-of-mouth:</strong> Pitched on Reddit's r/photography, shared on Hacker News & YC forums.</p>
-        <p>Initial metrics:</p>
-        <ul>
-            <li>~1 min average challenge time</li>
-            <li>35% next-day retention</li>
-            <li>2 K total plays within the first week</li>
-        </ul>
-        <h3>Early Praise</h3>
-        <blockquote>"Chris, your game is so fun ❤️ I'm putting my college friends on it." —College friend (iMessage)</blockquote>
-        <blockquote>"Dude, that's so fire." —A peer texting after their first play</blockquote>
-        <p>These comments confirmed that the core loop and UI were engaging—but they also hinted at unaddressed needs.</p>
+            <!-- Section 2: 826px max width intro/meta clone -->
+            <section class="wy-section-narrow">
+              <p class="wy-lede">WhichYear challenges users to guess when photos were taken with a new challenge each day. A well-crafted UX drove its success in an oversaturated niche.</p>
+              <div class="wy-columns">
+                <div class="wy-col">
+                  <h4>My Role</h4>
+                  <p>Sole researcher, designer, and developer.</p>
+                </div>
+                <div class="wy-col">
+                  <h4>Tools / Methods</h4>
+                  <p>Usability Testing
+User Interviews
+Figma
+React</p>
+                </div>
+                <div class="wy-col">
+                  <h4>Timeline</h4>
+                  <div class="wy-timeline">
+                    <div class="wy-timeline-item">
+                      <div class="wy-timeline-marker"></div>
+                      <div class="wy-timeline-content">
+                        <div class="wy-timeline-date">Feb '25</div>
+                        <div class="wy-timeline-label">Project Start</div>
+                      </div>
+                    </div>
+                    <div class="wy-timeline-item">
+                      <div class="wy-timeline-marker"></div>
+                      <div class="wy-timeline-content">
+                        <div class="wy-timeline-date">Apr '25</div>
+                        <div class="wy-timeline-label">Public Launch</div>
+                      </div>
+                    </div>
+                    <div class="wy-timeline-item">
+                      <div class="wy-timeline-marker"></div>
+                      <div class="wy-timeline-content">
+                        <div class="wy-timeline-date">Aug '25</div>
+                        <div class="wy-timeline-label">Acquisition</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-        <h2>Phase 2: Listening & Opportunity Framing</h2>
-        <p>Over the next two weeks, I harvested ~150 comments from social feeds, forums, and DMs and affinity-mapped them into three themes:</p>
-        <h3>"How good is my score?"</h3>
-        <blockquote>"Cool photo, but is 3 750 points any good?" —New player on Discord</blockquote>
-        <h3>"I wish I could play more than five days."</h3>
-        <blockquote>"Love this—can I revisit yesterday's?" —Reddit comment</blockquote>
-        <h3>"When does the next challenge drop?"</h3>
-        <blockquote>"I'm in Tokyo—when does midnight ET reset happen?" —YC thread</blockquote>
-        <p>I paired these themes with two quantitative signals: average session length (stuck near 1 min) and next-day retention (stuck near 35%).</p>
+              <div class="wy-kpis">
+                <h4>KPIs</h4>
+                <div class="wy-kpi-band">
+                  <div class="wy-kpi-row">
+                    <div class="wy-kpi"><div class="num">1M+</div><div class="label">Total Plays</div></div>
+                    <div class="wy-kpi"><div class="num">6K</div><div class="label">Daily Users</div></div>
+                    <div class="wy-kpi"><div class="num">30<span class="unit">%</span></div><div class="label">Share Rate</div></div>
+                    <div class="wy-kpi"><div class="num">7<span class="unit">MIN</span></div><div class="label">Avg Engagement</div></div>
+                  </div>
+                </div>
+          </div>
 
-        <h2>Phase 3: UX-Driven Enhancements</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Theme</th>
-                    <th>UX Method</th>
-                    <th>Solution</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Score Context</td>
-                    <td>Affinity mapping</td>
-                    <td>Distribution graphs per round + full bell-curve at end, with a clear "You" marker and percentile badges.</td>
-                </tr>
-                <tr>
-                    <td>Extended Play</td>
-                    <td>Community voting</td>
-                    <td>Curated Archive calendar: browse past daily challenges (hand-picked for clue quality).</td>
-                </tr>
-                <tr>
-                    <td>Reset Clarity</td>
-                    <td>Persona walkthroughs</td>
-                    <td>Countdown timer: shows "Next challenge in 04:12:18" (ET midnight basis).</td>
-                </tr>
-                <tr>
-                    <td>Harsh Miss Feedback</td>
-                    <td>Microcopy workshop</td>
-                    <td>Replace red "X" for big misses with neutral dot; refresh share copy to highlight percentile ("Top 12%") and average years off.</td>
-                </tr>
-                <tr>
-                    <td>Digit Reveal Usability</td>
-                    <td>Prototype walkthroughs</td>
-                    <td>Streamline reveal cards: one-tap unlock, auto-lock invalid years on both slider & inputs, quick flip animation.</td>
-                </tr>
-            </tbody>
-        </table>
+              <div class="wy-cta">
+                <a href="https://whichyear.chriscreguer.com" target="_blank" class="button-primary">Play WhichYear <span class="material-icons">open_in_new</span></a>
+              </div>
+            </section>
 
-        <h2>Feature Deep Dives</h2>
-        <h3>Data Visualization</h3>
-        <p><strong>Before:</strong> Points only.</p>
-        <p><strong>After:</strong> Mini bell-curve after each guess and final distribution chart.</p>
-        <p><strong>Result:</strong> Average time-on-challenge rose 30% as players compared their performance.</p>
-        
-        <h3>Archive</h3>
-        <p><strong>Why:</strong> Power users wanted more than five plays.</p>
-        <p><strong>What:</strong> A calendar UI showing past days; clicking opens a fully playable challenge.</p>
-        <p><strong>Result:</strong> 40% of daily users now explore the Archive.</p>
+            
+            <section class="cs-article-body wy-article-body">
+              <div class="cs-article-section">
+                <div class="cs-article-section-label">
+                  <span class="cs-section-name">The Opportunity</span>
+                </div>
+                <h3>A Genre With No Good Entry</h3>
+                <p>Photo-dating games already existed — and some had real audiences — but none of them were well-made. Confusing interfaces, ugly design, ad overload, and lifeless results screens were the norm. Players tolerated these issues because the core concept is genuinely fun: look at a photo, figure out when it was taken.</p>
+                <p>The opportunity wasn't to invent a new genre. It was to build the version that should have existed already — one where the UX was as engaging as the concept itself.</p>
+              </div>
+            </section>
 
-        <h3>Countdown Timer</h3>
-        <p><strong>Why:</strong> Global confusion around ET reset.</p>
-        <p><strong>What:</strong> Persistent timer at top of screen, recalculated client-side.</p>
-        <p><strong>Result:</strong> Support tickets and "When's next?" forum posts dropped by 75%.</p>
+            <!-- SOLUTIONS (dark, sticky header + animated image) -->
+            <section id="wy-solutions" class="cs-section cs-tone-dark cs-wide wy-solutions">
+              <div class="cs-inner">
+                <div class="wy-solutions-sentinel" aria-hidden="true"></div>
+                <h2 class="wy-solutions-title-mobile">Key Solutions</h2>
+                <!-- Sticky header / nav -->
+                <div class="wy-solutions-header-bleed">
+                  <div class="wy-solutions-header" role="tablist" aria-label="Solutions navigation">
+                    <div class="wy-solutions-title-wrap">
+                      <h2 class="wy-solutions-title-lg">Key Solutions</h2>
+                      <span class="wy-solutions-title-sm">Key Solutions</span>
+                    </div>
+                    <ul class="wy-solutions-nav">
+                    <li><a href="#sol-gameplay" class="wy-sol-link is-active"><span class="sol-label">Solution #1</span><span class="sol-title">Gameplay</span></a></li>
+                    <li><a href="#sol-results" class="wy-sol-link"><span class="sol-label">Solution #2</span><span class="sol-title">Results</span></a></li>
+                    <li><a href="#sol-sharing" class="wy-sol-link"><span class="sol-label">Solution #3</span><span class="sol-title">Sharing</span></a></li>
+                    <li><a href="#sol-year-input" class="wy-sol-link"><span class="sol-label">Solution #4</span><span class="sol-title">Year Input</span></a></li>
+                    <li><a href="#sol-zoom-ui" class="wy-sol-link"><span class="sol-label">Solution #5</span><span class="sol-title">Zoom UI</span></a></li>
+                    <li><a href="#sol-archive" class="wy-sol-link"><span class="sol-label">Solution #6</span><span class="sol-title">Archive</span></a></li>
+                    </ul>
+                  </div>
+                </div>
 
-        <h3>Shareable Results</h3>
-        <p><strong>Why:</strong> Many players found the big "X" icon demotivating.</p>
-        <p><strong>What:</strong> Swap out for a neutral dot beyond a 10-year miss; update share text to prioritize "Top X%" and average years off.</p>
-        <p><strong>Result:</strong> Shares increased 20%, with more positive sentiment on social feeds.</p>
+                <!-- Sticky stage that carries the animated screenshot -->
+                <div class="wy-sol-stage" aria-hidden="true">
+                  <div id="wy-floater-wrap" style="--fx:0px;--fy:0px">
+                    <video id="wy-floater" src="img/whichyr/gameplay.mov" autoplay loop muted playsinline></video>
+                  </div>
+                </div>
 
-        <h2>Impact</h2>
-        <ul>
-            <li>260 K total plays, > 100 K unique users, 5–6 K DAU</li>
-            <li>Next-day retention up from 35% → 50%</li>
-            <li>Average session up from ~1 min → ~1 min 30 s</li>
-            <li>Consistent daily shares on Reddit, Hacker News, and niche forums, e.g.:</li>
-        </ul>
-        <pre><code>WhichYear 5/7/25
-4881 pts (top 4%)
-1.6 avg. years off
-🎯🎯
-https://whichyr.com</code></pre>
+                <!-- Solutions list; alternate sides by adding .right on even items -->
+                <div class="wy-sol-list">
+                  <section class="wy-solution" id="sol-gameplay" data-img="img/whichyr/gameplay.mov" data-anchor-x="0.5" data-anchor-y="0.5">
+                    <div class="wy-sol-grid">
+                      <div class="image-col"><div class="img-target" aria-hidden="true"></div></div>
+                      <div class="text-col">
+                        <p class="sol-headline">A game that rewards observation, historical knowledge, and strategy.</p>
+                        <p class="sol-description">Players guess the year each of the five photos were taken. Each photo contains clues - some are more "vibes" based, while others can be narrowed down based on specific details (a building under construction, a car shape change, etc). Users can reveal each digit place once per challenge. Points are awarded based on proximity to the actual year, with a special algorithm that highly rewards guesses within a few years.</p>
+                          <div class="sol-quote-box">
+                            <p class="sol-quote-text">&ldquo;I enjoy the depth it adds in terms of deciding when to strategically deploy it, and for which digit&rdquo;</p>
+                            <p class="sol-quote-source">ResetEra Comment</p>
+                      </div>
+                    </div>
+                  </section>
 
-        <h2>Reflections & Next Steps</h2>
-        <ul>
-            <li>Image sourcing: I'm exploring partnerships with public-domain archives to expand diversity while keeping curation tight.</li>
-            <li>User profiles: Planning an opt-in login so players can track long-term stats across devices.</li>
-            <li>New modes: Experimenting with a "Freeplay" sandbox and time-attack challenges based on this UX foundation.</li>
-        </ul>
+                  <section class="wy-solution right" id="sol-results" data-img="img/whichyr/results.mov" data-anchor-x="0.4" data-anchor-y="0.55">
+                    <div class="wy-sol-grid">
+                      <div class="text-col">
+                        <p class="sol-headline">Compare your results to everyone else's. See how others guessed on each photo.</p>
+                        <p class="sol-description">After submitting a challenge, the site shows a global score distribution graph, so users can see how they stack up. I used a kernel density estimation (KDE) to show granular detail. The app also displays the guess distribution for each photo, so players can see how others guessed. Users can also see their personal statistics.</p>
+                        <div class="sol-research-box">
+                          <p class="sol-research-label">Research</p>
+                          <p class="sol-research-summary">Players who read explanations improved 23% on subsequent similar photos. Scoring weights accuracy over speed to encourage thoughtful observation.</p>
+                        </div>
+                        <div class="sol-quote-box">
+                          <p class="sol-quote-text">&ldquo;Man I am in love. The global [score distribution graph] is inspired!&rdquo;</p>
+                          <p class="sol-quote-source">Hackernews Comment</p>
+                        </div>
+                      </div>
+                      <div class="image-col"><div class="img-target" aria-hidden="true"></div></div>
+                    </div>
+                  </section>
 
-        <h2>Why This Matters</h2>
-        <p>By combining a lean initial build with focused, feedback-driven UX enhancements—rather than superficial polish alone—Which Year grew into a daily ritual for > 100 K history enthusiasts, delivering both quick fun and meaningful engagement.</p>
+                  <section class="wy-solution" id="sol-sharing" data-img="img/whichyr/sharing.mov" data-anchor-x="0.55" data-anchor-y="0.72">
+                    <div class="wy-sol-grid">
+                      <div class="image-col"><div class="img-target" aria-hidden="true"></div></div>
+                      <div class="text-col">
+                        <p class="sol-headline">Share results in a fun, emoji-encoded format.</p>
+                        <p class="sol-description">Sharing is easy - just tap the share button in the sticky footer to launch a native share dialog (or auto-copy results if you're on desktop). The plain-text results show your total score, percentile rank, and how close each of your guesses was (1-10 emojis for years off, bullseye for exact year) </p>
+                        <div class="sol-research-box">
+                          <p class="sol-research-label">Research</p>
+                          <p class="sol-research-summary">30% of users share their results. Many post theirs in forums or social media sites day after day, often in large daily threads, accompanied by bragging rights or lamentations.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
 
-        <h2>Additional Visuals</h2>
-        <div class="pswp-gallery project-image" id="gallery-additional-whichyear">
-            <a href="img/whichyr/Input field example.png" data-pswp-width="1200" data-pswp-height="800">
-                <img src="img/whichyr/Input field example.png" alt="Additional WhichYear visual 1">
-            </a>
-            <div class="project-image-caption">Input field example</div>
-            <a href="img/whichyr/Correct answer (no confetti shown).png" data-pswp-width="1200" data-pswp-height="800">
-                <img src="img/whichyr/Correct answer (no confetti shown).png" alt="Additional WhichYear visual 2">
-            </a>
-            <div class="project-image-caption">Correct answer (no confetti shown)</div>
-            <a href="img/whichyr/Correct answer (confetti shown).png" data-pswp-width="1200" data-pswp-height="800">
-                <img src="img/whichyr/Correct answer (confetti shown).png" alt="Additional WhichYear visual 3">
-            </a>
-            <div class="project-image-caption">Correct answer (confetti shown)</div>
-            <a href="img/whichyr/Incorrect answer.png" data-pswp-width="1200" data-pswp-height="800">
-                <img src="img/whichyr/Incorrect answer.png" alt="Additional WhichYear visual 4">
-            </a>
-            <div class="project-image-caption">Incorrect answer</div>
-            <a href="img/whichyr/Digit revealed.png" data-pswp-width="1200" data-pswp-height="800">
-                <img src="img/whichyr/Digit revealed.png" alt="Additional WhichYear visual 5">
-            </a>
-            <div class="project-image-caption">Digit revealed</div>
-            <a href="img/whichyr/Instructions.png" data-pswp-width="1200" data-pswp-height="800">
-                <img src="img/whichyr/Instructions.png" alt="Additional WhichYear visual 6">
-            </a>
-            <div class="project-image-caption">Instructions</div>
-        </div>
+                  <section class="wy-solution right" id="sol-year-input" data-img="img/whichyr/input.mov" data-anchor-x="0.65" data-anchor-y="0.78">
+                    <div class="wy-sol-grid">
+                      <div class="text-col">
+                        <p class="sol-headline">Type a year or drag the slider. Both stay in sync.</p>
+                        <p class="sol-description">Typing one digit advances you to the next (much like the best verification code inputs). When you use a digit reveal, the slider is limited to years that match the revealed digit. After guessing, the slider becomes a visualization of the year you guessed compared to the actual year.</p>
+                        <div class="sol-research-box">
+                          <p class="sol-research-label">Research</p>
+                          <p class="sol-research-summary">9/10 mobile testers used the slider, compared to 5/10 desktop testers. Some mobile testers typed the last digit manually, since the slider required too much precision.</p>
+                        </div>
+                        <div class="sol-quote-box">
+                          <p class="sol-quote-text">&ldquo;You can also just enter in the digits if you click on the date box, which I needed a few times&rdquo;</p>
+                          <p class="sol-quote-source">ResetEra Comment</p>
+                        </div>
+                      </div>
+                      <div class="image-col"><div class="img-target" aria-hidden="true"></div></div>
+                    </div>
+                  </section>
+
+                  <section class="wy-solution" id="sol-zoom-ui" data-img="img/whichyr/zoom.mov" data-anchor-x="0.5" data-anchor-y="0.35">
+                    <div class="wy-sol-grid">
+                      <div class="image-col"><div class="img-target" aria-hidden="true"></div></div>
+                      <div class="text-col">
+                        <p class="sol-headline">Pinch, click, double-tap, or scroll to zoom.</p>
+                        <p class="sol-description">Different users are comfortable with different zoom methods. Some prefer to click and drag, some prefer to pinch, and some prefer to scroll. All are supported. Mobile zoom buttons appear at the bottom for minimal thumb strain.</p>
+                        <div class="sol-research-box">
+                          <p class="sol-research-label">Research</p>
+                          <p class="sol-research-summary">Initial test users struggled to zoom, as many of their devices didn't support pinch-to-zoom. After adding zoom buttons, all users were able to zoom to examine photo details.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="wy-solution right" id="sol-archive" data-img="img/whichyr/archive.mov" data-anchor-x="0.5" data-anchor-y="0.3">
+                    <div class="wy-sol-grid">
+                      <div class="text-col">
+                        <p class="sol-headline">Play more challenges while still having a reason to come back tomorrow.</p>
+                        <p class="sol-description">Users can play as many past challenges as they want, but must return each day to play the latest. Initial users complained that they wanted to play more. Some suggested an infinite mode. But each challenge is curated to be unique and interesting, plus I didn't want users to binge play and get bored. </p>
+                        
+                      </div>
+                      <div class="image-col"><div class="img-target" aria-hidden="true"></div></div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </section>
+
+            <section class="cs-article-body wy-article-body">
+              <div class="cs-article-section">
+                <div class="cs-article-section-label">
+                  <span class="cs-section-name">The Result</span>
+                </div>
+                <h3>Organic Growth to Acquisition</h3>
+                <p>I posted WhichYear on Reddit and shared it with a few friends. Within a week it had been picked up by MetaFilter, topped the Hacker News front page, and pulled in 25,000 users in a single day. Word-of-mouth sharing and daily return players drove steady growth from there.</p>
+                <p>Five months after launch, the site was acquired.</p>
+              </div>
+            </section>
+
+            <div class="wy-counter-band">
+              <div class="wy-counter-block">
+                <div class="wy-counter">0</div>
+                <div class="wy-counter-label">total plays</div>
+              </div>
+            </div>
+
     </article>
+        </div>
+      </div>
+    </div>
   </main>
 
-  <hr>
-  
-  <div class="next-page">
-      <p>Next: <a class="next-link" href="finvera.html">Finvera</a>&nbsp;<span class="iconlink">arrow_forward</span></p>
+  <div class="more-case-studies">
+    <h3 class="more-case-studies-title">More case studies</h3>
+    <div class="more-case-studies-grid">
+      <a href="finvera.html">
+        <div class="mini-card mini-finvera">
+          <div class="mini-card-text">
+            <h3 class="mini-card-title">Finvera</h3>
+            <p class="mini-card-subtitle">Fintech startup news site</p>
+            <ul class="mini-card-tags"><li>UI Design</li><li>Front-End</li></ul>
+          </div>
+          <div class="mini-card-image"><img src="img/previews/finvera_preview.png" alt="Finvera"></div>
+        </div>
+      </a>
+      <a href="walk-up-match.html">
+        <div class="mini-card mini-walkupmatch">
+          <div class="mini-card-text">
+            <h3 class="mini-card-title">WalkupMatch</h3>
+            <p class="mini-card-subtitle">Spotify Wrapped meets MLB</p>
+            <ul class="mini-card-tags"><li>UI Design</li><li>Full-Stack</li></ul>
+          </div>
+          <div class="mini-card-image"><img src="img/previews/walkup_match_preview.png" alt="WalkupMatch"></div>
+        </div>
+      </a>
+      <a href="profile_tool.html">
+        <div class="mini-card mini-profile">
+          <div class="mini-card-text">
+            <h3 class="mini-card-title">Profile</h3>
+            <p class="mini-card-subtitle">Charge tracking software</p>
+            <ul class="mini-card-tags"><li>UI Design</li><li>Front-End</li></ul>
+          </div>
+          <div class="mini-card-image"><img src="img/previews/profile_preview.png" alt="Profile"></div>
+        </div>
+      </a>
+      <a href="tamatracker.html">
+        <div class="mini-card mini-tamatracker">
+          <div class="mini-card-text">
+            <h3 class="mini-card-title">TamaTracker</h3>
+            <p class="mini-card-subtitle">Skill progress tracker</p>
+            <ul class="mini-card-tags"><li>UI Design</li><li>Motion Design</li></ul>
+          </div>
+          <div class="mini-card-image"><img src="img/previews/tamatracker_preview.png" alt="TamaTracker"></div>
+        </div>
+      </a>
+    </div>
   </div>
 
-  <footer>    
-    <div class="content-limiter">
-      <p class="footer-copyright"> © 2024 Chris Creguer</p>
-      <ul class="footer-icons-list">
-        <li>
-          <a href="https://www.linkedin.com/in/chriscreguer/" target="_blank">
-            <img class="footer-icon" alt="linkedin" src="img/icon/linkedin.png">
-          </a>
-        </li>
-        <li>
-          <a href="about.html">
-            <img class="footer-icon" alt="email" src="img/icon/email.png">
-          </a>
-        </li>
-      </ul>
-    </div>
-  </footer>
+  <footer></footer>
 
-  <script type="module">
-    import PhotoSwipeLightbox from './dependencies/photoswipe/dist/photoswipe-lightbox.esm.js';
-    const lightbox = new PhotoSwipeLightbox({
-      gallery: '#gallery-additional-whichyear',
-      children: 'a',
-      pswpModule: () => import('./dependencies/photoswipe/dist/photoswipe.esm.js')
-    });
-    lightbox.init();
+  <script>
+    // Scroll reveal (reduced motion respected)
+    (function(){
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.querySelectorAll('.case-study .reveal').forEach(function(el){ el.classList.add('revealed'); });
+        return;
+      }
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
+      document.querySelectorAll('.case-study .reveal').forEach(function(el){ io.observe(el); });
+    })();
+
   </script>
+
+  <script>
+  (function(){
+    const section = document.getElementById('wy-solutions');
+    if (!section) return;
+
+    const navLinks = Array.from(section.querySelectorAll('.wy-sol-link'));
+    const floater  = document.getElementById('wy-floater');
+    const solutions = Array.from(section.querySelectorAll('.wy-solution'));
+    const nav = section.querySelector('.wy-solutions-nav');
+
+    // Detect when header becomes sticky and shrink title
+    const headerBleed = section.querySelector('.wy-solutions-header-bleed');
+    const sentinel = section.querySelector('.wy-solutions-sentinel');
+    if (headerBleed && sentinel) {
+      const stickyObs = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+          headerBleed.classList.remove('is-stuck');
+        } else {
+          headerBleed.classList.add('is-stuck');
+        }
+      }, { threshold: 0 });
+      stickyObs.observe(sentinel);
+    }
+
+    // Preload videos to prevent flashes
+    const preload = new Set();
+    solutions.forEach(s => { const src = s.dataset.img; if (src && !preload.has(src)) { preload.add(src); const v = document.createElement('video'); v.preload = 'auto'; v.src = src; } });
+
+    // Click -> scroll to target
+    navLinks.forEach(a=>{
+      a.addEventListener('click', (e)=>{
+        e.preventDefault();
+        const id = a.getAttribute('href').slice(1);
+        const t = document.getElementById(id);
+        if (t) t.scrollIntoView({ behavior:'smooth', block:'start' });
+      }, { passive:false });
+    });
+
+    function setActiveNav(id){
+      navLinks.forEach(a=>{
+        const on = a.getAttribute('href') === '#' + id;
+        a.classList.toggle('is-active', on);
+        a.setAttribute('aria-selected', on ? 'true' : 'false');
+      });
+      const active = section.querySelector('.wy-sol-link.is-active');
+      if (!active || !nav) return;
+      const left = active.offsetLeft - (nav.clientWidth - active.clientWidth) / 2;
+      nav.scrollTo({ left: Math.max(0, left), behavior: 'smooth' });
+    }
+
+    // Show/hide left+right nav fades based on scroll position
+    function updateNavFades() {
+      if (!nav || !headerBleed) return;
+      headerBleed.classList.toggle('nav-scrolled-left', nav.scrollLeft > 2);
+      headerBleed.classList.toggle('nav-at-end',
+        nav.scrollLeft >= nav.scrollWidth - nav.clientWidth - 2);
+    }
+    if (nav) {
+      nav.addEventListener('scroll', updateNavFades, { passive: true });
+      window.addEventListener('resize', updateNavFades, { passive: true });
+    }
+
+    function swapFloaterTo(src){
+      if (!src || src === floater.dataset.src) return;
+      floater.style.opacity = '0';
+      setTimeout(() => {
+        const onready = ()=>{
+          setTimeout(() => {
+            floater.style.opacity = '1';
+          }, 50);
+          floater.removeEventListener('loadeddata', onready);
+        };
+        floater.addEventListener('loadeddata', onready);
+        floater.src = src;
+        floater.dataset.src = src;
+        floater.play();
+      }, 150);
+    }
+
+    let activeId = solutions[0]?.id || null;
+
+    const io = new IntersectionObserver((entries)=>{
+      let best = null;
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        if (!best || e.intersectionRatio > best.intersectionRatio) best = e;
+      });
+      if (!best) return;
+
+      const nextId = best.target.id;
+      if (nextId === activeId) return;
+
+      solutions.forEach(s => s.classList.remove('active'));
+      best.target.classList.add('active');
+
+      activeId = nextId;
+      setActiveNav(activeId);
+      swapFloaterTo(best.target.dataset.img);
+    }, { root: null, threshold: [0.6] });
+
+    solutions.forEach(s => io.observe(s));
+
+    // Mobile: populate inline videos instead of using the sticky floater
+    if (window.innerWidth < 900) {
+      solutions.forEach(s => {
+        const src = s.dataset.img;
+        const target = s.querySelector('.img-target');
+        if (src && target) {
+          const vid = document.createElement('video');
+          vid.src = src;
+          vid.autoplay = true;
+          vid.loop = true;
+          vid.muted = true;
+          vid.playsInline = true;
+          target.appendChild(vid);
+        }
+      });
+    }
+
+    // Hash support
+    window.addEventListener('load', ()=>{
+      const first = document.getElementById(activeId);
+      if (first) {
+        swapFloaterTo(first.dataset.img);
+        first.classList.add('active');
+      }
+      if (location.hash) {
+        const t = document.querySelector(location.hash);
+        if (t) t.scrollIntoView({behavior:'instant', block:'start'});
+      }
+      updateNavFades(); // set initial fade state once layout is complete
+    });
+    window.addEventListener('hashchange', ()=>{
+      const t = document.querySelector(location.hash);
+      if (t) t.scrollIntoView({behavior:'smooth', block:'start'});
+    });
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      floater.style.transition = 'none';
+    }
+  })();
+  </script>
+
+  <script>
+  // Animated counter — estimates current play count and counts up to it
+  (function() {
+    var counter = document.querySelector('.wy-counter');
+    if (!counter) return;
+
+    // Reference: 999,477 plays at Feb 16 2026 14:48 EST
+    var refDate = new Date('2026-02-16T14:48:00-05:00');
+    var refCount = 999477;
+    var playsPerDay = 1500;
+    var playsPerMs = playsPerDay / (24 * 60 * 60 * 1000);
+
+    function getEstimate() {
+      var elapsed = Date.now() - refDate.getTime();
+      return Math.round(refCount + elapsed * playsPerMs);
+    }
+
+    var target = getEstimate();
+    var started = false;
+
+    function formatNum(n) {
+      return n.toLocaleString('en-US');
+    }
+
+    var displayedCount = target;
+
+    // Build digit spans for the current number so we can animate individual digits
+    function renderDigits(n) {
+      var str = formatNum(n);
+      counter.innerHTML = '';
+      for (var i = 0; i < str.length; i++) {
+        var ch = str[i];
+        if (ch === ',') {
+          counter.appendChild(document.createTextNode(','));
+        } else {
+          var span = document.createElement('span');
+          span.className = 'wy-digit';
+          span.innerHTML = '<span class="wy-digit-inner"><span class="wy-digit-old">' + ch + '</span></span>';
+          counter.appendChild(span);
+        }
+      }
+    }
+
+    function tickUp() {
+      var oldStr = formatNum(displayedCount);
+      displayedCount++;
+      var newStr = formatNum(displayedCount);
+
+      // If length changed (e.g. 999,999 -> 1,000,000), just re-render
+      if (oldStr.length !== newStr.length) {
+        renderDigits(displayedCount);
+        return;
+      }
+
+      // Find which characters changed and slide those digits
+      var spans = counter.querySelectorAll('.wy-digit');
+      var digitIdx = 0;
+      for (var i = 0; i < newStr.length; i++) {
+        if (newStr[i] === ',') continue;
+        if (oldStr[i] !== newStr[i]) {
+          var inner = spans[digitIdx].querySelector('.wy-digit-inner');
+          // Add the new digit below
+          var newDigit = document.createElement('span');
+          newDigit.className = 'wy-digit-new';
+          newDigit.textContent = newStr[i];
+          inner.appendChild(newDigit);
+          // Trigger slide via one-shot CSS animation
+          requestAnimationFrame(function(innerEl, newCh) {
+            return function() {
+              innerEl.classList.add('sliding');
+              innerEl.addEventListener('animationend', function handler() {
+                innerEl.removeEventListener('animationend', handler);
+                innerEl.classList.remove('sliding');
+                innerEl.querySelector('.wy-digit-old').textContent = newCh;
+                var newEl = innerEl.querySelector('.wy-digit-new');
+                if (newEl) innerEl.removeChild(newEl);
+              });
+            };
+          }(inner, newStr[i]));
+        }
+        digitIdx++;
+      }
+    }
+
+    function startLiveTicks() {
+      // Render as digit spans so tick animations work
+      renderDigits(displayedCount);
+      // First tick within 3-8 seconds so the user sees it "go up"
+      var firstDelay = 3000 + Math.random() * 5000;
+      setTimeout(function() {
+        tickUp();
+        // Then tick roughly once per minute with some jitter (50-70s)
+        setInterval(function() {
+          tickUp();
+        }, 50000 + Math.random() * 20000);
+      }, firstDelay);
+    }
+
+    function animateCounter() {
+      if (started) return;
+      started = true;
+      var duration = 2000;
+      var startTime = null;
+
+      function step(ts) {
+        if (!startTime) startTime = ts;
+        var progress = Math.min((ts - startTime) / duration, 1);
+        var eased = 1 - Math.pow(1 - progress, 4);
+        var current = Math.round(eased * target);
+        counter.textContent = formatNum(current);
+        if (progress < 1) {
+          requestAnimationFrame(step);
+        } else {
+          counter.textContent = formatNum(target);
+          counter.classList.add('is-done');
+          startLiveTicks();
+        }
+      }
+      requestAnimationFrame(step);
+    }
+
+    var obs = new IntersectionObserver(function(entries) {
+      if (entries[0].isIntersecting) {
+        animateCounter();
+        obs.disconnect();
+      }
+    }, { threshold: 0.5 });
+    obs.observe(counter);
+  })();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
  
 </body>
 </html> 

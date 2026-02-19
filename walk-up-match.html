@@ -1,123 +1,249 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!doctype html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/hamburgers.css" rel="stylesheet">
-    <link rel="stylesheet" href="/dependencies/photoswipe/dist/photoswipe.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2/css/lightgallery-bundle.min.css">
     <script async src="js/script.js"></script>
-    <title>Chris Creguer—UX Designer</title>
+    <script async src="js/footer.js"></script>
+    <title>Chris Creguer—UX Designer | WalkupMatch Case Study</title>
 </head>
-<body>
-    <nav class="navbar">
-        <a class="logo" href="index.html">
-            <div>Chris Creguer</div>
-        </a>
-        <button class="hamburger hamburger--collapse" type="button">
-            <span class="hamburger-box">
-                <span class="hamburger-inner"></span>
-            </span>
-        </button>
-        <ul class="navbar-list">
-            <a href="index.html" class="active"><li>Work</li></a>
-            <a href="about.html"><li>About</li></a>
-        </ul>
-    </nav>
-    <div class="overlay-menu">
-        <ul class="navbar-list-mobile">
-            <a href="index.html" class="active"><li>Work</li></a>
-            <a href="about.html"><li>About</li></a>
-        </ul>
-    </div>
-    <header class="case-study-header case-study-theme-walkupmatch">
-        <div class="case-study-header-text">
-            <h1>WalkupMatch</h1>
-            <p class="subtitle">Connecting pickup soccer players</p>
-            <ul class="tags">
-                <li>UI Design</li>
-                <li>Prototyping</li>
-            </ul>
-            <div class="project-links">
-                <a href="#" target="_blank" class="button-primary">View Live Project <span class="icon-external-link"></span></a> 
-                <!-- Replace # with actual link if available -->
-            </div>
-        </div>
-        <div class="case-study-header-images">
-            <img src="img/walkupmatch/hero1.png" alt="WalkupMatch Hero Image 1">
-            <img src="img/walkupmatch/hero2.png" alt="WalkupMatch Hero Image 2">
-            <img src="img/walkupmatch/hero3.png" alt="WalkupMatch Hero Image 3">
-        </div>
-    </header>
+<body class="cs-page cs-theme-walkupmatch">
 
-    <main class="case-study-content case-study-theme-walkupmatch">
-        <div id="introduction-section">
-            <div class="panel" data-color="white">
-                <h2 class="project-section-title">Background</h2>
-                <p class="detail">Walk-up Match is a piece of software that lets you add your Spotify, gives you a team of baseball players with similar music taste to you based on their walk-up music, and gives you stats about the team. This case study shows mockups of the application. (Boilerplate text)</p>
-                
-                <h3 class="project-section-title" style="margin-top: 2em;">Application Mockups</h3>
-                <div class="pswp-gallery project-image" id="gallery-walkupmatch">
-                    <div style="display: flex; gap: 1em; justify-content: center;">
-                        <div style="flex: 1; max-width: 45%;">
-                            <a href="img/walkupmatch/WalkupMatch Mobile 1.png" data-pswp-width="1200" data-pswp-height="800"> 
-                                <img src="img/walkupmatch/WalkupMatch Mobile 1.png" alt="Walk-up Match Mobile Screenshot 1" style="width: 100%;">
-                            </a>
-                            <div class="project-image-caption" style="text-align: center;">Mobile Design 1</div>
-                        </div>
-                        <div style="flex: 1; max-width: 45%;">
-                            <a href="img/walkupmatch/WalkupMatch Mobile 2.png" data-pswp-width="1200" data-pswp-height="800">
-                                <img src="img/walkupmatch/WalkupMatch Mobile 2.png" alt="Walk-up Match Mobile Screenshot 2" style="width: 100%;">
-                            </a>
-                            <div class="project-image-caption" style="text-align: center;">Mobile Design 2</div>
-                        </div>
-                    </div>
+  <nav class="navbar">
+    <div class="content-limiter">
+      <a class="logo" href="index.html">
+        <div>Chris Creguer</div>
+      </a>
+      <button class="hamburger hamburger--collapse" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+      <ul class="navbar-list">
+        <a href="index.html"><li>Work</li></a>
+        <a href="about.html"><li>About</li></a>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="overlay-menu">
+    <ul class="navbar-list-mobile">
+      <a href="index.html"><li>Work</li></a>
+      <a href="about.html"><li>About</li></a>
+    </ul>
+  </div>
+
+  <header class="cs-hero">
+    <div class="cs-hero-bg"></div>
+    <div class="cs-hero-inner">
+      <h1 class="cs-hero-title">WalkupMatch</h1>
+      <div class="cs-hero-subtitle">Spotify Wrapped meets MLB</div>
+      <div class="cs-hero-image">
+        <img src="img/walkupmatch/WalkupMatch Desktop.png" alt="WalkupMatch — Desktop view">
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="content-limiter">
+      <div class="case-study case-study-theme-walkupmatch">
+        <div class="cs-layout">
+          <article class="cs-content" style="padding: 0 3em;">
+
+            <section class="wy-section-narrow">
+              <p class="wy-lede">WalkupMatch connects to your Spotify and builds you a full MLB roster — matching you with real baseball players whose walk-up songs align with your music taste. It then pulls live stats and tells you how your fantasy music team would actually perform.</p>
+              <div class="wy-columns">
+                <div class="wy-col">
+                  <h4>My Role</h4>
+                  <p>Designer &amp; Full-Stack Developer</p>
+                </div>
+                <div class="wy-col">
+                  <h4>Tools / Methods</h4>
+                  <p>Figma
+React / Next.js
+Spotify API
+Live Sports API</p>
+                </div>
+                <div class="wy-col">
+                  <h4>Timeline</h4>
+                  <p>2024 — Personal Project</p>
+                </div>
+              </div>
+
+              <div class="wy-cta">
+                <a href="#" target="_blank" class="button-primary">Try WalkupMatch <span class="material-icons">open_in_new</span></a>
+              </div>
+            </section>
+
+            <section class="cs-article-body" id="gallery-walkupmatch">
+
+
+              <div class="cs-article-section">
+                <div class="cs-article-section-label">
+                  <span class="cs-section-name">Concept</span>
+                </div>
+                <h3>The Idea</h3>
+                <p>A lot of apps connect to Spotify and tell you things you already know — your top artists, your most-played songs. I wanted to do something more unexpected with that data. Baseball players choose walk-up songs that play as they step up to bat, and there's a rich database of those choices across current and former MLB players. The premise: if your music taste overlaps with a player's walk-up music, they're on your team.</p>
+                <p>It's a simple concept, but making the results feel meaningful — not random — required a matching algorithm with real depth behind it.</p>
+
+                <div class="cs-article-img-grid cs-article-img-grid--phone">
+                  <a href="img/walkupmatch/WalkupMatch Mobile Lineup View.png" data-src="img/walkupmatch/WalkupMatch Mobile Lineup View.png">
+                    <img src="img/walkupmatch/WalkupMatch Mobile Lineup View.png" alt="WalkupMatch — Mobile lineup view">
+                  </a>
+                  <a href="img/walkupmatch/WalkupMatch Mobile Playlist View.png" data-src="img/walkupmatch/WalkupMatch Mobile Playlist View.png">
+                    <img src="img/walkupmatch/WalkupMatch Mobile Playlist View.png" alt="WalkupMatch — Mobile playlist view">
+                  </a>
+                </div>
+              </div>
+
+              <div class="cs-article-section">
+                <div class="cs-article-section-label">
+                  <span class="cs-section-name">How It Works</span>
+                </div>
+                <h3>From Spotify to Roster</h3>
+                <p>You connect your Spotify account, and the app pulls your top tracks, top artists, saved songs, and genre profile across multiple time ranges. On the other side is a database of MLB players with their walk-up songs, linked to Spotify track IDs and tagged with genres.</p>
+                <p>The app scores every player against your profile, then assembles a full roster — one player per position — optimizing for match quality while keeping the team balanced. Once your team is built, it pulls each player's real stats from a live sports API to calculate team averages and a projected win-loss record.</p>
+
+                <div class="cs-article-img">
+                  <a href="img/walkupmatch/WalkupMatch Desktop.png" data-src="img/walkupmatch/WalkupMatch Desktop.png">
+                    <img src="img/walkupmatch/WalkupMatch Desktop.png" alt="WalkupMatch — Desktop view">
+                  </a>
+                </div>
+              </div>
+
+              <div class="cs-article-section">
+                <div class="cs-article-section-label">
+                  <span class="cs-section-name">Algorithm</span>
+                </div>
+                <h3>The Matching Logic</h3>
+                <p>Each player's walk-up songs are scored against your Spotify data on three dimensions: direct song matches (you listen to the same track), artist matches (you listen to the same artist), and genre overlap (your top genres align with the song's genres). A song you've actually liked or saved carries the most weight — it's the strongest signal that the match is real.</p>
+                <p>Time range matters too. A track in your long-term top songs says more about your taste than something you binged last week, so the algorithm weights accordingly. Rank also factors in — your #3 artist is a stronger match than your #47.</p>
+                <p>When assembling the team, the algorithm fills positions one at a time, applying two constraints that keep the results interesting: a genre diversity boost (so your team isn't nine players who all share one genre) and an artist repetition penalty (so one popular artist doesn't dominate the roster). The result is a team that genuinely reflects the range of your music taste.</p>
+              </div>
+
+              <div class="cs-article-section">
+                <div class="cs-article-section-label">
+                  <span class="cs-section-name">Live Stats</span>
+                </div>
+                <h3>Team Stats &amp; Projected Record</h3>
+                <p>Once your roster is locked, the app hits a live sports API to pull real stats for each player — batting average, OPS, ERA, and more. It aggregates these into team-level numbers and generates a projected win-loss record, so you can see whether your music taste would produce a playoff contender or a last-place squad.</p>
+                <p>The stats are real even if the premise is absurd, which is what makes it fun. Your team's projected record is based on actual player performance, just filtered through a completely unserious selection method.</p>
+              </div>
+
+              <div class="cs-article-section">
+                <div class="cs-article-section-label">
+                  <span class="cs-section-name">Illustration</span>
+                </div>
+                <h3>Custom Backdrops</h3>
+                <p>I illustrated a set of baseball environments — the field, dugout, and bullpen — used as decorative backdrops behind each player on their card. They give the app a handmade, editorial quality that sets it apart from the typical data-heavy sports interface, and help each position feel like its own scene rather than a row in a table.</p>
+
+                <div class="cs-article-img">
+                  <a href="img/walkupmatch/Field Illustration.png" data-src="img/walkupmatch/Field Illustration.png">
+                    <img src="img/walkupmatch/Field Illustration.png" alt="WalkupMatch — Field illustration">
+                  </a>
                 </div>
 
-                <h3 class="project-section-title" style="margin-top: 2em;">Additional Visuals</h3>
-                <div class="pswp-gallery project-image" id="gallery-additional-walkupmatch">
-                    <a href="img/walkupmatch/WalkupMatch Desktop.png" data-pswp-width="1200" data-pswp-height="800">
-                        <img src="img/walkupmatch/WalkupMatch Desktop.png" alt="Additional WalkupMatch visual 1">
-                    </a>
-                    <div class="project-image-caption">Desktop Design</div>
+                <div class="cs-article-img-grid">
+                  <a href="img/walkupmatch/Dugout Illustration.png" data-src="img/walkupmatch/Dugout Illustration.png">
+                    <img src="img/walkupmatch/Dugout Illustration.png" alt="WalkupMatch — Dugout illustration">
+                  </a>
+                  <a href="img/walkupmatch/Bullpen Illustration.png" data-src="img/walkupmatch/Bullpen Illustration.png">
+                    <img src="img/walkupmatch/Bullpen Illustration.png" alt="WalkupMatch — Bullpen illustration">
+                  </a>
                 </div>
+              </div>
 
-            </div>
+              <div class="cs-article-section">
+                <div class="cs-article-section-label">
+                  <span class="cs-section-name">Design &amp; Build</span>
+                </div>
+                <h3>End-to-End</h3>
+                <p>I designed and built this end-to-end — Figma for the UI, React and Next.js for the frontend, server-side API routes for the Spotify OAuth flow, matching logic, and sports data integration. The interface needed to make a dense amount of information (roster, match reasons, individual stats, team projections) feel lightweight and fun rather than like a spreadsheet.</p>
+                <p>The mobile layout was the primary target since this is the kind of thing people share and try on their phones.</p>
+              </div>
+
+            </section>
+
+          </article>
         </div>
-        <div class="spacer"></div><div class="spacer"></div><div class="spacer"></div>
-        <p style="color:rgb(0,0,0, .6); text-align:center; font-weight: 500;"><span style="font-family:material icons; font-size:3rem;">engineering</span><br>This case study is under construction</p>
+      </div>
     </div>
-    </main>
+  </main>
 
-    <hr>
-    <div class="next-page">
-        <p>Next: <a class="next-link" href="index.html">Home</a>&nbsp;<span class="iconlink">arrow_forward</span></p>
+  <div class="more-case-studies">
+    <h3 class="more-case-studies-title">More case studies</h3>
+    <div class="more-case-studies-grid">
+      <a href="which_year.html">
+        <div class="mini-card mini-whichyear">
+          <div class="mini-card-text">
+            <h3 class="mini-card-title">WhichYear</h3>
+            <p class="mini-card-subtitle">Daily game with over 600,000 plays</p>
+            <ul class="mini-card-tags"><li>UI Design</li><li>Full-Stack</li></ul>
+          </div>
+          <div class="mini-card-image"><img src="img/previews/whichyear_preview.png" alt="WhichYear"></div>
+        </div>
+      </a>
+      <a href="finvera.html">
+        <div class="mini-card mini-finvera">
+          <div class="mini-card-text">
+            <h3 class="mini-card-title">Finvera</h3>
+            <p class="mini-card-subtitle">Fintech startup news site</p>
+            <ul class="mini-card-tags"><li>UI Design</li><li>Front-End</li></ul>
+          </div>
+          <div class="mini-card-image"><img src="img/previews/finvera_preview.png" alt="Finvera"></div>
+        </div>
+      </a>
+      <a href="profile_tool.html">
+        <div class="mini-card mini-profile">
+          <div class="mini-card-text">
+            <h3 class="mini-card-title">Profile</h3>
+            <p class="mini-card-subtitle">Charge tracking software</p>
+            <ul class="mini-card-tags"><li>UI Design</li><li>Front-End</li></ul>
+          </div>
+          <div class="mini-card-image"><img src="img/previews/profile_preview.png" alt="Profile"></div>
+        </div>
+      </a>
+      <a href="tamatracker.html">
+        <div class="mini-card mini-tamatracker">
+          <div class="mini-card-text">
+            <h3 class="mini-card-title">TamaTracker</h3>
+            <p class="mini-card-subtitle">Skill progress tracker</p>
+            <ul class="mini-card-tags"><li>UI Design</li><li>Motion Design</li></ul>
+          </div>
+          <div class="mini-card-image"><img src="img/previews/tamatracker_preview.png" alt="TamaTracker"></div>
+        </div>
+      </a>
     </div>
-    <footer class="footer">
-        <p class="footer-copyright"> © 2024 Chris Creguer</p>
-        <ul class="footer-icons-list">
-            <li><a href="https://www.linkedin.com/in/chriscreguer/" target="_blank"><img class="footer-icon" alt="linkedin" src="img/icon/linkedin.png"></a></li>
-            <li><a href="about.html"><img class="footer-icon" alt="email" src="img/icon/email.png"></a></li>
-        </ul>
-    </footer>
-    <script type="module">
-        import PhotoSwipeLightbox from '/dependencies/photoswipe/dist/photoswipe-lightbox.esm.js';
-        
-        // Initialize existing galleries with the class selector
-        const classLightbox = new PhotoSwipeLightbox({
-            gallery: '#gallery-walkupmatch', // Target existing gallery by ID
-            children: 'a',
-            pswpModule: () => import('/dependencies/photoswipe/dist/photoswipe.esm.js')
-        });
-        classLightbox.init();
+  </div>
 
-        // Initialize the new gallery with its ID selector
-        const additionalWalkupmatchLightbox = new PhotoSwipeLightbox({
-            gallery: '#gallery-additional-walkupmatch',
-            children: 'a',
-            pswpModule: () => import('/dependencies/photoswipe/dist/photoswipe.esm.js')
-        });
-        additionalWalkupmatchLightbox.init();
-    </script>
+  <footer></footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2/lightgallery.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2/plugins/thumbnail/lg-thumbnail.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2/plugins/zoom/lg-zoom.umd.js"></script>
+  <script>
+    var lg = lightGallery(document.getElementById('gallery-walkupmatch'), {
+      selector: 'a[data-src]',
+      plugins: [lgThumbnail, lgZoom],
+      speed: 0,
+      backdropDuration: 100,
+      download: false,
+      thumbnail: true,
+      animateThumb: true,
+      currentPagerPosition: 'middle',
+      thumbWidth: 100,
+      thumbHeight: '70px',
+      thumbMargin: 10,
+      zoom: true,
+      scale: 0.5,
+      enableZoomAfter: 0,
+      actualSize: false,
+      showZoomInOutIcons: true,
+    });
+  </script>
+
 </body>
-</html> 
+</html>
