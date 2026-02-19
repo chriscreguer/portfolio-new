@@ -1286,8 +1286,8 @@ a.card-size-60 {
 .project-card.dribbble-gallery-card .flex svg { flex-shrink: 0; width: 20px; height: 20px; margin-top: 2px; }
 
 
-/* Desktop grid — only activates above 1440px */
-@media (min-width: 1441px) {
+/* Desktop grid — activates at 1024px and above */
+@media (min-width: 1024px) {
     /* Card heights at desktop */
     a.card-size-40 { height: 520px; }
     a.card-size-60 { height: 520px; }
@@ -1400,10 +1400,10 @@ a.card-size-60 {
 }
 
 /* ================================================================
-   STACKING LAYOUT — ≤ 1440px
-   Cards stack single-column; grid only kicks in above 1440px
+   STACKING LAYOUT — ≤ 1023px
+   Cards stack single-column; desktop grid kicks in at 1024px+
    ================================================================ */
-@media (max-width: 1440px) {
+@media (max-width: 1023px) {
     /* All cards full-width single-column — override global grid-column spans */
     .projects-list { grid-template-columns: 1fr; padding: 0 3em; margin-bottom: 1em; }
     a.card-size-40 { height: 480px; grid-column: 1 / -1; }
@@ -1480,10 +1480,10 @@ a.card-size-60 {
 }
 
 /* ================================================================
-   2-COLUMN GRID — 800px–1440px
+   2-COLUMN GRID — 768px–1023px
    Override the single-column stacking layout with 2 equal columns
    ================================================================ */
-@media (min-width: 800px) and (max-width: 1440px) {
+@media (min-width: 768px) and (max-width: 1023px) {
     .projects-list { grid-template-columns: repeat(2, 1fr); }
     a.card-size-40 { grid-column: auto; height: 480px; }
     a.card-size-60 { grid-column: auto; height: 480px; }
@@ -2159,7 +2159,7 @@ ol .project-image{
 .more-case-studies {
     max-width: 858px;
     margin: 0 auto;
-    padding: 3rem 16px 1.5rem 16px;
+    padding: 3rem 16px 4rem 16px;
     box-sizing: border-box;
     border-top: 1px solid #E5E5E5;
 }
