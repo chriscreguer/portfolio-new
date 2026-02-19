@@ -80,7 +80,7 @@
 }
 
 /* Section 2 (826px max width) */
-.wy-section-narrow { max-width: 826px; margin: 16px auto 0 auto; padding: 8px 16px 0 16px; }
+.wy-section-narrow { max-width: 826px; margin: 0 auto 0 auto; padding: 8px 16px 0 16px; }
 .wy-lede { font-size: 24px !important; font-weight: 700; line-height: 1.4; }
 .wy-columns { display: grid; grid-template-columns: 1fr; row-gap: 62px; column-gap: 100px; margin-top: 62px; }
 @media (min-width: 900px) { .wy-columns { grid-template-columns: 1fr 1fr 1fr; } }
@@ -604,7 +604,7 @@
   /* Metadata columns */
   .wy-columns {
     row-gap: 36px;
-    margin-top: 36px;
+    margin-top: 56px;
   }
 
   /* CTA */
@@ -618,7 +618,7 @@
     margin-top: 48px;
   }
   .wy-article-body:has(+ #wy-solutions) {
-    padding-bottom: 72px;
+    padding-bottom: 28px;
   }
 
   /* Solutions section — mobile rework */
@@ -627,6 +627,7 @@
   }
   .wy-solutions {
     scroll-snap-type: none;
+    margin-top: 0;
   }
   .wy-sol-list {
     scroll-snap-type: none;
@@ -692,7 +693,7 @@
     font-weight: 700;
     color: #fff;
     margin: 0;
-    padding: 12px 0 16px 0;
+    padding: 6px 0 12px 0;
   }
   .wy-solutions-header .wy-solutions-title-wrap {
     display: none;
@@ -707,9 +708,13 @@
   }
 
   /* Extend sticky nav bar to full viewport width; G aligns with content left edge */
+  /* padding-top + background fill the notch/safe-area on iPhones so the dark bg covers it */
   .wy-solutions-header-bleed {
     margin-left: -1.25rem;
     width: calc(100% + 2.5rem);
+    padding-top: env(safe-area-inset-top);
+    background: rgba(15, 15, 18, 0.96);
+    backdrop-filter: blur(6px);
   }
   /* Left fade — hidden until nav has been scrolled right */
   .wy-solutions-header-bleed::before {
@@ -749,7 +754,7 @@
   section#wy-solutions + .wy-article-body {
     padding-top: 32px;
     margin-top: 32px;
-    padding-bottom: 40px;
+    padding-bottom: 24px;
   }
   /* Label → h3 gap in Results to match Opportunity section feel */
   section#wy-solutions + .wy-article-body .cs-article-section-label {
@@ -759,6 +764,11 @@
   /* Counter band: reduce padding above and below */
   .wy-counter-band {
     padding: 32px 0;
+  }
+
+  /* Tighten gap between counter band and More Case Studies */
+  .wy-page main {
+    margin-bottom: 1.5rem;
   }
 
   /* Footer: shorter and smaller icons on WhichYear mobile */
@@ -786,16 +796,17 @@
 @media (max-width: 600px) {
   /* Hero */
   .wy-hero-inner {
-    padding: 9rem 1rem 2rem 1rem;
+    padding: 9rem 1rem 1rem 1rem;
   }
   .wy-logo {
-    margin-bottom: 3px;
+    margin-bottom: 2px;
   }
   .wy-logo svg {
     height: 26px;
   }
   .wy-subtitle {
     font-size: 16px;
+    margin-top: 4px;
   }
   .wy-hero-images {
     margin-top: 40px;
@@ -855,6 +866,17 @@
   .mini-card-subtitle {
     font-size: 13px;
   }
+}
+
+/* Which Year case study: spacing on smaller-than-desktop only */
+@media (max-width: 1023px) {
+  .wy-page .wy-hero-images { margin-top: 52px; }
+  .wy-page .wy-section-narrow { margin-top: 8px; }
+  .wy-page .wy-article-body:has(+ #wy-solutions) { padding-bottom: 64px; }
+  .wy-page .case-study .cs-section { padding-top: 2.75rem; padding-bottom: 0; }
+  .wy-page main { margin-bottom: 3rem; }
+  .wy-page #wy-solutions + .wy-article-body { margin-bottom: 24px; }
+  .wy-page .more-case-studies { padding-bottom: 1rem; }
 }
 
 /* overscroll-behavior removed per guidance to avoid bounce issues */
@@ -1469,6 +1491,20 @@ a.card-size-60 {
 
     /* WhichYear: restore full top padding (ribbon anchors to top, not needing clearance) */
     .project-card.which-year-card .project-card-content-wrapper { padding-top: 1.5em; }
+
+    /* Ribbon: shorter text on mobile */
+    .ribbon { font-size: 0; }
+    .ribbon::after { content: "1M PLAYS"; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+
+    /* Card typography: tighter title-to-subtitle spacing */
+    .project-card-subtitle { font-size: 1rem; }
+    .project-card-title { margin-bottom: 2px; }
+
+    /* Footer: compact on mobile */
+    footer > .content-limiter { height: auto; padding: 1.5rem 1.25rem; }
+
+    /* Reduce the large bottom gap below main on case study pages */
+    main { margin-bottom: 2rem; }
 }
 
 /* Hide ribbon when the hamburger overlay menu is open */
@@ -4291,14 +4327,16 @@ text-align: left;
 }
 
 @media (max-width: 900px) {
-    .cs-hero-inner { padding: 6rem 1.5rem 3rem 1.5rem; }
+    .cs-hero-inner { padding: 6rem 1.5rem 2rem 1.5rem; }
     .cs-hero-image { margin-top: 36px; }
     .cs-page .cs-content { padding: 0 1rem !important; }
-    .cs-page .wy-section-narrow { padding-bottom: 48px; }
+    .cs-page .wy-section-narrow { padding-bottom: 36px; }
     .cs-article-body { margin-top: 48px; }
     .cs-article-section { padding-top: 48px; margin-top: 48px; }
     .cs-article-img { margin: 24px 0; }
     .cs-article-img-grid { margin: 24px 0; gap: 12px; }
+    /* Tighten gap between content and More Case Studies */
+    .cs-page main { margin-bottom: 1.5rem; }
 }
 
 /* Per-theme accent for CTA button (overrides the default purple in .wy-cta) */
@@ -4442,12 +4480,12 @@ section#wy-solutions + .wy-article-body {
     .cs-article-img-grid {
         grid-template-columns: 1fr;
     }
-    .cs-hero-inner { padding: 7rem 1rem 2.5rem 1rem; }
+    .cs-hero-inner { padding: 9rem 1rem 1.5rem 1rem; }
     .cs-hero-logo img { max-height: 40px; width: auto; }
     .cs-hero-title { font-size: 1.6rem; }
-    .cs-hero-subtitle { font-size: 16px; }
+    .cs-hero-subtitle { font-size: 16px; margin-top: 4px; }
     .cs-page .cs-content { padding: 0 0.75rem !important; }
-    .cs-page .wy-section-narrow { padding-bottom: 36px; }
+    .cs-page .wy-section-narrow { padding-bottom: 24px; }
     .cs-article-body { margin-top: 36px; }
     .cs-article-section { padding-top: 36px; margin-top: 36px; }
     .cs-article-img { margin: 16px 0; }
