@@ -63,7 +63,7 @@
 /* Hero */
 .wy-hero { position: relative; margin-top: 0; }
 .wy-hero-bg { position: absolute; inset: 0; background: linear-gradient(180deg, #EDE7FF 0%, #F7F4FF 80%, transparent 80%); }
-.wy-hero-inner { max-width: 1440px; margin: 0 auto; padding: 8rem 3rem 4rem 3rem; text-align: center; position: relative; }
+.wy-hero-inner { max-width: 1440px; margin: 0 auto; padding: 9rem 3rem 3rem 3rem; text-align: center; position: relative; }
 .wy-logo { height: 42px; width: auto; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 2rem; letter-spacing: -0.02em; }
 .wy-logo svg { height: 42px; width: auto; display: block; }
 .wy-subtitle { margin-top: 10px; font-size: 20px; font-weight: 500; color: rgba(0,0,0,.7); }
@@ -94,7 +94,7 @@
   width: 100vw;
   background: var(--cs-kpi-bg, #f3eefb);
   padding: 40px 0;
-  margin-top: 62px;
+  margin-top: 64px;
   box-sizing: border-box;
 }
 .wy-kpis h4 {
@@ -1494,7 +1494,7 @@ a.card-size-60 {
 
     /* Ribbon: shorter text on mobile */
     .ribbon { font-size: 0; }
-    .ribbon::after { content: "1M PLAYS"; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+    .ribbon::after { content: "1 MILLION PLAYS!"; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
 
     /* Card typography: tighter title-to-subtitle spacing */
     .project-card-subtitle { font-size: 1rem; }
@@ -2195,7 +2195,7 @@ ol .project-image{
 .more-case-studies {
     max-width: 858px;
     margin: 0 auto;
-    padding: 3rem 16px 4rem 16px;
+    padding: 3rem 16px 5rem 16px;
     box-sizing: border-box;
     border-top: 1px solid #E5E5E5;
 }
@@ -4269,7 +4269,7 @@ text-align: left;
 .cs-hero-inner {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 8rem 3rem 4rem 3rem;
+    padding: 9rem 3rem 3rem 3rem;
     text-align: center;
     position: relative;
 }
@@ -4489,7 +4489,7 @@ section#wy-solutions + .wy-article-body {
     .cs-article-body { margin-top: 36px; }
     .cs-article-section { padding-top: 36px; margin-top: 36px; }
     .cs-article-img { margin: 16px 0; }
-    .cs-article-img-grid { margin: 16px 0; gap: 10px; }
+    .cs-article-img-grid { margin: 8px 0; gap: 10px; }
     .cs-article-img-grid--phone img { max-height: 400px; }
 }
 
@@ -4509,9 +4509,12 @@ section#wy-solutions + .wy-article-body {
 
 /* Image caption */
 .cs-article-img-caption {
-    font-size: 14px;
-    color: #888;
+    font-size: 12px;
+    color: rgba(0, 0, 0, .7);
     margin-top: 10px;
+}
+@media (min-width: 768px) {
+    .cs-article-img-caption { font-size: 14px; }
 }
 
 /* Scroll reveal before/after */
