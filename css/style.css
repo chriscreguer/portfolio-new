@@ -57,7 +57,7 @@
 
 /* WhichYear page theming */
 .wy-page .navbar { background: transparent; position: absolute; left: 0; right:0; z-index: 10; }
-.wy-page .overlay-menu { background: transparent; }
+.wy-page .overlay-menu { background: #fff; }
 .wy-page .cs-content { padding: 0 3em; }
 
 /* Hero */
@@ -1022,14 +1022,14 @@ ol {
     opacity: 0;
     visibility: hidden;
     background-color: #fff;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 6;
     width: 100%;
     height: 100vh;
     transition: all .3s ease;
-} 
+}
 
 .display-overlay-menu{
     opacity: 0 !important;
@@ -4276,7 +4276,7 @@ text-align: left;
 
 /* Body class: transparent navbar overlaying the hero (same as .wy-page) */
 .cs-page .navbar { background: transparent; position: absolute; left: 0; right: 0; z-index: 10; }
-.cs-page .overlay-menu { background: transparent; }
+.cs-page .overlay-menu { background: #fff; }
 
 .cs-hero {
     position: relative;
