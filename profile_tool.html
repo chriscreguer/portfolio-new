@@ -10,7 +10,7 @@
     <script async src="js/footer.js"></script>
     <title>Chris Creguer—UX Designer | Profile Case Study</title>
 </head>
-<body class="cs-page cs-theme-profile">
+<body class="cs-page cs-theme-profile" id="gallery-profile">
 
   <nav class="navbar">
     <div class="content-limiter">
@@ -44,7 +44,9 @@
       </div>
       <div class="cs-hero-subtitle">Charge tracking tool for contractors</div>
       <div class="cs-hero-image">
-        <img src="img/profile/Profile - Table View.png" alt="Profile Tool — Table view">
+        <a href="img/profile/Profile - Table View.png" data-src="img/profile/Profile - Table View.png">
+          <img src="img/profile/Profile - Table View.png" alt="Profile Tool — Table view">
+        </a>
       </div>
     </div>
   </header>
@@ -88,7 +90,7 @@ Usability Testing</p>
 
             </section>
 
-            <section class="cs-article-body" id="gallery-profile">
+            <section class="cs-article-body">
 
 
               <div class="cs-article-section">
@@ -102,17 +104,6 @@ Usability Testing</p>
 
 
 
-              </div>
-
-              <div class="cs-article-section">
-                <div class="cs-article-section-label">
-                  <span class="cs-section-name">The Solution</span>
-                </div>
-                <h3>Beyond a UI Redesign</h3>
-                <p>In addition to refreshing the UI, we improved the surrounding workflows so the right data existed, the right people received it at the right time, and it was harder to miss key information.</p>
-                <p><strong>Upstream adoption:</strong> Before Profile could prevent errors for employees, it needed a reliable source of truth. We improved the manager-facing planning tool where effort is allocated and added a tightly integrated workflow to push updates into work authorizations in one or two clicks from the same screen.</p>
-                <p><strong>Proactive prevention:</strong> We added automated email alerts when someone overcharged an authorization, routed to users' government-site email addresses when needed, since many employees can't access their company email during the day.</p>
-                <p><strong>Manager dashboard:</strong> We created a dashboard for managers that surfaces overcharges across direct reports in a single view, with a one-click reminder email built in. Managers can still reach out personally when needed, but the default path is faster and more consistent.</p>
               </div>
 
               <div class="cs-article-section">
@@ -154,7 +145,11 @@ Usability Testing</p>
                 <h3>Density When You Need It</h3>
                 <p>For users with many authorizations, a table view provides compact scanning with sortable columns while preserving the same status language. Sort by expiration to surface urgency. Sort by remaining hours to identify authorizations near exhaustion.</p>
 
-  
+                <div class="cs-article-img">
+                  <a href="img/profile/Profile - Table View Highlight.png" data-src="img/profile/Profile - Table View Highlight.png">
+                    <img src="img/profile/Profile - Table View Highlight.png" alt="Profile Tool — Table view with highlighted columns">
+                  </a>
+                </div>
               </div>
 
               <div class="cs-article-section">
@@ -165,7 +160,22 @@ Usability Testing</p>
                 <p>The old tabs were All, Current, and Expired. But "Expired" wasn't a primary workflow. People needed to know what they <em>can</em> charge to now, and what's coming next. We reframed the experience around three modes: <strong>All</strong> for full context, <strong>Chargeable</strong> for items effective today and still relevant, and <strong>Upcoming</strong> for future authorizations so users can anticipate transitions and avoid last-minute confusion.</p>
                 <p>We also introduced a "Last Charged" column as a disambiguation tool. Many work authorizations look nearly identical: similar project names, similar codes, similar time windows. Anchoring decisions in recent behavior (<em>"This is the one I used yesterday"</em>) reduces selection mistakes when users are moving fast and the data isn't naturally human-readable.</p>
 
-  
+                <div class="cs-article-img">
+                  <a href="img/profile/Profile - Before vs After Filters.png" data-src="img/profile/Profile - Before vs After Filters.png">
+                    <img src="img/profile/Profile - Before vs After Filters.png" alt="Profile Tool — Before and after filter redesign">
+                  </a>
+                </div>
+              </div>
+
+              <div class="cs-article-section">
+                <div class="cs-article-section-label">
+                  <span class="cs-section-name">The Solution</span>
+                </div>
+                <h3>Beyond a UI Redesign</h3>
+                <p>In addition to refreshing the UI, we improved the surrounding workflows so the right data existed, the right people received it at the right time, and it was harder to miss key information.</p>
+                <p><strong>Upstream adoption:</strong> Before Profile could prevent errors for employees, it needed a reliable source of truth. We improved the manager-facing planning tool where effort is allocated and added a tightly integrated workflow to push updates into work authorizations in one or two clicks from the same screen.</p>
+                <p><strong>Proactive prevention:</strong> We added automated email alerts when someone overcharged an authorization, routed to users' government-site email addresses when needed, since many employees can't access their company email during the day.</p>
+                <p><strong>Manager dashboard:</strong> We created a dashboard for managers that surfaces overcharges across direct reports in a single view, with a one-click reminder email built in. Managers can still reach out personally when needed, but the default path is faster and more consistent.</p>
               </div>
 
               <div class="cs-article-section">
