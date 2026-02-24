@@ -56,7 +56,7 @@
           <article class="cs-content" style="padding: 0 3em;">
 
             <section class="wy-section-narrow">
-              <p class="wy-lede">Profile is an internal tool that helps government contractors manage work authorizations — showing where to charge time, what's expiring, and what needs attention. It's part of a larger ecosystem of internal tools, and the real goal isn't just better visibility. It's preventing costly charging errors before they happen.</p>
+              <p class="wy-lede">Profile is an internal tool that helps government contractors manage work authorizations. It shows employees where to charge time, what's expiring, and what needs attention. Part of an ecosystem of internal tools, it also helps prevent costly charging errors before they happen.</p>
               <div class="wy-columns">
                 <div class="wy-col">
                   <h4>My Role</h4>
@@ -71,7 +71,7 @@ Usability Testing</p>
                 </div>
                 <div class="wy-col">
                   <h4>Timeline</h4>
-                  <p>2024</p>
+                  <p>Jan 2025 - Present</p>
                 </div>
               </div>
 
@@ -79,10 +79,9 @@ Usability Testing</p>
                 <h4>KPIs</h4>
                 <div class="wy-kpi-band">
                   <div class="wy-kpi-row">
-                    <div class="wy-kpi"><div class="num">42<span class="unit">%</span></div><div class="label">Faster Time-on-Task</div></div>
+                    <div class="wy-kpi"><div class="num">42<span class="unit">%</span></div><div class="label">Less time spent on error resolution</div></div>
                     <div class="wy-kpi"><div class="num">65<span class="unit">%</span></div><div class="label">Fewer Unresolved Overcharges</div></div>
                     <div class="wy-kpi"><div class="num">4.5<span class="unit">/5</span></div><div class="label">User Satisfaction</div></div>
-                    <div class="wy-kpi"><div class="num">800<span class="unit">+</span></div><div class="label">Active Users</div></div>
                   </div>
                 </div>
               </div>
@@ -97,9 +96,9 @@ Usability Testing</p>
                   <span class="cs-section-name">The Problem</span>
                 </div>
                 <h3>The Old System Created Errors by Default</h3>
-                <p>In government contracting, employees routinely split time across multiple projects, and each project can include multiple charge lines with different budgets, effective dates, expiration dates, and constraints. When someone charges to the wrong line — or keeps charging after hours are exhausted — it creates a cascade of cleanup work for managers, administrators, and finance teams.</p>
-                <p>The original Profile experience technically contained the right information, but it didn't help users act on it. Authorizations had no hierarchy — healthy items looked identical to broken ones. Overcharges and expiring lines weren't surfaced until they became emergencies. Users relied on managers to manually flag issues, often via email.</p>
-                <p>Many employees weren't even in the system, because their assignments weren't being created through the workflow that feeds Profile. Managers were forced into a workaround loop — manually tracking hours and sending guidance emails — which increased error risk and wasted time.</p>
+                <p>In government contracting, employees routinely split time across multiple projects, and each project can include multiple charge lines with different budgets, effective dates, expiration dates, and constraints. When someone charges to the wrong line (or keeps charging after hours are exhausted) it creates a cascade of cleanup work for project managers.</p>
+                <p>The original Profile experience technically contained the right information, but didn't help users act on it. Healthy items looked identical to broken ones. A card view with poor visual hierarchy contributed to the problem, making information difficult to read and impossible to sort. Users relied on managers to manually flag issues, often via email.</p>
+                <p>Many employees weren't even in the system, because their assignments weren't being created through the workflow that feeds Profile. Managers were forced into a workaround loop of manually tracking hours and sending guidance emails, which increased error risk and wasted time.</p>
 
 
 
@@ -110,20 +109,19 @@ Usability Testing</p>
                   <span class="cs-section-name">The Solution</span>
                 </div>
                 <h3>Beyond a UI Redesign</h3>
-                <p>This project wasn't just a visual refresh of Profile. It was a coordinated effort across the surrounding workflow so the right data existed, the right people received it at the right time, and the UI made it hard to do the wrong thing.</p>
-                <p><strong>Upstream adoption:</strong> Before Profile could prevent errors for employees, it needed a reliable source of truth. We improved the manager-facing planning tool where effort is allocated and added a tightly integrated workflow to push updates into work authorizations in one or two clicks from the same screen. This was intentionally a "push" model — not a passive read of planned hours — because authorization hours are gated by an approval process and aren't always equivalent to what a manager intends to allocate.</p>
-                <p><strong>Proactive prevention:</strong> We added automated email alerts when someone overcharged an authorization, routed to users' government-site email addresses when needed — a practical decision based on where employees actually are during the day. Overcharges became a moment-to-moment fix, not a delayed cleanup task.</p>
-                <p><strong>Manager dashboard:</strong> We created a dashboard that surfaces overcharges across direct reports in a single view, with a one-click reminder email built in. Managers can still reach out personally when needed, but the default path is faster and more consistent.</p>
+                <p>In addition to refreshing the UI, we improved the surrounding workflows so the right data existed, the right people received it at the right time, and it was harder to miss key information.</p>
+                <p><strong>Upstream adoption:</strong> Before Profile could prevent errors for employees, it needed a reliable source of truth. We improved the manager-facing planning tool where effort is allocated and added a tightly integrated workflow to push updates into work authorizations in one or two clicks from the same screen.</p>
+                <p><strong>Proactive prevention:</strong> We added automated email alerts when someone overcharged an authorization, routed to users' government-site email addresses when needed, since many employees can't access their company email during the day.</p>
+                <p><strong>Manager dashboard:</strong> We created a dashboard for managers that surfaces overcharges across direct reports in a single view, with a one-click reminder email built in. Managers can still reach out personally when needed, but the default path is faster and more consistent.</p>
               </div>
 
               <div class="cs-article-section">
                 <div class="cs-article-section-label">
-                  <span class="cs-section-name">Card View</span>
+                  <span class="cs-section-name">Information Hierarchy</span>
                 </div>
                 <h3>Scan, Don't Browse</h3>
-                <p>Profile is not a product people explore. It's something they open to answer a question quickly: <em>Where can I charge today? What's about to expire? Is anything broken that I need to fix?</em> The redesign reorganized the experience around urgency and action, not raw completeness.</p>
-                <p>Each work authorization became a card designed for fast comprehension. Key signals are grouped and visually prioritized so users can assess an authorization without reading every field. Overcharged items are visually flagged, remaining hours and time sensitivity are easy to spot, and new or noteworthy items don't blend into the background.</p>
-                <p>This is where "digestibility" becomes error prevention: when the right line is obvious, the wrong line is less likely.</p>
+                <p>Profile is supposed to help employees understand their work authorizations quickly: <em>Where can I charge today? What's about to expire? Is anything broken that I need to fix?</em> The redesign reorganized the experience to surface answers to these questions most prominently and filter out noise.</p>
+                <p>Key signals are grouped and visually prioritized so users can assess an authorization without reading every field. Overcharged items are visually flagged, remaining hours and time sensitivity are easy to spot, and new or noteworthy items don't blend into the background.</p>
 
                 <div class="cs-scroll-reveal">
                   <div class="cs-scroll-item cs-scroll-before">
@@ -137,6 +135,14 @@ Usability Testing</p>
                     <a href="img/profile/Profile - Table View.png" data-src="img/profile/Profile - Table View.png">
                       <img src="img/profile/Profile - Table View.png" alt="Profile Tool — Redesigned table view">
                     </a>
+                    <br>
+                    <a href="img/profile/Profile - Card View.png" data-src="img/profile/Profile - Card View.png">
+                      <img src="img/profile/Profile - Card View.png" alt="Profile Tool — Card view with color-coded work authorizations">
+                    </a>
+                    <br>
+                    <a href="img/profile/IWA - IWA Details Modal Open.png" data-src="img/profile/IWA - IWA Details Modal Open.png">
+                      <img src="img/profile/IWA - IWA Details Modal Open.png" alt="Profile Tool — Work authorization detail view">
+                    </a>
                   </div>
                 </div>
               </div>
@@ -146,13 +152,9 @@ Usability Testing</p>
                   <span class="cs-section-name">Table View</span>
                 </div>
                 <h3>Density When You Need It</h3>
-                <p>For users with many authorizations, a table view provides compact scanning with sortable columns while preserving the same status language. Sort by expiration to surface urgency. Sort by remaining hours to identify near-exhaustion. Visual status cues stay consistent so critical items don't disappear in dense layouts.</p>
+                <p>For users with many authorizations, a table view provides compact scanning with sortable columns while preserving the same status language. Sort by expiration to surface urgency. Sort by remaining hours to identify authorizations near exhaustion.</p>
 
-                <div class="cs-article-img">
-                  <a href="img/profile/Profile - Card View.png" data-src="img/profile/Profile - Card View.png">
-                    <img src="img/profile/Profile - Card View.png" alt="Profile Tool — Card view with color-coded work authorizations">
-                  </a>
-                </div>
+  
               </div>
 
               <div class="cs-article-section">
@@ -160,14 +162,10 @@ Usability Testing</p>
                   <span class="cs-section-name">Filters &amp; Detail</span>
                 </div>
                 <h3>Matching How Users Think</h3>
-                <p>The old tabs were All, Current, and Expired. "Expired" wasn't a primary workflow — people needed to know what they <em>can</em> charge to now, and what's coming next. We reframed the experience around three modes: <strong>All</strong> for full context, <strong>Chargeable</strong> for items effective today and still relevant, and <strong>Upcoming</strong> for future authorizations so users can anticipate transitions and avoid last-minute confusion.</p>
-                <p>We also introduced a "Last Charged" column as a disambiguation tool. Many work authorizations look nearly identical — similar project names, similar codes, similar time windows — and the identifiers can be opaque strings. Anchoring decisions in recent behavior (<em>"This is the one I used yesterday"</em>) reduces selection mistakes when users are moving fast and the data isn't naturally human-readable.</p>
+                <p>The old tabs were All, Current, and Expired. But "Expired" wasn't a primary workflow. People needed to know what they <em>can</em> charge to now, and what's coming next. We reframed the experience around three modes: <strong>All</strong> for full context, <strong>Chargeable</strong> for items effective today and still relevant, and <strong>Upcoming</strong> for future authorizations so users can anticipate transitions and avoid last-minute confusion.</p>
+                <p>We also introduced a "Last Charged" column as a disambiguation tool. Many work authorizations look nearly identical: similar project names, similar codes, similar time windows. Anchoring decisions in recent behavior (<em>"This is the one I used yesterday"</em>) reduces selection mistakes when users are moving fast and the data isn't naturally human-readable.</p>
 
-                <div class="cs-article-img">
-                  <a href="img/profile/IWA - IWA Details Modal Open.png" data-src="img/profile/IWA - IWA Details Modal Open.png">
-                    <img src="img/profile/IWA - IWA Details Modal Open.png" alt="Profile Tool — Work authorization detail view">
-                  </a>
-                </div>
+  
               </div>
 
               <div class="cs-article-section">
@@ -175,8 +173,8 @@ Usability Testing</p>
                   <span class="cs-section-name">Outcome</span>
                 </div>
                 <h3>Results</h3>
-                <p>Profile and its surrounding improvements shifted work authorization management away from email threads and memory, and toward a system that prevents errors through better data, better timing, and clearer UI. Time-on-task improved in usability testing, unresolved overcharges decreased by 65%, and user satisfaction improved based on post-rollout survey feedback.</p>
-                <p>The biggest win wasn't visual polish. It was reducing the company's dependence on manual manager guidance and making correct charging the default behavior.</p>
+                <p>Profile and its surrounding improvements shifted work authorization management away from email threads and memory, and toward a system that prevents errors through better data, better timing, and clearer UI. Time spent on error resolution decreased by 42%, unresolved overcharges decreased by 65%, and user satisfaction improved based on post-rollout survey feedback.</p>
+                <p>Managers reported a much easier time managing overcharges, previously a major source of frustration.</p>
               </div>
 
             </section>

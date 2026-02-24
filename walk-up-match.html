@@ -54,7 +54,7 @@
           <article class="cs-content" style="padding: 0 3em;">
 
             <section class="wy-section-narrow">
-              <p class="wy-lede">WalkupMatch connects to your Spotify and builds you a full MLB roster — matching you with real baseball players whose walk-up songs align with your music taste. It then pulls live stats and tells you how your fantasy music team would actually perform.</p>
+              <p class="wy-lede">WalkupMatch connects to your Spotify and builds you a full MLB roster of real baseball players whose walk-up songs align with your music taste. It then pulls live stats and tells you how your fantasy music team would actually perform.</p>
               <div class="wy-columns">
                 <div class="wy-col">
                   <h4>My Role</h4>
@@ -69,12 +69,8 @@ Live Sports API</p>
                 </div>
                 <div class="wy-col">
                   <h4>Timeline</h4>
-                  <p>2024 — Personal Project</p>
+                  <p>Feb 2025 - Apr 2025</p>
                 </div>
-              </div>
-
-              <div class="wy-cta">
-                <a href="#" target="_blank" class="button-primary">Try WalkupMatch <span class="material-icons">open_in_new</span></a>
               </div>
             </section>
 
@@ -86,8 +82,8 @@ Live Sports API</p>
                   <span class="cs-section-name">Concept</span>
                 </div>
                 <h3>The Idea</h3>
-                <p>A lot of apps connect to Spotify and tell you things you already know — your top artists, your most-played songs. I wanted to do something more unexpected with that data. Baseball players choose walk-up songs that play as they step up to bat, and there's a rich database of those choices across current and former MLB players. The premise: if your music taste overlaps with a player's walk-up music, they're on your team.</p>
-                <p>It's a simple concept, but making the results feel meaningful — not random — required a matching algorithm with real depth behind it.</p>
+                <p>Baseball players choose walk-up songs that play as they step up to bat or pitch. When I stumbled across <a href="http://walkupdb.com" target="_blanlk">an open-source API for MLB walk-up songs</a>, I knew I wanted to build something with it. The premise: if your music taste overlaps with a player's walk-up music, they're on your team.</p>
+                <p>It's a simple and lighthearted concept, but I felt making the results feel meaningful required a matching algorithm with real depth behind it.</p>
 
                 <div class="cs-article-img-grid cs-article-img-grid--phone">
                   <a href="img/walkupmatch/WalkupMatch Mobile Lineup View.png" data-src="img/walkupmatch/WalkupMatch Mobile Lineup View.png">
@@ -105,7 +101,7 @@ Live Sports API</p>
                 </div>
                 <h3>From Spotify to Roster</h3>
                 <p>You connect your Spotify account, and the app pulls your top tracks, top artists, saved songs, and genre profile across multiple time ranges. On the other side is a database of MLB players with their walk-up songs, linked to Spotify track IDs and tagged with genres.</p>
-                <p>The app scores every player against your profile, then assembles a full roster — one player per position — optimizing for match quality while keeping the team balanced. Once your team is built, it pulls each player's real stats from a live sports API to calculate team averages and a projected win-loss record.</p>
+                <p>The app scores every player against your profile, then assembles a full roster, optimizing for match quality. Once your team is built, it pulls each player's real stats from a live sports API to calculate team averages and a projected win-loss record.</p>
 
                 <div class="cs-article-img">
                   <a href="img/walkupmatch/WalkupMatch Desktop.png" data-src="img/walkupmatch/WalkupMatch Desktop.png">
@@ -119,8 +115,8 @@ Live Sports API</p>
                   <span class="cs-section-name">Algorithm</span>
                 </div>
                 <h3>The Matching Logic</h3>
-                <p>Each player's walk-up songs are scored against your Spotify data on three dimensions: direct song matches (you listen to the same track), artist matches (you listen to the same artist), and genre overlap (your top genres align with the song's genres). A song you've actually liked or saved carries the most weight — it's the strongest signal that the match is real.</p>
-                <p>Time range matters too. A track in your long-term top songs says more about your taste than something you binged last week, so the algorithm weights accordingly. Rank also factors in — your #3 artist is a stronger match than your #47.</p>
+                <p>Each player's walk-up songs are scored against your Spotify data on three dimensions: direct song matches (you listen to the same track), artist matches (you listen to the same artist), and genre overlap (your top genres align with the song's genres). A song you've actually liked or saved carries the most weight.</p>
+                <p>Time range matters too. A track in your long-term top songs says more about your taste than something you binged last week, so the algorithm weights accordingly. Rank also factors in: your #3 artist is a stronger match than your #47.</p>
                 <p>When assembling the team, the algorithm fills positions one at a time, applying two constraints that keep the results interesting: a genre diversity boost (so your team isn't nine players who all share one genre) and an artist repetition penalty (so one popular artist doesn't dominate the roster). The result is a team that genuinely reflects the range of your music taste.</p>
               </div>
 
@@ -129,8 +125,7 @@ Live Sports API</p>
                   <span class="cs-section-name">Live Stats</span>
                 </div>
                 <h3>Team Stats &amp; Projected Record</h3>
-                <p>Once your roster is locked, the app hits a live sports API to pull real stats for each player — batting average, OPS, ERA, and more. It aggregates these into team-level numbers and generates a projected win-loss record, so you can see whether your music taste would produce a playoff contender or a last-place squad.</p>
-                <p>The stats are real even if the premise is absurd, which is what makes it fun. Your team's projected record is based on actual player performance, just filtered through a completely unserious selection method.</p>
+                <p>Once your roster is locked, the app hits a live sports API to pull real stats for each player: batting average, OPS, and ERA. It aggregates these into team-level numbers and generates a projected win-loss record, so you can see whether your music taste would produce a playoff contender or a last-place squad.</p>
               </div>
 
               <div class="cs-article-section">
@@ -138,7 +133,7 @@ Live Sports API</p>
                   <span class="cs-section-name">Illustration</span>
                 </div>
                 <h3>Custom Backdrops</h3>
-                <p>I illustrated a set of baseball environments — the field, dugout, and bullpen — used as decorative backdrops behind each player on their card. They give the app a handmade, editorial quality that sets it apart from the typical data-heavy sports interface, and help each position feel like its own scene rather than a row in a table.</p>
+                <p>I illustrated a set of baseball environments used as decorative backdrops behind each player on their card. They give the app a handmade, editorial quality and help each position feel like its own scene.</p>
 
                 <div class="cs-article-img">
                   <a href="img/walkupmatch/Field Illustration.png" data-src="img/walkupmatch/Field Illustration.png">
@@ -161,8 +156,7 @@ Live Sports API</p>
                   <span class="cs-section-name">Design &amp; Build</span>
                 </div>
                 <h3>End-to-End</h3>
-                <p>I designed and built this end-to-end — Figma for the UI, React and Next.js for the frontend, server-side API routes for the Spotify OAuth flow, matching logic, and sports data integration. The interface needed to make a dense amount of information (roster, match reasons, individual stats, team projections) feel lightweight and fun rather than like a spreadsheet.</p>
-                <p>The mobile layout was the primary target since this is the kind of thing people share and try on their phones.</p>
+                <p>I designed and built this end-to-end: Figma for the UI, React and Next.js for the frontend, server-side API routes for the Spotify OAuth flow, matching logic, and sports data integration.</p>
               </div>
 
             </section>
