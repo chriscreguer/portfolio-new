@@ -14,6 +14,9 @@
 </head>
 <body class="wy-page">
 
+  <!-- Covers iOS safe area (notch) when the solutions sticky nav is active -->
+  <div class="wy-notch-cover" aria-hidden="true"></div>
+
   <nav class="navbar">
     <div class="content-limiter">
       <a class="logo" href="index.html">
@@ -381,8 +384,10 @@ React</p>
       const stickyObs = new IntersectionObserver((entries) => {
         if (entries[0].isIntersecting) {
           headerBleed.classList.remove('is-stuck');
+          document.body.classList.remove('wy-nav-stuck');
         } else {
           headerBleed.classList.add('is-stuck');
+          document.body.classList.add('wy-nav-stuck');
         }
       }, { threshold: 0 });
       stickyObs.observe(sentinel);
