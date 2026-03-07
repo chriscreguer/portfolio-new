@@ -716,6 +716,8 @@
     padding-top: env(safe-area-inset-top);
     background: rgba(15, 15, 18, 0.96);
     backdrop-filter: blur(6px);
+    /* Extend background color upward into the iOS safe area gap above the sticky element */
+    box-shadow: 0 calc(-1 * env(safe-area-inset-top, 0px)) 0 0 rgba(15, 15, 18, 0.96);
   }
   /* Left fade — hidden until nav has been scrolled right */
   .wy-solutions-header-bleed::before {
