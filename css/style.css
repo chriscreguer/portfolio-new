@@ -1395,14 +1395,13 @@ a.card-size-60 {
         margin-right: -60px; /* Reduced Image hang effect */
         max-width: 130%; /* Reduced image size/hang */
         max-height: 100%;
-        object-fit: contain; 
+        object-fit: contain;
     }
-    .project-card.walkupmatch-card .project-card-image-container img {
-        /* Assuming walkupmatch also needs similar horizontal hanging image adjustment */
-        margin-right: -60px; 
-        max-width: 130%; 
-        max-height: 100%;
-        object-fit: contain; 
+    .project-card.profile-card .project-card-text-content {
+        flex-basis: 50%; /* More room for text/tags */
+    }
+    .project-card.profile-card .project-card-image-container {
+        flex-basis: 50%;
     }
 
     .project-card.dribbble-gallery-card .project-card-image-container img {
@@ -1414,17 +1413,17 @@ a.card-size-60 {
 
     /* Specific Card Image Effects - Tablet & Desktop */
     .project-card.which-year-card .project-card-image-container img,
-    .project-card.walkupmatch-card .project-card-image-container img,
     .project-card.tamatracker-card .project-card-image-container img {
         margin-bottom: -60px; /* Image hang effect for vertical cards */
     }
-    /* Profile is now horizontal — uses generic horizontal rules, no overrides needed */
-
+    .project-card.walkupmatch-card .project-card-image-container {
+        margin-top: 2.5em; /* Push image lower */
+    }
     .project-card.walkupmatch-card .project-card-image-container img {
+        width: 110%; /* Wider than container */
+        max-width: none;
         margin-right: 0;
-        max-width: 100%;
-        max-height: 100%;
-        margin-bottom: -60px; /* Vertical hang like WhichYear */
+        margin-bottom: -80px; /* Bigger bottom hang */
         object-fit: contain;
     }
 }
