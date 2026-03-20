@@ -1394,20 +1394,18 @@ a.card-size-60 {
         max-height: 100%;
         object-fit: contain; /* Ensure image aspect ratio is maintained */
     }
-    .project-card.walkupmatch-card .project-card-image-container {
-        margin-top: 3em; /* Push image lower in the card */
+    .project-card.finvera-card .project-card-image-container img {
+        margin-right: -60px; /* Reduced Image hang effect */
+        max-width: 130%; /* Reduced image size/hang */
+        max-height: 100%;
+        object-fit: contain; 
     }
     .project-card.walkupmatch-card .project-card-image-container img {
-        margin-right: 0;
-        max-width: 100%; /* Less zoomed */
+        /* Assuming walkupmatch also needs similar horizontal hanging image adjustment */
+        margin-right: -60px; 
+        max-width: 130%; 
         max-height: 100%;
-        margin-bottom: -40px; /* Hang at bottom */
-        object-fit: contain;
-    }
-
-    .project-card.finvera-card .project-card-image-container img {
-        margin-right: -140px; /* Push image further right */
-        max-width: 170%;
+        object-fit: contain; 
     }
 
     .project-card.dribbble-gallery-card .project-card-image-container img {
@@ -1420,35 +1418,33 @@ a.card-size-60 {
     /* Specific Card Image Effects - Tablet & Desktop */
     .project-card.which-year-card .project-card-image-container img,
     /* .project-card.profile-card .project-card-image-container img, -- Profile card has custom handling below */
-    .project-card.finvera-card .project-card-image-container img,
     .project-card.tamatracker-card .project-card-image-container img {
         margin-bottom: -60px; /* Image hang effect for vertical cards */
     }
     .project-card.profile-card .project-card-text-content {
-        flex-basis: 50%; /* More space for text */
-        position: relative;
+        position: relative; /* Ensure text is above image if overlapping */
         z-index: 1;
     }
-    .project-card.profile-card .project-card-image-container {
-        flex-basis: 50%;
-        width: auto; /* Let flex-basis control width */
-        height: 100%;
-        margin: 0;
-        overflow: visible;
-        display: flex;
-        align-items: center;
+    .project-card.profile-card .project-card-image-container { /* For profile card's specific layout */
+        width: 100%; 
+        margin-left: 0; /* Reset mobile margins if any */
+        margin-right: 0;
+        margin-bottom: -60px; /* Hang effect */
+        height: auto; /* Adjust if specific height needed */
+        position: relative; /* For z-indexing if needed */
+        overflow: visible; /* Allow image to hang */
     }
     .project-card.profile-card .project-card-image-container img {
         display: block;
-        width: auto;
-        max-width: 150%;
-        max-height: 100%;
+        width: 150%; /* Oversize the image */
+        max-width: none; 
         height: auto;
-        object-fit: contain;
-        margin-right: -80px;
-        margin-bottom: 0;
-        margin-left: 0;
-        border-radius: 4px;
+        object-fit: cover; 
+        object-position: top left; 
+        margin-left: 0; /* Align with left edge of text block */
+        margin-bottom: -80px; /* Increased negative margin for more hang */
+        margin-right: -80px; /* Negative margin to hang right */
+        border-radius: 4px; 
     }
 }
 
@@ -1477,15 +1473,9 @@ a.card-size-60 {
     }
     /* Reset per-card hang margins set in base styles */
     .project-card.which-year-card .project-card-image-container img,
-    .project-card.finvera-card .project-card-image-container img,
     .project-card.tamatracker-card .project-card-image-container img,
-    .project-card.profile-card .project-card-image-container img,
-    .project-card.walkupmatch-card .project-card-image-container img {
+    .project-card.profile-card .project-card-image-container img {
         margin-bottom: 0;
-        margin-right: 0;
-    }
-    .project-card.walkupmatch-card .project-card-image-container {
-        margin-top: 1.5em;
     }
 
     /* Gap between chips and image for horizontal cards (stacked vertically here) */
