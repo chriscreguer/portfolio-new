@@ -1306,9 +1306,8 @@ a.card-size-60 {
 .project-card.which-year-card { background-color: rgba(95, 44, 200, 0.08); } /* Light Purpleish */
 .project-card.which-year-card .tags li { background-color: rgba(95, 44, 200, 0.08); color: #5F2CC8; /* border-color: rgba(95, 44, 200, 0.2); REMOVED */ }
 
-/* Adjust content positioning for WhichYear card to make room for ribbon */
 .project-card.which-year-card .project-card-content-wrapper {
-    padding-top: 1.2em; /* Reduced padding to bring text higher */
+    padding-top: 2em;
 }
 
 
