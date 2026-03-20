@@ -1194,11 +1194,8 @@ ol {
 
 /* Specific Card Image Effects - Mobile (can be adjusted if needed) */
 .project-card.which-year-card .project-card-image-container img,
+.project-card.walkupmatch-card .project-card-image-container img,
 .project-card.tamatracker-card .project-card-image-container img {
-    margin-bottom: -20px; /* Less hang on mobile, as per original observation */
-}
-.project-card.profile-card .project-card-image-container img {
-    width: 100%; /* Full width on mobile */
     margin-bottom: -20px; /* Less hang on mobile */
 }
 
@@ -1417,34 +1414,18 @@ a.card-size-60 {
 
     /* Specific Card Image Effects - Tablet & Desktop */
     .project-card.which-year-card .project-card-image-container img,
-    /* .project-card.profile-card .project-card-image-container img, -- Profile card has custom handling below */
+    .project-card.walkupmatch-card .project-card-image-container img,
     .project-card.tamatracker-card .project-card-image-container img {
         margin-bottom: -60px; /* Image hang effect for vertical cards */
     }
-    .project-card.profile-card .project-card-text-content {
-        position: relative; /* Ensure text is above image if overlapping */
-        z-index: 1;
-    }
-    .project-card.profile-card .project-card-image-container { /* For profile card's specific layout */
-        width: 100%; 
-        margin-left: 0; /* Reset mobile margins if any */
+    /* Profile is now horizontal — uses generic horizontal rules, no overrides needed */
+
+    .project-card.walkupmatch-card .project-card-image-container img {
         margin-right: 0;
-        margin-bottom: -60px; /* Hang effect */
-        height: auto; /* Adjust if specific height needed */
-        position: relative; /* For z-indexing if needed */
-        overflow: visible; /* Allow image to hang */
-    }
-    .project-card.profile-card .project-card-image-container img {
-        display: block;
-        width: 150%; /* Oversize the image */
-        max-width: none; 
-        height: auto;
-        object-fit: cover; 
-        object-position: top left; 
-        margin-left: 0; /* Align with left edge of text block */
-        margin-bottom: -80px; /* Increased negative margin for more hang */
-        margin-right: -80px; /* Negative margin to hang right */
-        border-radius: 4px; 
+        max-width: 100%;
+        max-height: 100%;
+        margin-bottom: -60px; /* Vertical hang like WhichYear */
+        object-fit: contain;
     }
 }
 
@@ -1473,8 +1454,8 @@ a.card-size-60 {
     }
     /* Reset per-card hang margins set in base styles */
     .project-card.which-year-card .project-card-image-container img,
-    .project-card.tamatracker-card .project-card-image-container img,
-    .project-card.profile-card .project-card-image-container img {
+    .project-card.walkupmatch-card .project-card-image-container img,
+    .project-card.tamatracker-card .project-card-image-container img {
         margin-bottom: 0;
     }
 
