@@ -1398,10 +1398,14 @@ a.card-size-60 {
         object-fit: contain;
     }
     .project-card.profile-card .project-card-text-content {
-        flex-basis: 50%; /* More room for text/tags */
+        flex-basis: 42%;
     }
     .project-card.profile-card .project-card-image-container {
-        flex-basis: 50%;
+        flex-basis: 58%;
+    }
+    .project-card.profile-card .project-card-image-container img {
+        max-width: 170%;
+        margin-right: -110px;
     }
 
     .project-card.dribbble-gallery-card .project-card-image-container img {
