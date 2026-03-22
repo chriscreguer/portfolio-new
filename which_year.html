@@ -155,7 +155,7 @@ React</p>
                 </div>
                 <h3>A Genre With No Good Entry</h3>
                 <p>Photo-dating games already existed, some with real audiences, but none were well-made. Confusing interfaces, ugly design, ad overload, and lifeless results screens were the norm. Players tolerated these issues because the core concept is genuinely fun: look at a photo, figure out when it was taken.</p>
-                <p>I saw an opportunity to solve the problems that plagued competitors with a UI that felt as fun as the concept itself.</p>
+                <p>I saw an opportunity to solve the problems that plagued competitors by crafting a UI that felt as fun as the concept itself.</p>
               </div>
             </section>
 
@@ -196,7 +196,7 @@ React</p>
                       <div class="image-col"><div class="img-target" aria-hidden="true"></div></div>
                       <div class="text-col">
                         <p class="sol-headline">A game that rewards observation, historical knowledge, and strategy.</p>
-                        <p class="sol-description">Players guess the year each of the five photos were taken. Each photo contains clues - some are more "vibes" based, while others can be narrowed down based on specific details (a building under construction, a car shape change, etc). Users can reveal each digit place once per challenge. Points are awarded based on proximity to the actual year, with a special algorithm that highly rewards guesses within a few years.</p>
+                        <p class="sol-description">Players guess the year each of the five photos was taken. Each photo contains clues - some are more vibes-based, while others can be narrowed down based on specific details (a building under construction, a car shape change, etc). Users can reveal each digit position once per challenge. Points are awarded based on proximity to the actual year, with a special algorithm that heavily rewards guesses within a few years.</p>
                           <div class="sol-quote-box">
                             <p class="sol-quote-text">&ldquo;I enjoy the depth it adds in terms of deciding when to strategically deploy it, and for which digit&rdquo;</p>
                             <p class="sol-quote-source">ResetEra Comment</p>
@@ -208,11 +208,7 @@ React</p>
                     <div class="wy-sol-grid">
                       <div class="text-col">
                         <p class="sol-headline">Compare your results to everyone else's. See how others guessed on each photo.</p>
-                        <p class="sol-description">After submitting a challenge, the site shows a global score distribution graph, so users can see how they stack up. I used a kernel density estimation (KDE) to show granular detail. The app also displays the guess distribution for each photo, so players can see how others guessed. Users can also see their personal statistics.</p>
-                        <div class="sol-research-box">
-                          <p class="sol-research-label">Research</p>
-                          <p class="sol-research-summary">Players who read explanations improved 23% on subsequent similar photos. Scoring weights accuracy over speed to encourage thoughtful observation.</p>
-                        </div>
+                        <p class="sol-description">After submitting a challenge, the site shows a global score distribution graph, so users can see how they stack up. I used a kernel density estimation (KDE) to show granular detail. The app also displays the guess distribution for each photo, so players can see how others guessed. Users can also see their lifetime stats.</p>
                         <div class="sol-quote-box">
                           <p class="sol-quote-text">&ldquo;Man I am in love. The global [score distribution graph] is inspired!&rdquo;</p>
                           <p class="sol-quote-source">Hackernews Comment</p>
@@ -227,10 +223,10 @@ React</p>
                       <div class="image-col"><div class="img-target" aria-hidden="true"></div></div>
                       <div class="text-col">
                         <p class="sol-headline">Share results in a fun, emoji-encoded format.</p>
-                        <p class="sol-description">Sharing is easy - just tap the share button in the sticky footer to launch a native share dialog (or auto-copy results if you're on desktop). The plain-text results show your total score, percentile rank, and how close each of your guesses was (1-10 emojis for years off, bullseye for exact year) </p>
+                        <p class="sol-description">Sharing is easy - just tap the share button in the sticky footer to launch a native share dialog (or auto-copy results if you're on desktop). The plain-text results show your total score, percentile rank, and how close each of your guesses was (1-10 emojis for years off, bullseye for exact year). </p>
                         <div class="sol-research-box">
                           <p class="sol-research-label">Research</p>
-                          <p class="sol-research-summary">30% of users share their results. Many post theirs in forums or social media sites day after day, often in large daily threads, accompanied by bragging rights or lamentations.</p>
+                          <p class="sol-research-summary">30% of users share their results. Many post theirs in forums or social media sites every day to brag or commiserate.</p>
                         </div>
                       </div>
                     </div>
@@ -240,7 +236,7 @@ React</p>
                     <div class="wy-sol-grid">
                       <div class="text-col">
                         <p class="sol-headline">Type a year or drag the slider. Both stay in sync.</p>
-                        <p class="sol-description">Typing one digit advances you to the next (much like the best verification code inputs). When you use a digit reveal, the slider is limited to years that match the revealed digit. After guessing, the slider becomes a visualization of the year you guessed compared to the actual year.</p>
+                        <p class="sol-description">Typing one digit advances you to the next (much like well-designed verification code inputs). When you use a digit reveal, the slider is limited to years that match the revealed digit. After guessing, the slider becomes a visualization of the year you guessed compared to the actual year.</p>
                         <div class="sol-research-box">
                           <p class="sol-research-label">Research</p>
                           <p class="sol-research-summary">9/10 mobile testers used the slider, compared to 5/10 desktop testers. Some mobile testers typed the last digit manually, since the slider required too much precision.</p>
@@ -272,7 +268,7 @@ React</p>
                     <div class="wy-sol-grid">
                       <div class="text-col">
                         <p class="sol-headline">Play more challenges while still having a reason to come back tomorrow.</p>
-                        <p class="sol-description">Users can play as many past challenges as they want, but must return each day to play the latest. Initial users complained that they wanted to play more. Some suggested an infinite mode. But each challenge is curated to be unique and interesting, plus I didn't want users to binge play and get bored. </p>
+                        <p class="sol-description">Users can play as many past challenges as they want, but must return each day to play the latest. Initial users complained that they wanted to play more. Some suggested an infinite mode. But each challenge is curated to be unique and interesting, plus I didn't want users to binge-play and get bored. </p>
                         
                       </div>
                       <div class="image-col"><div class="img-target" aria-hidden="true"></div></div>
@@ -288,7 +284,7 @@ React</p>
                   <span class="cs-section-name">The Result</span>
                 </div>
                 <h3>Organic Growth to Acquisition</h3>
-                <p>I posted WhichYear on Reddit and shared it with a few friends. Within a week it had been picked up by MetaFilter, topped the Hacker News front page, and pulled in 25,000 users in a single day. Word-of-mouth sharing and daily return players drove steady growth from there.</p>
+                <p>I posted WhichYear on Reddit and shared it with a few friends. Within a week it had been picked up by MetaFilter, topped the Hacker News front page, and pulled in 25,000 users in a single day. Word-of-mouth and daily return players drove steady growth from there.</p>
                 <p>Five months after launch, the site was acquired.</p>
               </div>
             </section>
@@ -458,12 +454,19 @@ React</p>
     let activeId = solutions[0]?.id || null;
 
     const io = new IntersectionObserver((entries)=>{
-      let best = null;
-      entries.forEach(e => {
-        if (!e.isIntersecting) return;
-        if (!best || e.intersectionRatio > best.intersectionRatio) best = e;
+      const entering = entries.filter(e => e.isIntersecting);
+      if (!entering.length) return;
+
+      // Among sections entering the detection band, pick the one whose center
+      // is closest to the viewport center. This handles short sections that
+      // could never reach a 60% threshold, fixing the scroll-up skip bug.
+      const viewCenter = window.innerHeight / 2;
+      let best = entering[0];
+      entering.forEach(e => {
+        const r = e.boundingClientRect;
+        const br = best.boundingClientRect;
+        if (Math.abs((r.top + r.height / 2) - viewCenter) < Math.abs((br.top + br.height / 2) - viewCenter)) best = e;
       });
-      if (!best) return;
 
       const nextId = best.target.id;
       if (nextId === activeId) return;
@@ -474,7 +477,7 @@ React</p>
       activeId = nextId;
       setActiveNav(activeId);
       swapFloaterTo(best.target.dataset.img);
-    }, { root: null, threshold: [0.6] });
+    }, { root: null, rootMargin: '-35% 0px -35% 0px', threshold: 0 });
 
     solutions.forEach(s => io.observe(s));
 
