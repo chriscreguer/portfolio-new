@@ -453,33 +453,25 @@ React</p>
 
     let activeId = solutions[0]?.id || null;
 
-    const io = new IntersectionObserver((entries)=>{
-      const entering = entries.filter(e => e.isIntersecting);
-      if (!entering.length) return;
-
-      // Among sections entering the detection band, pick the one whose center
-      // is closest to the viewport center. This handles short sections that
-      // could never reach a 60% threshold, fixing the scroll-up skip bug.
-      const viewCenter = window.innerHeight / 2;
-      let best = entering[0];
-      entering.forEach(e => {
-        const r = e.boundingClientRect;
-        const br = best.boundingClientRect;
-        if (Math.abs((r.top + r.height / 2) - viewCenter) < Math.abs((br.top + br.height / 2) - viewCenter)) best = e;
+    // Track active section by which has the most pixels visible. Scroll events
+    // are synchronous so this can't miss fast scrolling the way IntersectionObserver can.
+    function updateActive() {
+      let best = null;
+      let bestVisible = 0;
+      solutions.forEach(s => {
+        const r = s.getBoundingClientRect();
+        const visiblePx = Math.min(r.bottom, window.innerHeight) - Math.max(r.top, 0);
+        if (visiblePx > bestVisible) { bestVisible = visiblePx; best = s; }
       });
-
-      const nextId = best.target.id;
-      if (nextId === activeId) return;
-
+      if (!best || best.id === activeId) return;
       solutions.forEach(s => s.classList.remove('active'));
-      best.target.classList.add('active');
-
-      activeId = nextId;
+      best.classList.add('active');
+      activeId = best.id;
       setActiveNav(activeId);
-      swapFloaterTo(best.target.dataset.img);
-    }, { root: null, rootMargin: '-35% 0px -35% 0px', threshold: 0 });
+      swapFloaterTo(best.dataset.img);
+    }
 
-    solutions.forEach(s => io.observe(s));
+    window.addEventListener('scroll', updateActive, { passive: true });
 
     // Mobile: populate inline videos instead of using the sticky floater
     if (window.innerWidth < 900) {
@@ -500,11 +492,21 @@ React</p>
 
     // Hash support
     window.addEventListener('load', ()=>{
-      const first = document.getElementById(activeId);
+      // Pre-initialize first solution as active so it's already sharp when scrolled to,
+      // and pre-load its video into the floater so there's no fade-in on first arrival.
+      const first = solutions[0];
       if (first) {
-        swapFloaterTo(first.dataset.img);
         first.classList.add('active');
+        setActiveNav(first.id);
+        const firstSrc = first.dataset.img;
+        if (firstSrc) {
+          floater.dataset.src = firstSrc;
+          floater.src = firstSrc;
+          floater.addEventListener('loadeddata', () => { floater.style.opacity = '1'; }, { once: true });
+          floater.play().catch(() => {});
+        }
       }
+      updateActive();
       if (location.hash) {
         const t = document.querySelector(location.hash);
         if (t) t.scrollIntoView({behavior:'instant', block:'start'});
